@@ -19,10 +19,12 @@ const config: Config = {
           25: "#E4E4E4",
           50: "#D9D9D9",
           100: "#585858",
+          150: "#4F4F4F",
+          200: "#373737",
         },
         dark: {
-          secondary: "#4B4949",
           primary: "#2B2B2B",
+          secondary: "#4B4949",
         },
         brand: {
           primary: "#F0B929",
@@ -33,6 +35,23 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        navbar: "0 4px 12px rgba(0, 0, 0, 0.04)", // Custom shadow
+      },
+      animation: {
+        "slide-down": "slideDown 0.6s ease-in-out",
+        "slide-up": "slideUp 0.6s ease-in-out",
+      },
+      keyframes: {
+        slideDown: {
+          "0%": { transform: "translateY(-10px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        slideUp: {
+          "0%": { transform: "translateY(0)", opacity: "1" },
+          "100%": { transform: "translateY(-10px)", opacity: "0" },
+        },
       },
     },
   },
