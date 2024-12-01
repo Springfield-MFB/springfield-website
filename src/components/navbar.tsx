@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Logo from "../../public/svg/logo.svg";
+import Logo from "@/public/svg/logo.svg";
 
 import { MaxWidthWrapper } from "./max-width-wrapper";
 import { Button } from "./ui/button";
