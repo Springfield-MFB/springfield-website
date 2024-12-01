@@ -41,7 +41,7 @@ const config: Config = {
       },
       animation: {
         "slide-down": "slideDown 0.6s ease-in-out",
-        "slide-up": "slideUp 0.6s ease-in-out",
+        "slide-up": "slideUp 0.6s ease",
       },
       keyframes: {
         slideDown: {
