@@ -2,7 +2,7 @@ import { MaxWidthWrapper } from "../max-width-wrapper";
 
 const Feat = () => {
   return (
-    <div className="mt-20 lg:mt-0">
+    <div className="mt-20 z-20 lg:mt-0">
       <MaxWidthWrapper>
         <div className="px-8 lg:px-24 py-12 bg-brand-primary rounded-[24px]">
           <div className="grid lg:grid-cols-5 gap-x-8">
