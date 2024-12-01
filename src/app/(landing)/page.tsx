@@ -27,7 +27,9 @@ const Page = () => {
         </div>
       </section>
       <Feat />
-      <section className="pt-16 lg:pt-44 -z-10 lg:-mt-24 relative bg-[#F9F9F9]">
+
+      <section className="relative ">
+        <div className="absolute inset-x-0 -inset-y-16 bg-[#F9F9F9] -z-20" />
         <MaxWidthWrapper>
           <FullPotential />
         </MaxWidthWrapper>
