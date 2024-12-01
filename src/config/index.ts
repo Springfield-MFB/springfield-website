@@ -35,7 +35,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFE8FD",
         title: "Who we are",
-        desc: "we are a team of passionate and dedicated individuals committed to providing financial services to underserved communities.",
+        desc:
+          "we are a team of passionate and dedicated individuals committed to providing financial services to underserved communities.",
       },
 
       {
@@ -44,7 +45,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFE6E7",
         title: "Management Team",
-        desc: "Our management team is committed to leading by example, fostering a culture of innovation, and driving excellence in everything we do. ",
+        desc:
+          "Our management team is committed to leading by example, fostering a culture of innovation, and driving excellence in everything we do. ",
       },
 
       {
@@ -53,7 +55,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFE8FD",
         title: "Careers",
-        desc: "Join our team and be part of a dynamic and innovative organization that is committed to making a difference.",
+        desc:
+          "Join our team and be part of a dynamic and innovative organization that is committed to making a difference.",
       },
 
       {
@@ -62,7 +65,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFE9DC",
         title: "Careers",
-        desc: "Join our team and be part of a dynamic and innovative organization that is committed to making a difference.",
+        desc:
+          "Join our team and be part of a dynamic and innovative organization that is committed to making a difference.",
       },
 
       {
@@ -71,7 +75,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E2EBF7",
         title: "Media",
-        desc: "Get the latest insights, news, and updates on our products, services, and community initiatives from Springfield Microfinance Bank.",
+        desc:
+          "Get the latest insights, news, and updates on our products, services, and community initiatives from Springfield Microfinance Bank.",
       },
       {
         icon: PiBankFill,
@@ -79,7 +84,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFF7E2",
         title: "ESG",
-        desc: "At Springfield Microfinance Bank, we are committed to operating in a responsible and sustainable manner. ",
+        desc:
+          "At Springfield Microfinance Bank, we are committed to operating in a responsible and sustainable manner. ",
       },
 
       {
@@ -88,7 +94,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E8E8FF",
         title: "CSR",
-        desc: " Our CSR initiatives are designed to make a positive impact on the lives of our customers, employees, and the wider community.",
+        desc:
+          " Our CSR initiatives are designed to make a positive impact on the lives of our customers, employees, and the wider community.",
       },
     ],
   },
@@ -104,7 +111,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFE8FD",
         title: "Springfield Daily Contribution (SDC)",
-        desc: "daily contribution account to encourage goal oriented savings of our customers. No Monthly charge and sms. Opportunity for loan.",
+        desc:
+          "daily contribution account to encourage goal oriented savings of our customers. No Monthly charge and sms. Opportunity for loan.",
       },
 
       {
@@ -113,7 +121,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E8E8FF",
         title: "Springfield Target Account (STA)",
-        desc: "Special savings account crafted for customers to save for their financial goals. This is built on encouraging financial discipline.",
+        desc:
+          "Special savings account crafted for customers to save for their financial goals. This is built on encouraging financial discipline.",
       },
 
       {
@@ -122,7 +131,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E2EBF7",
         title: "Springfield Target Account (STA)",
-        desc: "Fixed and tenured investment account with a goal to maximize financial returns on short, medium or long term bases.",
+        desc:
+          "Fixed and tenured investment account with a goal to maximize financial returns on short, medium or long term bases.",
       },
     ],
   },
@@ -139,7 +149,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E6FBFF",
         title: "Springfield Micro Loan",
-        desc: "Specialized loan product thoughtfully designed to provide financial support and empower small and micro business owners to grow and sustain their ventures.",
+        desc:
+          "Specialized loan product thoughtfully designed to provide financial support and empower small and micro business owners to grow and sustain their ventures.",
       },
 
       {
@@ -148,7 +159,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E6FFF2",
         title: "School Support Product (3SP)",
-        desc: "School owners, parents/guardian and tertiary students who seek financial empowerment to achieve their educational goals.",
+        desc:
+          "School owners, parents/guardian and tertiary students who seek financial empowerment to achieve their educational goals.",
       },
 
       {
@@ -157,7 +169,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "FaPersonShelter",
         title: "Springfield Shelter Loan",
-        desc: "Loan designed to help you build, renovate, or own your dream home with flexible repayment options tailored to your needs.",
+        desc:
+          "Loan designed to help you build, renovate, or own your dream home with flexible repayment options tailored to your needs.",
       },
     ],
   },
@@ -174,7 +187,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E6FBFF",
         title: "Instant Debit Card",
-        desc: "Get your debit card immediately after opening an account. Make purchases, withdraw cash, and check your balance anywhere, anytime.",
+        desc:
+          "Get your debit card immediately after opening an account. Make purchases, withdraw cash, and check your balance anywhere, anytime.",
       },
 
       {
@@ -183,7 +197,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E6FFF2",
         title: "Mobile Banking",
-        desc: "Banking just got easier! Download our Mobile Banking app and enjoy convenient, secure, and hassle-free banking on the go.",
+        desc:
+          "Banking just got easier! Download our Mobile Banking app and enjoy convenient, secure, and hassle-free banking on the go.",
       },
 
       {
@@ -192,7 +207,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFE6FC",
         title: "Agency Banking",
-        desc: "Bringing banking services closer to customers, reducing the need to travel long distances to access banking services.",
+        desc:
+          "Bringing banking services closer to customers, reducing the need to travel long distances to access banking services.",
       },
 
       {
@@ -201,7 +217,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E8E8FF",
         title: "Buy Now Pay Later",
-        desc: "Take advantage of our Buy Now Pay Later option, offering flexible payment plans that let you shop with confidence and pay on your own terms.",
+        desc:
+          "Take advantage of our Buy Now Pay Later option, offering flexible payment plans that let you shop with confidence and pay on your own terms.",
       },
 
       {
@@ -210,7 +227,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFF3E8",
         title: "USSD",
-        desc: "Experience the freedom to bank anywhere, anytime with our convenient and secure USSD banking service, designed to make your life easier.",
+        desc:
+          "Experience the freedom to bank anywhere, anytime with our convenient and secure USSD banking service, designed to make your life easier.",
       },
     ],
   },
@@ -227,7 +245,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFE8FD",
         title: "Loan Calculator",
-        desc: "Make smart financial decisions with our advanced loan calculator, offering a comprehensive breakdown of your monthly loan repayments.",
+        desc:
+          "Make smart financial decisions with our advanced loan calculator, offering a comprehensive breakdown of your monthly loan repayments.",
       },
 
       {
@@ -236,7 +255,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E8E8FF",
         title: "Fixed & Deposit Calculator",
-        desc: "Make informed investment decisions and maximize your returns with our intuitive Fixed Deposit Calculator.",
+        desc:
+          "Make informed investment decisions and maximize your returns with our intuitive Fixed Deposit Calculator.",
       },
     ],
   },
@@ -253,7 +273,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E6FBFF",
         title: "Help Center",
-        desc: "Get instant support and find detailed answers to your questions, with our extensive knowledge base and dedicated customer support team",
+        desc:
+          "Get instant support and find detailed answers to your questions, with our extensive knowledge base and dedicated customer support team",
       },
 
       {
@@ -262,7 +283,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFE8FD",
         title: "Branch Locator",
-        desc: "Locate your nearest branch and navigate to it with ease using our intuitive branch locator tool, providing you with accurate directions and details.",
+        desc:
+          "Locate your nearest branch and navigate to it with ease using our intuitive branch locator tool, providing you with accurate directions and details.",
       },
 
       {
@@ -271,7 +293,8 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#FFE6E7",
         title: "FAQ’s",
-        desc: "Get instant clarity on our products, services, and policies with our detailed and regularly updated FAQ section.",
+        desc:
+          "Get instant clarity on our products, services, and policies with our detailed and regularly updated FAQ section.",
       },
 
       {
@@ -280,8 +303,30 @@ export const NAVBART_ITEMS = [
         href: "#",
         color: "#E8E8FF",
         title: "Whistle Blower",
-        desc: "We are committed to maintaining the highest standards of ethics, integrity, and transparency in our business practices.",
+        desc:
+          "We are committed to maintaining the highest standards of ethics, integrity, and transparency in our business practices.",
       },
     ],
+  },
+];
+
+export const SERVICES = [
+  {
+    title: "Corporate Banking",
+    description:
+      "Discover tailored corporate banking solutions to manage your business finances, including treasury management and foreign exchange services.",
+    image: "path/to/image1.jpg", // Replace with actual image paths
+  },
+  {
+    title: "Loans",
+    description:
+      "Whether you need working capital or financing for expansion projects, we offer a variety of business loan options to support your growth.",
+    image: "path/to/image2.jpg",
+  },
+  {
+    title: "Micro-Insurance",
+    description:
+      "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
+    image: "path/to/image3.jpg",
   },
 ];
