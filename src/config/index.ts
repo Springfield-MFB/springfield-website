@@ -23,6 +23,11 @@ import {
 import { TiLocation } from "react-icons/ti";
 import { GiWhistle } from "react-icons/gi";
 
+// SERVICES
+import BankingImg from "@/public/images/banking.png";
+import LoansImg from "@/public/images/loans.png";
+import InsuranceImg from "@/public/images/insurance.png";
+
 export const NAVBART_ITEMS = [
   // COMPANY
   {
@@ -315,18 +320,32 @@ export const SERVICES = [
     title: "Corporate Banking",
     description:
       "Discover tailored corporate banking solutions to manage your business finances, including treasury management and foreign exchange services.",
-    image: "path/to/image1.jpg", // Replace with actual image paths
+    image: BankingImg, // Replace with actual image paths
   },
   {
     title: "Loans",
     description:
       "Whether you need working capital or financing for expansion projects, we offer a variety of business loan options to support your growth.",
-    image: "path/to/image2.jpg",
+    image: LoansImg,
   },
   {
     title: "Micro-Insurance",
     description:
       "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
-    image: "path/to/image3.jpg",
+    image: InsuranceImg,
+  },
+
+  {
+    title: "Micro-Insurance",
+    description:
+      "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
+    image: BankingImg,
+  },
+
+  {
+    title: "Micro-Insurance",
+    description:
+      "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
+    image: LoansImg,
   },
 ];
