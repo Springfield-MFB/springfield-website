@@ -24,6 +24,7 @@ import { TiLocation } from "react-icons/ti";
 import { GiWhistle } from "react-icons/gi";
 
 export const NAVBART_ITEMS = [
+  // COMPANY
   {
     label: "Company",
     value: "Company" as const,
@@ -92,6 +93,7 @@ export const NAVBART_ITEMS = [
     ],
   },
 
+  // SAVINGS & DEPOSIT
   {
     label: "Savings & Deposit",
     value: "savings_&_deposit" as const,
@@ -125,6 +127,8 @@ export const NAVBART_ITEMS = [
     ],
   },
 
+  // LOANS
+
   {
     label: "Loans",
     value: "loans" as const,
@@ -157,6 +161,8 @@ export const NAVBART_ITEMS = [
       },
     ],
   },
+
+  // DIGITAL SERVICES
 
   {
     label: "Digital Services",
@@ -209,6 +215,8 @@ export const NAVBART_ITEMS = [
     ],
   },
 
+  // CALCULATOR
+
   {
     label: "Calculator",
     value: "calculator" as const,
@@ -232,6 +240,8 @@ export const NAVBART_ITEMS = [
       },
     ],
   },
+
+  // CONTACT US
 
   {
     label: "Contact Us",

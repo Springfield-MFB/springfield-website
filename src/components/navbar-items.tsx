@@ -1,5 +1,7 @@
 "use client";
 
+import AnimatedBackground from "../components/core/animated-background";
+
 import { NAVBART_ITEMS } from "@/config";
 import { useRef, useState } from "react";
 import { NavItem } from "./nav-item";
