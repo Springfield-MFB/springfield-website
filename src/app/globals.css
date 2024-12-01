@@ -67,3 +67,85 @@
     --chart-5: 340 75% 55%;
   }
 }
+.custom-buttom {
+  position: relative;
+  justify-content: center;
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 12px 50px;
+  border-radius: 8px;
+  font-weight: 300;
+  border: none;
+  overflow: hidden;
+  overflow: hidden;
+}
+
+.text {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  height: 40px;
+  overflow: hidden;
+  overflow: hidden;
+}
+
+.text span {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  text-transform: capitalize;
+  transition-delay: 0.1s;
+  overflow: hidden;
+}
+
+.custom-buttom:hover span:nth-child(1) {
+  transform: translateY(-100%);
+  transition-delay: 0s;
+}
+
+.custom-buttom:hover span:nth-child(2) {
+  transform: translateY(-100%);
+  transition-delay: 0s;
+}
+
+.arrow {
+  color: white;
+  opacity: 1;
+  opacity: 100;
+  font-size: 20px;
+  transition: all 0.1s;
+}
+
+.custom-buttom:hover .arrow {
+  color: white;
+  opacity: 0;
+  font-size: 20px;
+}
+
+.arrow-1 {
+  position: absolute;
+  color: white;
+  transform: translateX(-80px);
+  opacity: 100;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+
+.custom-buttom:hover .arrow-1 {
+  transform: translateX(-30px);
+  color: white;
+  font-size: 20px;
+}
+
+/* Add this to your global CSS or Tailwind config */
+.bg-grid {
+  background-image: linear-gradient(to right, red 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+  background-size: 20px 20px;
+}
