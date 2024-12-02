@@ -19,3 +19,21 @@ export const Heading = ({ children, className, ...props }: HeadingProps) => {
     </h1>
   );
 };
+
+export const SmallHeading = ({
+  children,
+  className,
+  ...props
+}: HeadingProps) => {
+  return (
+    <h1
+      className={cn(
+        "text-2xl md:text-4xl text-center lg:text-left font-millik text-dark-primary",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </h1>
+  );
+};
