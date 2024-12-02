@@ -28,6 +28,11 @@ import BankingImg from "@/public/images/banking.png";
 import LoansImg from "@/public/images/loans.png";
 import InsuranceImg from "@/public/images/insurance.png";
 
+// WHY CHOOSE SPRINGFIELD
+import Money from "@/public/svg/money.svg";
+import Business from "@/public/svg/business.svg";
+import Analysis from "@/public/svg/analysis.svg";
+
 export const NAVBART_ITEMS = [
   // COMPANY
   {
@@ -347,5 +352,28 @@ export const SERVICES = [
     description:
       "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
     image: LoansImg,
+  },
+];
+
+export const WHY_CHOOSE_SPRINGFIELD = [
+  {
+    image: Money,
+    name: "Convenience:",
+    description:
+      "Future Banking lets you manage finances anytime, anywhere—no queues, no paperwork.",
+  },
+
+  {
+    image: Business,
+    name: "Personalized",
+    description:
+      "We provide personalized financial solutions tailored to your unique needs",
+  },
+
+  {
+    image: Analysis,
+    name: "Security:",
+    description:
+      "Springfield ensures your financial security with advanced encryption and biometric authentication.",
   },
 ];
