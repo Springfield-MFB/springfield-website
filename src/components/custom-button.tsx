@@ -21,7 +21,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
     >
       <>
         <div
-          className={cn("text text-center text-xs font-medium ", {
+          className={cn("text text-center text- font-medium ", {
             "text-white": type === "primary",
             "text-dark-primary": type === "ghost",
           })}
