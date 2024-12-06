@@ -33,6 +33,12 @@ import Money from "@/public/svg/money.svg";
 import Business from "@/public/svg/business.svg";
 import Analysis from "@/public/svg/analysis.svg";
 
+// TESTIMONIALS
+import Testimonial1Img from "@/public/images/avatar-1.svg";
+import Testimonial2Img from "@/public/images/avatar-2.png";
+import Testimonial3Img from "@/public/images/avatar-3.png";
+import Testimonial4Img from "@/public/images/avatar-4.png";
+
 export const NAVBART_ITEMS = [
   // COMPANY
   {
@@ -375,5 +381,47 @@ export const WHY_CHOOSE_SPRINGFIELD = [
     name: "Security:",
     description:
       "Springfield ensures your financial security with advanced encryption and biometric authentication.",
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    testimony:
+      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
+    image: Testimonial1Img,
+    name: "Daniel Samuel",
+    role: "Current Account",
+  },
+
+  {
+    testimony:
+      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
+    image: Testimonial2Img,
+    name: "John Doe",
+    role: "Saving Account",
+  },
+
+  {
+    testimony:
+      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
+    image: Testimonial3Img,
+    name: "Michael Smith",
+    role: "Saving Account",
+  },
+
+  {
+    testimony:
+      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
+    image: Testimonial3Img,
+    name: "Evans Smith",
+    role: "Current Account",
+  },
+
+  {
+    testimony:
+      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
+    image: Testimonial4Img,
+    name: "Jasmine Jane",
+    role: "Saving Account",
   },
 ];
