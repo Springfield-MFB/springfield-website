@@ -5,6 +5,7 @@ import Feat from "@/components/home/feat";
 import { FullPotential } from "@/components/home/full-potential";
 import { Hero } from "@/components/home/hero";
 import { OurServices } from "@/components/home/our-services";
+import { Testimonials } from "@/components/home/testimonials";
 import { WhySpringfield } from "@/components/home/why-spring-field";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import Image from "next/image";
@@ -53,6 +54,13 @@ const Page = () => {
       <section className="relative py-20 lg:py-24">
         <MaxWidthWrapper>
           <OurServices />
+        </MaxWidthWrapper>
+      </section>
+
+      {/* What are customers saying? */}
+      <section className="relative  lg:py-8">
+        <MaxWidthWrapper>
+          <Testimonials />
         </MaxWidthWrapper>
       </section>
       <section></section>
