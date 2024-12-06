@@ -20,7 +20,10 @@ export function PotentialCarousel() {
       </div>
       <CarouselContent className="-ml-1">
         {SERVICES.map((service, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            key={index}
+            className="pl-1 md:basis-1/2 lg:basis-[32%]"
+          >
             <div className="p-1">
               <Card className="bg-none p-0 border-none shadow-none">
                 <CardContent className="flex aspect-square w-full flex-col ">
