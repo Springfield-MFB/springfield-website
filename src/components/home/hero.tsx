@@ -6,15 +6,15 @@ import HeroImage from "@/public/images/home-hero.png";
 
 export const Hero = () => {
   return (
-    <div className="ma-auto flex flex-col md:flex-row  px-2 lg:px-6 space-y-10 md:space-y-0 md:space-x-12 ">
+    <div className="ma-auto flex flex-col lg:flex-row  px-2  space-y-10 md:space-y-0 md:space-x-12 ">
       {/* LEFT CONTENT */}
 
-      <div className="flex-1  md:text-left">
+      <div className="basis-2/3   md:text-left">
         <h1 className="text-4xl md:text-6xl leading-[45px] lg:leading-[70px] font-millik">
           Guiding you toward{" "}
           <span className="text-brand-primary">financial</span> achievement
         </h1>
-        <p className="mt-4 lg:leading-[30px] text-[#383838] text-sm lg:text-sm">
+        <p className="mt-4 lg:leading-6 text-[#383838] text-sm lg:text-sm">
           Discover the power to unlock your full potential through our automated
           and secure savings, strategic investment opportunities, agency banking
           solutions, and a wide array of value-added services tailored to meet
@@ -27,14 +27,14 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="flex-1 relative">
+      <div className=" basis-1/2 ">
         {/* Grid Effect */}
-        <div className="relative grid grid-cols-3 gap-1 w-full h-full">
-          <div className="col-span-3 row-span-3">
+        <div className="relative flex lg:justify-end">
+          <div className="col-span-3 w-[95%] row-span-3 ">
             <Image
               src={HeroImage} // Replace with actual path
               alt="Building"
-              width={550}
+              width={1000}
               height={1000}
               className="h-full  object-cover"
             />
