@@ -48,7 +48,7 @@ export const NAVBART_ITEMS = [
       {
         icon: MdInfo,
         iconColor: "#D500C3",
-        href: "#",
+        href: "/about",
         color: "#FFE8FD",
         title: "Who we are",
         desc:
@@ -70,9 +70,9 @@ export const NAVBART_ITEMS = [
         iconColor: "#D500C3",
         href: "#",
         color: "#FFE8FD",
-        title: "Careers",
+        title: "Management Team",
         desc:
-          "Join our team and be part of a dynamic and innovative organization that is committed to making a difference.",
+          "Our management team is committed to leading by example, fostering a culture of innovation, and driving excellence in everything we do. ",
       },
 
       {
