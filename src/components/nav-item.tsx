@@ -7,6 +7,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { NAVBART_ITEMS } from "@/config";
 import AnimatedBackground from "./core/animated-background";
+import { FlipText } from "./flip-text";
 
 type NavItem = (typeof NAVBART_ITEMS)[number];
 
@@ -30,7 +31,8 @@ export const NavItem: FC<NavItemProps> = ({
       "
         onMouseEnter={onMouseEnter}
       >
-        <span>{navItem.label}</span>
+        {/* <span>{navItem.label}</span> */}
+        <FlipText>{navItem.label}</FlipText>
         <ChevronDown
           size={14}
           className={cn("transition-all", {
