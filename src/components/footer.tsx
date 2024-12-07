@@ -12,6 +12,7 @@ import FooterLogo from "@/public/svg/footer-logo.svg";
 import PartnerLogo from "@/public/svg/partner-logo.svg";
 import CbnLogo from "@/public/svg/cbn-logo.svg";
 import NdicLogo from "@/public/svg/ndic-logo.svg";
+import Placeholder from "@/public/svg/footer-placeholder.svg";
 
 export const Footer = () => {
   return (
@@ -57,7 +58,7 @@ export const Footer = () => {
         </MaxWidthWrapper>
       </div>
 
-      <footer className="bg-dark-primary text-white py-12">
+      <footer className="relative bg-dark-primary text-white py-12">
         <MaxWidthWrapper>
           {/* Footer - Top */}
 
@@ -174,7 +175,7 @@ export const Footer = () => {
 
           {/* Footer - Bottom */}
 
-          <div className="container mx-auto flex flex-col lg:flex-row  gap-x-20 justify-between ">
+          <div className="container mx-auto flex flex-col lg:flex-row  gap-x-20 justify-between z-20 ">
             <div className="flex-1">
               {/* Partner Information */}
               <div className="mb-20">
@@ -257,6 +258,14 @@ export const Footer = () => {
               </div>
             </div>
           </div>
+
+          <Image
+            src={Placeholder}
+            alt="Footer Logo"
+            width={1000}
+            height={1000}
+            className="absolute bottom-0 right-0 w-[600px] z-0"
+          />
         </MaxWidthWrapper>
       </footer>
     </>
