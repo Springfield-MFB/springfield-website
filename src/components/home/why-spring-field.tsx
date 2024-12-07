@@ -25,7 +25,10 @@ export const WhySpringfield = () => {
 
       <div className="flex flex-col gap-y-4 mt-12 lg:mt-0 h-full">
         {WHY_CHOOSE_SPRINGFIELD.map((item, index) => (
-          <div className="bg-dark-secondary w-full rounded-[12px] p-4 md:p-8 flex gap-x-4 items-center">
+          <div
+            key={index}
+            className="bg-dark-secondary w-full rounded-[12px] p-4 md:p-8 flex gap-x-4 items-center"
+          >
             <div className="size-[64px]">
               <Image
                 src={item.image}
