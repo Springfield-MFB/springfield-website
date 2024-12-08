@@ -15,6 +15,7 @@ interface NavItemProps {
   navItem: NavItem;
   isOpen: boolean;
   isAnyOpen: boolean;
+  close: () => void;
   onMouseEnter: () => void;
 }
 
@@ -23,6 +24,7 @@ export const NavItem: FC<NavItemProps> = ({
   isAnyOpen,
   navItem,
   onMouseEnter,
+  close,
 }) => {
   return (
     <div className="flex">
@@ -65,7 +67,12 @@ export const NavItem: FC<NavItemProps> = ({
                     enableHover
                   >
                     {navItem.content.map((item, i) => (
-                      <Link href={item.href} key={i} data-id={`card-${i}`}>
+                      <Link
+                        onClick={close}
+                        href={item.href}
+                        key={i}
+                        data-id={`card-${i}`}
+                      >
                         <div className="flex rounded-lg p-4">
                           <div className="flex gap-x-2 ">
                             <div
