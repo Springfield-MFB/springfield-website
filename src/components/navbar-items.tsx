@@ -18,6 +18,10 @@ export const NavbarItems = () => {
 
   const [ref, value] = useHover(navRef);
 
+  const handleItemClick = () => {
+    setHoveredIndex(null); // Close modal or reset hoveredIndex
+  };
+
   return (
     <div
       className="flex justify-between space-x-6 items-center h-full"
@@ -33,6 +37,7 @@ export const NavbarItems = () => {
             navItem={item}
             isOpen={isHovered}
             isAnyOpen={isAnyOpen}
+            close={handleItemClick}
           />
         );
       })}
