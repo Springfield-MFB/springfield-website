@@ -15,7 +15,7 @@ export const AboutHero = () => {
           <span className="text-brand-primary">financial</span> achievement
         </Heading>
 
-        <p className="text-center text-[#383838] text-[13px] lg:w-[70%] mx-auto mt-4 leading-6">
+        <p className="text-center text-[#383838] text-[13px] lg:w-[70%] mx-auto mt-4 mb-6 leading-6">
           Springfield Micro Finance Bank Limited (SMFB), situated in Igando,
           Lagos State, is a licensed Microfinance Bank (MFB) by the Central Bank
           of Nigeria (CBN) and (NDIC). SMFB is dedicated to providing
@@ -23,9 +23,7 @@ export const AboutHero = () => {
           communities and MSME through technological innovation.
         </p>
 
-        <CustomButton className="mt-6" type="ghost">
-          Learn More
-        </CustomButton>
+        <CustomButton type="ghost">Learn More</CustomButton>
 
         <div className="lg:w-[90%] mt-8">
           <Image
