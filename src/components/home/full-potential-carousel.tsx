@@ -42,9 +42,7 @@ export function PotentialCarousel() {
                       {service.title}
                     </h1>
                     <p className="text-[#54606E] text-xs font-light mt-2 leading-[20px]">
-                      Discover tailored corporate banking solutions to manage
-                      your business finances, including treasury management and
-                      foreign exchange services.
+                      {service.description}
                     </p>
                   </div>
                 </CardContent>
