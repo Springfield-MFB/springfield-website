@@ -2,7 +2,7 @@ import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { BenefitCarousel } from "./benefit-carousel";
 
-export const Benefit = () => {
+export const SavvingsBenefit = () => {
   return (
     <MaxWidthWrapper className="py-16">
       <Heading className="lg:w-[60%]">
