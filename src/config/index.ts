@@ -39,6 +39,12 @@ import Testimonial2Img from "@/public/images/avatar-2.png";
 import Testimonial3Img from "@/public/images/avatar-3.png";
 import Testimonial4Img from "@/public/images/avatar-4.png";
 
+// LOAN PROPERTIES
+import RateSvg from "@/public/svg/rate-svg.svg";
+import CalenderSvg from "@/public/svg/calender-svg.svg";
+import FastSvg from "@/public/svg/fast-svg.svg";
+import RepaymentSvg from "@/public/svg/payment-svg.svg";
+
 export const NAVBART_ITEMS = [
   // COMPANY
   {
@@ -124,7 +130,7 @@ export const NAVBART_ITEMS = [
       {
         icon: BsCloudSunFill,
         iconColor: "#B900AA",
-        href: "#",
+        href: "/saving-account",
         color: "#FFE8FD",
         title: "Springfield Daily Contribution (SDC)",
         desc:
@@ -162,7 +168,7 @@ export const NAVBART_ITEMS = [
       {
         icon: BiSolidCreditCardAlt,
         iconColor: "#0087A2",
-        href: "#",
+        href: "/micro-loan",
         color: "#E6FBFF",
         title: "Springfield Micro Loan",
         desc:
@@ -258,7 +264,7 @@ export const NAVBART_ITEMS = [
       {
         icon: TbCalculatorFilled,
         iconColor: "#DF18CE",
-        href: "#",
+        href: "/loan-calculator",
         color: "#FFE8FD",
         title: "Loan Calculator",
         desc:
@@ -462,5 +468,63 @@ export const BENEFITS = [
     description:
       "Savings accounts are typically low-risk, providing a safe place to store your money.",
     image: InsuranceImg,
+  },
+];
+
+export const LOAN_PROPERTIES = [
+  {
+    icon: RateSvg,
+    title: "Competitive Interest Rate",
+    desc:
+      "Apply for a loan today and take advantage of our competitive interest rate",
+  },
+  {
+    icon: CalenderSvg,
+    title: "3-6 Months Tenor",
+    desc: "Borrow for a short-term period and enjoy flexible repayment terms",
+  },
+  {
+    icon: FastSvg,
+    title: "Easy and fast processing",
+    desc:
+      "Get quick access to the funds you need with our streamlined loan application process",
+  },
+  {
+    icon: RepaymentSvg,
+    title: "Weekly Repayment",
+    desc: "Make manageable repayments that fit your schedule",
+  },
+];
+
+export const LOAN_BENEFITS = [
+  {
+    title: "Quick Access to Funds",
+    description:
+      "Experience the ease of quick access to funds, providing immediate financial solutions at your fingertips. Whether it's an unexpected expense or an exciting opportunity.",
+  },
+  {
+    title: "No Collateral Required",
+    description:
+      "Unlock financial opportunities hassle-free with our no-collateral-required solutions. Enjoy the freedom to secure funds without pledging assets.",
+  },
+  {
+    title: "Short-Term Solution",
+    description:
+      "Address immediate financial needs with our short-term solution, offering quick relief without long-term commitments.",
+  },
+  {
+    title: "Credit History Not Always a Decisive Factor",
+    description:
+      "Some lenders may consider the borrower’s income and employment status more heavily than their credit history when approving a salary loan. This can make salary loans accessible to individuals with a less-than-perfect credit history.",
+  },
+  {
+    title: "Predictable Repayments",
+    description:
+      "The fixed installment structure of salary loans makes it easier for borrowers to budget and plan for repayments since they know the exact amount that will be deducted from their salary each month.",
+  },
+  {
+    title: "Convenience",
+    description:
+      "The repayment of a salary loan is typically structured to be convenient for the borrower. The installments are deducted directly from the salary, reducing the hassle of manual payments.",
   },
 ];
