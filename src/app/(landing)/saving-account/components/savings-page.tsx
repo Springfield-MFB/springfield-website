@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SavingHero } from "./saving-hero";
 import { DocumentRequired } from "./document-required";
-import { Benefit } from "./benefit";
+import { SavvingsBenefit } from "./benefit";
 
 export const SavingPage = () => {
   return (
@@ -29,7 +29,7 @@ export const SavingPage = () => {
       </div>
 
       {/* Benefit of Savings */}
-      <Benefit />
+      <SavvingsBenefit />
     </>
   );
 };
