@@ -14,7 +14,7 @@ const Page = () => {
   return (
     <>
       {/* Hero section */}
-      <section className="mt-8 lg:mt-16 relative lg:pb-24 ">
+      <section className="mt-16 relative lg:pb-24 ">
         <MaxWidthWrapper>
           <Hero />
         </MaxWidthWrapper>
