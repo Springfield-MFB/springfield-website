@@ -20,12 +20,13 @@ export const FlipText = ({
           initial: { y: 0 },
           hovered: { y: "-100%" },
         }}
+        className={cn(className)}
       >
         {children}
       </motion.div>
 
       <motion.div
-        className="absolute inset-0"
+        className={cn("absolute inset-0", className)}
         variants={{
           initial: { y: "100%" },
           hovered: { y: "0" },
