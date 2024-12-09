@@ -425,3 +425,42 @@ export const TESTIMONIALS = [
     role: "Saving Account",
   },
 ];
+
+export const BENEFITS = [
+  {
+    title: "Earn Interest",
+    description:
+      "Savings accounts earn interest, allowing your money to grow over time.",
+    image: BankingImg, // Replace with actual image paths
+  },
+  {
+    title: "Liquidity",
+    description:
+      "Savings accounts provide easy access to your money when needed.",
+    image: LoansImg,
+  },
+  {
+    title: "Low Risk ",
+    description:
+      "Savings accounts are typically low-risk, providing a safe place to store your money.",
+    image: InsuranceImg,
+  },
+  {
+    title: "Earn Interest",
+    description:
+      "Savings accounts earn interest, allowing your money to grow over time.",
+    image: BankingImg, // Replace with actual image paths
+  },
+  {
+    title: "Liquidity",
+    description:
+      "Savings accounts provide easy access to your money when needed.",
+    image: LoansImg,
+  },
+  {
+    title: "Low Risk ",
+    description:
+      "Savings accounts are typically low-risk, providing a safe place to store your money.",
+    image: InsuranceImg,
+  },
+];
