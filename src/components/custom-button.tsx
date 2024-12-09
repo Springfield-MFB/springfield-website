@@ -28,10 +28,11 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
       onClick={onClick}
     >
       <FlipText
-        className={cn("text-center text-xs font-medium ", {
-          "text-white": type === "primary",
-          "text-dark-primary": type === "ghost",
-        })}
+        className={cn(
+          "text-center text-white text-xs font-medium ",
+          type === "ghost" && "text-dark-primary",
+          className
+        )}
       >
         {children}
       </FlipText>
