@@ -23,6 +23,7 @@ const config: Config = {
           200: "#373737",
         },
         dark: {
+          text: "#383838",
           primary: "#2B2B2B",
           secondary: "#4B4949",
         },
