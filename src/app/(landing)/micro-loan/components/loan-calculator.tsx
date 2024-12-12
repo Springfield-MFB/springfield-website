@@ -18,7 +18,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
   );
 
   return (
-    <MaxWidthWrapper className="px-6 lg:px-0">
+    <MaxWidthWrapper className="">
       <Heading className={cn(mode === "dark" ? "text-white" : "")}>
         Loan Calculator
       </Heading>
@@ -34,14 +34,13 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
 
       <div
         className={cn(
-          "flex flex-col lg:flex-row gap-x-20 items-center justify-center"
+          "flex flex-col lg:flex-row  items-center justify-between"
         )}
       >
         {/* Loan Calculator Section */}
-
         <div
           className={cn(
-            "w-full ",
+            "lg:w-[50%] w-full",
             mode === "dark" ? "text-white" : "text-black"
           )}
         >
@@ -58,7 +57,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
               max={3000000}
               value={loanAmount}
               onChange={(e) => setLoanAmount(Number(e.target.value))}
-              className=" custom-range  w-full accent-brand-primary mt-2"
+              className="custom-range  w-full accent-brand-primary mt-2"
               style={{
                 background:
                   mode === "dark"
@@ -153,7 +152,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
         </div>
 
         {/* Loan Application Process Section */}
-        <div className="relative overflow-hidden bg-[#5F5F5F] px-10 py-20 rounded-[10px] shadow-lg mt-8 max-w-lg w-full text-white">
+        <div className="relative lg:w-[50%] overflow-hidden bg-[#5F5F5F] px-10 py-20 rounded-[10px] shadow-lg mt-8 max-w-lg  text-white">
           <Image
             src="/svg/spring-svg.svg"
             alt="Loan Calculator Process"
