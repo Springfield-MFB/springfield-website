@@ -1,6 +1,5 @@
 "use client";
 
-import { Heading } from "@/components/heading";
 import Feat from "@/components/home/feat";
 import { FullPotential } from "@/components/home/full-potential";
 import { Hero } from "@/components/home/hero";

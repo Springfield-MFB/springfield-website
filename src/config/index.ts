@@ -63,10 +63,10 @@ export const NAVBART_ITEMS = [
 
       {
         icon: HiUsers,
-        iconColor: "#D40912",
-        href: "#",
-        color: "#FFE6E7",
-        title: "Management Team",
+        iconColor: "#00C860",
+        href: "/board-of-director",
+        color: "#E6FFF2",
+        title: "Board Of Directors",
         desc:
           "Our management team is committed to leading by example, fostering a culture of innovation, and driving excellence in everything we do. ",
       },
@@ -74,7 +74,7 @@ export const NAVBART_ITEMS = [
       {
         icon: FaUserLarge,
         iconColor: "#D500C3",
-        href: "#",
+        href: "/management-team",
         color: "#FFE8FD",
         title: "Management Team",
         desc:
@@ -84,7 +84,7 @@ export const NAVBART_ITEMS = [
       {
         icon: FaBriefcase,
         iconColor: "#EE5A02",
-        href: "#",
+        href: "/careers",
         color: "#FFE9DC",
         title: "Careers",
         desc:
@@ -292,7 +292,7 @@ export const NAVBART_ITEMS = [
       {
         icon: IoHelpCircleSharp,
         iconColor: "#00ADD0",
-        href: "#",
+        href: "/contact-us",
         color: "#E6FBFF",
         title: "Help Center",
         desc:
@@ -312,7 +312,7 @@ export const NAVBART_ITEMS = [
       {
         icon: BiSolidChat,
         iconColor: "#E00710",
-        href: "#",
+        href: "/faq",
         color: "#FFE6E7",
         title: "FAQ’s",
         desc:
@@ -322,7 +322,7 @@ export const NAVBART_ITEMS = [
       {
         icon: GiWhistle,
         iconColor: "#4E4EFE",
-        href: "#",
+        href: "/whistle-blowing",
         color: "#E8E8FF",
         title: "Whistle Blower",
         desc:

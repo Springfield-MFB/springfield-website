@@ -5,7 +5,7 @@ import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
 export const CoreValues = () => {
   return (
-    <div>
+    <div className="py-16">
       <MaxWidthWrapper>
         <Heading className="text-center lg:text-left">
           Our Core <span className="text-brand-primary">Values</span>
