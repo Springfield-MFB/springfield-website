@@ -7,8 +7,8 @@ import { Heading } from "@/components/heading";
 export const LoanBenefit = () => {
   return (
     <MaxWidthWrapper className="py-16">
-      <Heading className="text-center lg:text-left">Benefit of Loan</Heading>
-      <p className="text-dark-primary mt-6 mb-16 text-[13px] w-[80%] mx-auto lg:mx-0 lg:w-[50%] leading-[24px]">
+      <Heading className="text-left">Benefit of Loan</Heading>
+      <p className="text-dark-primary mt-6 mb-16 text-[13px] w-full  lg:w-[50%] leading-[24px]">
         Capacity to empower individuals and businesses to achieve their
         objectives by providing necessary financial support.
       </p>
