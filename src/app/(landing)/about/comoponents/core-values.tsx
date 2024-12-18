@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
+import CoreValueBg from "@/components/svgs/core-value-bg";
 
 export const CoreValues = () => {
   return (
@@ -22,7 +23,7 @@ export const CoreValues = () => {
             {/* 1 */}
             <div className={cn("rounded-lg flex-1 flex flex-col gap-y-4")}>
               {/* row -1 */}
-              <div className="flex-1 gap-2 pb-40 lg:pb-0 p-6 bg-[#DFE3FF] rounded-[10px] ">
+              <div className="relative flex-1 gap-2 pb-40 lg:pb-0 p-6 bg-[#DFE3FF] rounded-[10px] ">
                 <h3 className="text-xl font-bold mb-2">Integrity:</h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -38,10 +39,14 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#5D70F2" width={200} height={200} />
+                </div>
               </div>
 
               {/* row - 2 */}
-              <div className="flex-1 pb-40 lg:pb-0  p-6 bg-[#FFF5DB] rounded-[10px] ">
+              <div className="relative flex-1 pb-40 lg:pb-0  p-6 bg-[#FFF5DB] rounded-[10px] ">
                 <h3 className="text-xl font-bold mb-2">Leadership: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -57,6 +62,9 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#AC7C00" width={200} height={200} />
+                </div>
               </div>
             </div>
 
@@ -64,7 +72,7 @@ export const CoreValues = () => {
             <div className={cn("rounded-lg flex-1  flex flex-col gap-y-4")}>
               {/* row - 1 */}
 
-              <div className="lg:h-[60%] bg-[#DBF8FF] rounded-[10px] pb-40 lg:pb-0  p-6">
+              <div className="relative lg:h-[60%] bg-[#DBF8FF] rounded-[10px] pb-40 lg:pb-0  p-6">
                 <h3 className="text-xl font-bold mb-2">Customer Services: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -80,11 +88,14 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#00B8E4" width={200} height={200} />
+                </div>
               </div>
 
               {/* row - 2 */}
 
-              <div className="lg:h-[50%] bg-[#FFDBDB] rounded-[10px] pb-40 lg:pb-0  p-6">
+              <div className="relative lg:h-[50%] bg-[#FFDBDB] rounded-[10px] pb-40 lg:pb-0  p-6">
                 <h3 className="text-xl font-bold mb-2">Loyalty: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -100,6 +111,10 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#D30000" width={200} height={200} />
+                </div>
               </div>
             </div>
 
@@ -107,7 +122,7 @@ export const CoreValues = () => {
             <div className={cn("rounded-lg basis-1/3  flex flex-col gap-y-4")}>
               {/* row - 1 */}
 
-              <div className="flex-1 bg-[#DCFFEC] rounded-[10px] pb-40 lg:pb-0  p-6 ">
+              <div className="relative flex-1 bg-[#DCFFEC] rounded-[10px] pb-40 lg:pb-0  p-6 ">
                 <h3 className="text-xl font-bold mb-2">Accountability: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -123,11 +138,15 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#00AA4E" width={200} height={200} />
+                </div>
               </div>
 
               {/* row - 2 */}
 
-              <div className="flex-1 bg-[#FFF5DB] rounded-[10px] pb-40 lg:pb-0  p-6">
+              <div className="relative flex-1 bg-[#FFF5DB] rounded-[10px] pb-40 lg:pb-0  p-6">
                 <h3 className="text-xl font-bold mb-2">Team Work: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -143,6 +162,10 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#AC7C00" width={200} height={200} />
+                </div>
               </div>
             </div>
           </div>
