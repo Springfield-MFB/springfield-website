@@ -10,9 +10,8 @@ export const AboutHero = () => {
   return (
     <MaxWidthWrapper>
       <div className="flex flex-col px-4 items-center">
-        <Heading className="text-center w-[90%] lg:w-[70%] mx-auto">
-          Guiding you toward{" "}
-          <span className="text-brand-primary">financial</span> achievement
+        <Heading className="lg:w-[60%]  text-center">
+          Your Spring to <span className="text-brand-primary">Success</span>
         </Heading>
 
         <p className="text-center text-[#383838] text-[13px] lg:w-[70%] mx-auto mt-4 mb-6 leading-6">
