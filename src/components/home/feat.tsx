@@ -1,10 +1,11 @@
+import { SmallHeading } from "../heading";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 
 const Feat = () => {
   return (
     <div className="mt-20 z-20 lg:mt-0">
       <MaxWidthWrapper>
-        <div className="px-8 lg:px-24 py-12 bg-brand-primary rounded-[24px]">
+        <div className="px-8 lg:px-20 py-12 bg-brand-primary rounded-[24px]">
           <div className="grid lg:grid-cols-5 gap-x-8">
             {/* Our feat */}
             <div className="lg:col-span-2 text-center lg:text-left">
@@ -20,26 +21,9 @@ const Feat = () => {
 
             {/* Counts */}
             <div className="lg:col-span-3 flex flex-col lg:flex-row gap-8 lg:gap-0 mt-6 lg:mt-0  justify-between items-center">
-              <div className="text-center">
-                <h1 className="text-dark-primary text-3xl lg:text-2xl font-[900]">
-                  5 yrs
-                </h1>
-                <span className="text-[10px] lg:text-xs">Of Operating</span>
-              </div>
-
-              <div className="text-center">
-                <h1 className="text-dark-primary text-3xl lg:text-2xl font-[900]">
-                  7500+
-                </h1>
-                <span className="text-[10px] lg:text-xs">Happy Customer</span>
-              </div>
-
-              <div className="text-center">
-                <h1 className="text-dark-primary text-3xl lg:text-2xl font-[900]">
-                  9000+
-                </h1>
-                <span className="text-[10px] lg:text-xs">Active Account</span>
-              </div>
+              <p className="text-black text-2xl md:text-3xl text-center lg:text-left font-millik ">
+                Access up to N3m in less than 4hrs
+              </p>
             </div>
           </div>
         </div>
