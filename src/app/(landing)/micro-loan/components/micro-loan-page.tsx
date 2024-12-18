@@ -26,7 +26,7 @@ export const MicroLoanPage = () => {
       <LoanBenefit />
 
       {/* Loan Calculator */}
-      <div className="relative py-12 lg:py-24 mb-24">
+      <div className="relative py-12">
         <div className="absolute inset-x-0 inset-y-0  bg-dark-primary -z-10" />
         <LoanCalculator mode="dark" />
       </div>
