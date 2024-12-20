@@ -4,7 +4,7 @@ import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
-import LoanHeroImage from "@/public/images/loan-hero-image.png";
+import LoanHeroImage from "@/public/images/micro-loan-img.png";
 
 import RateSvg from "@/public/svg/rate-svg.svg";
 import { LOAN_PROPERTIES } from "@/config";
@@ -20,13 +20,14 @@ export const LoanHero = () => {
             <Heading className="w-[80%] lg:w-[80%]">
               Springfield Micro <span className="text-brand-primary">Loan</span>
             </Heading>
-
-            <p className="my-6 lg:w-[90%] text-dark-text lg:leading-7 text-sm">
-              This is normal savings account with attractive interest for
-              individuals, business owners, students and traders. Up to 3 times
-              withdrawals allowed with interest.
+            <p className="lg:w-[90%] text-dark-text lg:leading-7 text-sm">
+              This is a specialized loan product to financially empower small
+              and micro business owners.
             </p>
 
+            <p className="text-dark-text mb-6 text-sm">
+              Equity Contribution: 30%
+            </p>
             <CustomButton type="primary">Get Started</CustomButton>
           </div>
 
