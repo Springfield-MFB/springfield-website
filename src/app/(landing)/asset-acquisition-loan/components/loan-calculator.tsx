@@ -24,12 +24,12 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
       </Heading>
       <p
         className={cn(
-          "mt-6 mb-10  text-[13px]",
+          "mt-6 mb-10  text-[13px] md:w-[50%] leading-5",
           mode === "dark" ? "text-white" : "text-[#606060]"
         )}
       >
-        Lorem ipsum dolor sit amet consectetur. Et eleifend nibh felis feugiat
-        faucibus id.
+        Quickly estimate your monthly payments and total interest for any loan.
+        Make informed decisions and take control of your finances today!
       </p>
 
       <div

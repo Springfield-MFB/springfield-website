@@ -1,11 +1,11 @@
 "use client";
 
-import { LoanCalculator } from "./loan-calculator";
+import { DepositCalculator } from "./deposit-calculator";
 
 const Page = () => {
   return (
     <div className="pt-16 pb-40">
-      <LoanCalculator mode="light" />
+      <DepositCalculator mode="light" />
     </div>
   );
 };

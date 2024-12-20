@@ -4,10 +4,9 @@ import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
-import LoanHeroImage from "@/public/images/micro-loan-img.png";
+import LoanHeroImage from "@/public/images/assets-acquisition-img.png";
 
-import RateSvg from "@/public/svg/rate-svg.svg";
-import { LOAN_PROPERTIES } from "@/config";
+import { ASSETS_ACQUISITION_LOAN_PROPERTIES } from "@/config";
 
 export const LoanHero = () => {
   return (
@@ -18,11 +17,13 @@ export const LoanHero = () => {
 
           <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
             <Heading className="w-[80%] lg:w-[80%]">
-              Springfield Micro <span className="text-brand-primary">Loan</span>
+              Springfield Asset Aquisation{" "}
+              <span className="text-brand-primary">Loan (SAAL)</span>
             </Heading>
             <p className="lg:w-[90%] text-dark-text lg:leading-7 text-sm">
-              This is a specialized loan product to financially empower small
-              and micro business owners.
+              This is a product designed to give our customers access to funding
+              asset acquisition like Home appliances, electronics and phones
+              etc.
             </p>
 
             <p className="text-dark-text mb-6 text-sm">
@@ -44,7 +45,7 @@ export const LoanHero = () => {
         </div>
 
         <div className="w-full p-8 lg:p-14 grid lg:grid-cols-4 gap-8 bg-dark-primary rounded-[32px]">
-          {LOAN_PROPERTIES.map((item, i) => (
+          {ASSETS_ACQUISITION_LOAN_PROPERTIES.map((item, i) => (
             <div key={i} className="flex space-x-3">
               <Image
                 src={item.icon}

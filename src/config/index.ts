@@ -21,7 +21,7 @@ import {
   BiSolidMobileVibration,
 } from "react-icons/bi";
 import { TiLocation } from "react-icons/ti";
-import { GiWhistle } from "react-icons/gi";
+import { GiBassetHoundHead, GiWhistle } from "react-icons/gi";
 
 // SERVICES
 import BankingImg from "@/public/images/banking.png";
@@ -178,18 +178,28 @@ export const NAVBART_ITEMS = [
       {
         icon: IoSchool,
         iconColor: "#03C15E",
-        href: "#",
+        href: "/sme-loan",
         color: "#E6FFF2",
-        title: "School Support Product (3SP)",
+        title: "Springfield SME Loan",
         desc:
           "School owners, parents/guardian and tertiary students who seek financial empowerment to achieve their educational goals.",
       },
 
       {
+        icon: GiBassetHoundHead,
+        iconColor: "#D500C3",
+        href: "/asset-acquisition-loan",
+        color: "#FFE8FD",
+        title: "Springfield Asset Aquisation Loan (SAAL)",
+        desc:
+          "This is a product designed to give our customers access to funding asset acquisition like Home appliances, electronics and phones etc.",
+      },
+
+      {
         icon: FaPersonShelter,
         iconColor: "#D80A12",
-        href: "#",
-        color: "FaPersonShelter",
+        href: "/shelter-loan",
+        color: "#FFE6E7",
         title: "Springfield Shelter Loan",
         desc:
           "Loan designed to help you build, renovate, or own your dream home with flexible repayment options tailored to your needs.",
@@ -274,7 +284,7 @@ export const NAVBART_ITEMS = [
       {
         icon: PiHandDepositFill,
         iconColor: "#4E4EFE",
-        href: "#",
+        href: "/deposit-calculator",
         color: "#E8E8FF",
         title: "Fixed & Deposit Calculator",
         desc:
@@ -485,14 +495,86 @@ export const LOAN_PROPERTIES = [
   },
   {
     icon: FastSvg,
-    title: "Easy and fast processing",
-    desc:
-      "Get quick access to the funds you need with our streamlined loan application process",
+    title: "Loan Range",
+    desc: "Between N100 to N1,000,000",
   },
   {
     icon: RepaymentSvg,
     title: "Weekly Repayment",
-    desc: "Make manageable repayments that fit your schedule",
+    desc: "Make manageable repayments that fit your schedule:",
+  },
+];
+
+export const ASSETS_ACQUISITION_LOAN_PROPERTIES = [
+  {
+    icon: RateSvg,
+    title: "Competitive Interest Rate",
+    desc:
+      "Apply for a loan today and take advantage of our competitive interest rate",
+  },
+  {
+    icon: CalenderSvg,
+    title: "3-6 Months Tenor",
+    desc: "Borrow for a short-term period and enjoy flexible repayment terms",
+  },
+  {
+    icon: FastSvg,
+    title: "Loan Range",
+    desc: "Get up to 3,000,000.00",
+  },
+  {
+    icon: RepaymentSvg,
+    title: "Weekly Repayment",
+    desc: "Make manageable repayments that fit your schedule:",
+  },
+];
+
+export const SHELTER_LOAN_PROPERTIES = [
+  {
+    icon: RateSvg,
+    title: "Competitive Interest Rate",
+    desc:
+      "Apply for a loan today and take advantage of our competitive interest rate",
+  },
+  {
+    icon: CalenderSvg,
+    title: "3-6 Months Tenor",
+    desc: "Borrow for a short-term period and enjoy flexible repayment terms",
+  },
+  {
+    icon: FastSvg,
+    title: "Loan Range",
+    desc: "Get up to 3,000,000.00",
+  },
+  {
+    icon: RepaymentSvg,
+    title: "Weekly Repayment",
+    desc: "Make manageable repayments that fit your schedule:",
+  },
+];
+
+export const SME_LOAN_PROPERTIES = [
+  {
+    icon: RateSvg,
+    title: "Competitive Interest Rate",
+    desc:
+      "Apply for a loan today and take advantage of our competitive interest rate",
+  },
+  {
+    icon: CalenderSvg,
+    title: "3-6 Months Tenor",
+    desc: "Borrow for a short-term period and enjoy flexible repayment terms",
+  },
+  {
+    icon: FastSvg,
+    title: "Loan Range",
+    desc:
+      "Get quick access to the funds you need with our streamlined loan application process. ",
+  },
+  {
+    icon: RepaymentSvg,
+    title: "Weekly Repayment",
+    desc: "Make manageable repayments that fit your schedule:",
   },
 ];
 

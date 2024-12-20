@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { LoanHero } from "./loan-hero";
 import { LoanBenefit } from "./loan-benefit";
-import { LoanCalculator } from "../../loan-calculator/loan-calculator";
+import { LoanCalculator } from "./loan-calculator";
 
-export const MicroLoanPage = () => {
+export const AssetAcquisitionLoan = () => {
   return (
     <>
       <div className="relative ">

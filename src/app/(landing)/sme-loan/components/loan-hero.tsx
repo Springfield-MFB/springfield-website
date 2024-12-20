@@ -4,9 +4,8 @@ import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
-import LoanHeroImage from "@/public/images/micro-loan-img.png";
+import LoanHeroImage from "@/public/images/loan-hero-image.png";
 
-import RateSvg from "@/public/svg/rate-svg.svg";
 import { LOAN_PROPERTIES } from "@/config";
 
 export const LoanHero = () => {
@@ -18,15 +17,15 @@ export const LoanHero = () => {
 
           <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
             <Heading className="w-[80%] lg:w-[80%]">
-              Springfield Micro <span className="text-brand-primary">Loan</span>
+              Springfield SME <span className="text-brand-primary">Loan</span>
             </Heading>
             <p className="lg:w-[90%] text-dark-text lg:leading-7 text-sm">
-              This is a specialized loan product to financially empower small
-              and micro business owners.
+              This is a loan specially crafted for SME business owners whose
+              goals are business expansion and working capital enhancement.
             </p>
 
             <p className="text-dark-text mb-6 text-sm">
-              Equity Contribution: 30%
+              Interest Rate: Competitive interest rate
             </p>
             <CustomButton type="primary">Get Started</CustomButton>
           </div>
