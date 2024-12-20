@@ -31,7 +31,7 @@ export const Footer = () => {
         <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Content */}
-        <MaxWidthWrapper>
+        <MaxWidthWrapper className="md:px-0 max-w-screen-2xl">
           <div className="relative container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
             {/* Left Text Section */}
             <div className="text-center lg:text-left mb-6 lg:mb-0">
@@ -59,7 +59,7 @@ export const Footer = () => {
       </div>
 
       <footer className="relative bg-dark-primary text-white py-12">
-        <MaxWidthWrapper>
+        <MaxWidthWrapper className="md:px-0 max-w-screen-2xl">
           {/* Footer - Top */}
 
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 lg:gap-4">
