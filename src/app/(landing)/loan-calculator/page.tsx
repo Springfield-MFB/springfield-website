@@ -1,6 +1,6 @@
 "use client";
 
-import { LoanCalculator } from "../micro-loan/components/loan-calculator";
+import { LoanCalculator } from "./loan-calculator";
 
 const Page = () => {
   return (
