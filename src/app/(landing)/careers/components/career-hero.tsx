@@ -4,84 +4,46 @@ import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
-import CareerImage1 from "@/public/images/career-1.png";
-import CareerImage2 from "@/public/images/career-2.png";
-import CareerImage3 from "@/public/images/career-3.png";
-import CareerImage4 from "@/public/images/career-4.png";
-import CareerImage5 from "@/public/images/career-5.png";
+import CareerHeroImage from "@/public/images/career-hero-img.png";
 
 export const CareerHero = () => {
   return (
-    <div className="py-16 ">
-      <MaxWidthWrapper className="">
-        <div className="flex flex-col text-center items-center">
-          <Heading>
-            Work at <span className="text-brand-primary">Springfield</span>
-          </Heading>
+    <div>
+      <MaxWidthWrapper className="py-8 lg:py-16">
+        <div className=" flex pb-16 flex-col lg:flex-row px-2 space-y-10 md:space-y-0 md:space-x-6 items-center">
+          {/* LEFT CONTENT */}
 
-          <p className="text-[#1D1D1D] text-xs lg:text-sm leading-6 lg:w-[75%] mx-auto mt-4 mb-8">
-            Discover the power to unlock your full potential through our
-            automated and secure savings, strategic investment opportunities,
-            agency banking solutions, and a wide array of value-added services
-            tailored to meet your financial goals and beyond.
-          </p>
+          <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
+            <Heading className="w-[90%] lg:w-full text-white">
+              Be on the Frontier of Banking
+            </Heading>
+            <p className="lg:w-[90%] text-white lg:leading-7 text-sm">
+              Joining Springfield Microfinance means joining a family with
+              ambition. Ambition that pave the way for more than 170 years
+            </p>
 
-          <CustomButton>View all Job</CustomButton>
-
-          <div className="lg:w-[80%] border-[1.5px] border-[#F5B307] rounded-[24.55px] p-4  mt-6">
-            <div className="flex flex-col h-full gap-4">
-              <div className="grid lg:grid-cols-10 gap-4  flex-1">
-                <div className="lg:col-span-2 ">
-                  <Image
-                    src={CareerImage1}
-                    alt="1 - career"
-                    width={1000}
-                    height={1000}
-                    className=" lg:rounded-[24.55px] object-cover w-full h-full"
-                  />
-                </div>
-                <div className="lg:col-span-5">
-                  <Image
-                    src={CareerImage2}
-                    alt="2 - career"
-                    width={1000}
-                    height={1000}
-                    className=" h-full w-full"
-                  />
-                </div>
-                <div className="lg:col-span-3 ">
-                  <Image
-                    src={CareerImage3}
-                    alt="3 - career"
-                    width={1000}
-                    height={1000}
-                    className=" h-full w-full"
-                  />
-                </div>
-              </div>
-
-              <div className="grid lg:grid-cols-3 gap-4 flex-1">
-                <div className="lg:col-span-1 ">
-                  <Image
-                    src={CareerImage4}
-                    alt="4 - career"
-                    width={1000}
-                    height={1000}
-                    className=" h-full w-full"
-                  />
-                </div>
-
-                <div className="lg:col-span-2 ">
-                  <Image
-                    src={CareerImage5}
-                    alt="4 - career"
-                    width={1000}
-                    height={1000}
-                    className=" h-full w-full"
-                  />
-                </div>
-              </div>
+            <div className="flex space-y-4 lg:space-y-0 lg:space-x-4 mt-4 flex-col lg:flex-row ">
+              <CustomButton
+                type="ghost"
+                className="bg-[#373737] text-white w-full"
+              >
+                Search our jobs
+              </CustomButton>
+              <CustomButton type="primary" className="bg-[#191919] w-full">
+                Join our talent network
+              </CustomButton>
             </div>
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div className="lg:basis-[45%]">
+            <Image
+              src={CareerHeroImage}
+              alt="Saving Account"
+              width={1000}
+              height={1000}
+              className="object-cover  w-full h-full"
+            />
           </div>
         </div>
       </MaxWidthWrapper>
