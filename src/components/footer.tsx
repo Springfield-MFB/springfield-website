@@ -20,7 +20,7 @@ export const Footer = () => {
       {/* Footer Image */}
 
       <div
-        className="relative bg-black bg-cover text-white py-16"
+        className="relative bg-black bg-cover text-white h-[250px] lg:h-[200px] flex flex-col justify-center"
         style={{
           backgroundImage: `url('/images/foot-img.jpg')`, // Replace with the actual image path
           backgroundPosition: "top 40% center",
@@ -28,14 +28,14 @@ export const Footer = () => {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Content */}
         <MaxWidthWrapper className="md:px-0 max-w-screen-2xl">
           <div className="relative container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
             {/* Left Text Section */}
             <div className="text-center lg:text-left mb-6 lg:mb-0">
-              <h2 className="text-4xl font-millik leading-[60px]">
+              <h2 className="text-4xl font-millik lg:leading-[60px]">
                 Stay Close, We Are Always Here
               </h2>
               <p className="text-gray-300 text-sm">
@@ -99,28 +99,28 @@ export const Footer = () => {
                 <a
                   href="#"
                   aria-label="X"
-                  className="border-[1.5px] border-white rounded-full size-[40px]  flex justify-center items-center text-white hover:scale-[1.2]  transition-all duration-300 hover:text-white"
+                  className="border-[1.5px] border-white hover:border-brand-primary rounded-full size-[40px]  flex justify-center items-center text-white hover:scale-[1.2]  transition-all duration-300  hover:text-brand-primary"
                 >
                   <FaXTwitter />
                 </a>
                 <a
                   href="#"
                   aria-label="LinkedIn"
-                  className="border-[1.5px] border-white rounded-full size-[40px]  flex justify-center items-center text-white hover:scale-[1.2]  transition-all duration-300 hover:text-white"
+                  className="border-[1.5px] border-white hover:border-brand-primary rounded-full size-[40px]  flex justify-center items-center text-white hover:scale-[1.2]  transition-all duration-300  hover:text-brand-primary"
                 >
                   <FiLinkedin size={18} />
                 </a>
                 <a
                   href="#"
                   aria-label="Instagram"
-                  className="border-[1.5px] border-white rounded-full size-[40px]  flex justify-center items-center text-white hover:scale-[1.2]  transition-all duration-300 hover:text-white"
+                  className="border-[1.5px] border-white hover:border-brand-primary rounded-full size-[40px]  flex justify-center items-center text-white hover:scale-[1.2]  transition-all duration-300  hover:text-brand-primary"
                 >
                   <PiInstagramLogoFill size={18} />
                 </a>
                 <a
                   href="#"
                   aria-label="Phone"
-                  className="border-[1.5px] border-white rounded-full size-[40px]  flex justify-center items-center text-white hover:scale-[1.2]  transition-all duration-300 hover:text-white"
+                  className="border-[1.5px] border-white hover:border-brand-primary rounded-full size-[40px]  flex justify-center items-center text-white hover:scale-[1.2]  transition-all duration-300  hover:text-brand-primary"
                 >
                   <IoCall size={18} />
                 </a>
