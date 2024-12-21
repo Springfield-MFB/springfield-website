@@ -7,8 +7,11 @@ import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import LoanHeroImage from "@/public/images/loan-hero-image.png";
 
 import { LOAN_PROPERTIES } from "@/config";
+import { useRouter } from "next/navigation";
 
 export const LoanHero = () => {
+  const router = useRouter();
+
   return (
     <div>
       <MaxWidthWrapper className="py-16">
@@ -27,7 +30,12 @@ export const LoanHero = () => {
             <p className="text-dark-text mb-6 text-sm">
               Interest Rate: Competitive interest rate
             </p>
-            <CustomButton type="primary">Get Started</CustomButton>
+            <CustomButton
+              onClick={() => router.push("/sme-loan/business-loan")}
+              type="primary"
+            >
+              Get Started
+            </CustomButton>
           </div>
 
           {/* RIGHT CONTENT */}
