@@ -14,7 +14,7 @@ export const PageBoard: React.FC<PageBoardProps> = ({
 }) => {
   return (
     <div
-      className="relative flex justify-center items-center h-[450px] bg-black bg-cover text-white py-16 mb-16"
+      className="relative flex justify-center items-center lg:h-[450px] bg-black bg-cover text-white py-16"
       style={{
         backgroundImage: `${backgroundImage}`, // Replace with the actual image path
         backgroundPosition: "top 40% center",
@@ -22,7 +22,7 @@ export const PageBoard: React.FC<PageBoardProps> = ({
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/80"></div>
+      <div className="absolute inset-0 bg-black/80" />
 
       <MaxWidthWrapper className="relative text-center lg:w-[80%] mx-auto">
         <Heading className="text-white">{heading}</Heading>

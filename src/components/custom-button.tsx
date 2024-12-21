@@ -4,10 +4,11 @@ import { cn } from "@/lib/utils";
 import { FlipText } from "./flip-text";
 
 interface CustomButtonProps {
-  type?: "primary" | "ghost";
+  type?: "primary" | "ghost" | any;
   children: string;
   className?: string;
   onClick?: () => void;
+  arrowClassName?: string;
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({
@@ -15,6 +16,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
   children,
   onClick,
   className,
+  arrowClassName = "text-white",
 }) => {
   return (
     <motion.button
@@ -43,7 +45,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
               initial: { opacity: 1, x: 0 },
               hovered: { opacity: 1, x: 10 },
             }}
-            className="text-white "
+            className={cn("text-black", arrowClassName)}
           >
             →
           </motion.span>

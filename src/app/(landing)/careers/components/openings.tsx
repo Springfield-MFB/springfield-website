@@ -5,9 +5,13 @@ import Image from "next/image";
 export const Openings = () => {
   return (
     <MaxWidthWrapper>
-      <div className="flex flex-col  py-16">
-        <Heading>All Job Opening at Springfield</Heading>
-        <p className="mt-4 text-sm">Here are some of our available openings</p>
+      <div className="flex flex-col py-16">
+        <Heading className="text-center">
+          Current Job Opening at Springfield Microfinance Bank
+        </Heading>
+        <p className="mt-4 text-sm text-center">
+          Here are some of our available openings
+        </p>
 
         <div className="flex flex-col space-y-4 lg:w-[75%] lg:mx-auto mt-16">
           {["Manager", "Accountant", "Human Resource", "Security"].map(

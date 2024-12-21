@@ -45,6 +45,14 @@ import CalenderSvg from "@/public/svg/calender-svg.svg";
 import FastSvg from "@/public/svg/fast-svg.svg";
 import RepaymentSvg from "@/public/svg/payment-svg.svg";
 
+// TEAM MEMBERS
+import FakoyeImg from "@/public/images/mr-taiwo Fakayode (COO).jpg";
+import FrankImg from "@/public/images/mr-frank Odion. (Head Recovery).jpg";
+import PreciousImg from "@/public/images/mrs-precious (Internal Control).jpeg";
+import ShonayaImg from "@/public/images/mr-tosin (Company Sec and Legal).jpeg";
+import RasaqImg from "@/public/images/mr-rasaq (MD).jpg";
+import IsrealImg from "@/public/images/mr-ogundeyi Israel.jpg";
+
 export const NAVBART_ITEMS = [
   // COMPANY
   {
@@ -608,5 +616,78 @@ export const LOAN_BENEFITS = [
     title: "Convenience",
     description:
       "The repayment of a salary loan is typically structured to be convenient for the borrower. The installments are deducted directly from the salary, reducing the hassle of manual payments.",
+  },
+];
+
+export const TEAM_MEMEBERS = [
+  {
+    name: "Mr Fakayode Taiwo Olusola",
+    role: "Chief Operating Officer",
+    image: FakoyeImg,
+    summary:
+      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+  },
+  {
+    name: "Mr. Frank Odion",
+    role: "(Head Recovery)",
+    image: FrankImg,
+    summary:
+      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+  },
+  {
+    name: "PRECIOUS NKEMJIKA R.",
+    role: " HEAD, INTERNAL CONTROL/AUDIT",
+    image: PreciousImg,
+    summary:
+      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+  },
+  {
+    name: "A. T. Shonaya Esq.",
+    role: "Company Secretary / Head Legal",
+    image: ShonayaImg,
+    summary:
+      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+  },
+  {
+    name: "ADETUNJI RASAQ ADESHINA",
+    role: "MD/CEO",
+    image: RasaqImg,
+    summary:
+      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+  },
+  {
+    name: "ISRAEL ADEOYE OGUNDEYI",
+    role: "HEAD, CREDICT & RISK",
+    image: IsrealImg,
+    summary:
+      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+  },
+];
+
+export const FAQ_DATA = [
+  {
+    question: "How do I open an account?",
+    answer:
+      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+  },
+  {
+    question: "Can I open an account on my phone?",
+    answer:
+      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+  },
+  {
+    question: "What is the criteria for obtaining a loan?",
+    answer:
+      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+  },
+  {
+    question: "Is ATM card free?",
+    answer:
+      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+  },
+  {
+    question: "Can I make international payment with my card?",
+    answer:
+      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
   },
 ];
