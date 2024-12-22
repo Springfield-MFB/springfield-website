@@ -5,6 +5,7 @@ import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import BoxReveal from "@/components/ui/box-reveal";
 import DynamicSVG from "@/components/svg/bg-svg";
 
+
 export const CoreValues = () => {
   return (
     <div className="py-16">
@@ -33,6 +34,7 @@ export const CoreValues = () => {
                   <DynamicSVG color="#5D70F2" />
                 </div>
 
+
                 <h3 className="text-xl font-bold mb-2">Integrity:</h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -48,6 +50,10 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#5D70F2" width={200} height={200} />
+                </div>
               </div>
 
               {/* row - 2 */}
@@ -55,6 +61,7 @@ export const CoreValues = () => {
                 <div className="absolute bottom-0 right-0 ">
                   <DynamicSVG color="#AC7C00" />
                 </div>
+
                 <h3 className="text-xl font-bold mb-2">Leadership: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -70,6 +77,9 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#AC7C00" width={200} height={200} />
+                </div>
               </div>
             </div>
 
@@ -81,6 +91,7 @@ export const CoreValues = () => {
                 <div className="absolute bottom-0 right-0 ">
                   <DynamicSVG color="#00B8E4" />
                 </div>
+
                 <h3 className="text-xl font-bold mb-2">Customer Services: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -96,6 +107,9 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#00B8E4" width={200} height={200} />
+                </div>
               </div>
 
               {/* row - 2 */}
@@ -104,6 +118,7 @@ export const CoreValues = () => {
                 <div className="absolute bottom-0 right-0 ">
                   <DynamicSVG color="#D30000" />
                 </div>
+
                 <h3 className="text-xl font-bold mb-2">Loyalty: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -119,6 +134,10 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#D30000" width={200} height={200} />
+                </div>
               </div>
             </div>
 
@@ -130,6 +149,7 @@ export const CoreValues = () => {
                 <div className="absolute bottom-0 right-0 ">
                   <DynamicSVG color="#00AA4E" />
                 </div>
+
                 <h3 className="text-xl font-bold mb-2">Accountability: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -145,6 +165,10 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#00AA4E" width={200} height={200} />
+                </div>
               </div>
 
               {/* row - 2 */}
@@ -153,6 +177,7 @@ export const CoreValues = () => {
                 <div className="absolute bottom-0 right-0 ">
                   <DynamicSVG color="#AC7C00" />
                 </div>
+
                 <h3 className="text-xl font-bold mb-2">Team Work: </h3>
                 <ul className="space-y-2 list-disc pl-5">
                   {[
@@ -168,6 +193,10 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="absolute right-0 bottom-0">
+                  <CoreValueBg fill="#AC7C00" width={200} height={200} />
+                </div>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 
+
 import { MaxWidthWrapper } from "../max-width-wrapper";
 
 const Feat = () => {
@@ -32,6 +33,7 @@ const Feat = () => {
                   Access up to N3m in less than 4hrs
                 </p>
               </div>
+
             </div>
           </div>
         </motion.div>
