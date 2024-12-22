@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 
 interface FormInputProps {
-  label: string;
+  label?: string;
   id: string;
   type: string;
   placeholder?: string;
