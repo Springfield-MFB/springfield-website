@@ -7,8 +7,11 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
 import { LoanProcessCard } from "./loan-process-card";
+import { useRouter } from "next/navigation";
 
 export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
+  const router = useRouter();
+
   const [loanAmount, setLoanAmount] = useState<number>(2341980);
   const [loanDuration, setLoanDuration] = useState<number>(213);
 
@@ -147,7 +150,11 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
             </div>
           </div>
 
-          <CustomButton type="ghost" className="bg-[#585858] text-white">
+          <CustomButton
+            type="ghost"
+            onClick={() => router.push("/micro-loan/apply")}
+            className="bg-[#585858] text-white"
+          >
             Apply Now
           </CustomButton>
         </div>
