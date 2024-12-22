@@ -1,25 +1,37 @@
 import Image from "next/image";
-import { Heading } from "../heading";
+
+import { motion } from "framer-motion";
+
 import Why from "@/public/images/why.png";
 import { WHY_CHOOSE_SPRINGFIELD } from "@/config";
-import { it } from "node:test";
+import { Heading } from "../heading";
+import BoxReveal from "../ui/box-reveal";
 
 export const WhySpringfield = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-x-20 items-stretch">
       <div className="col-span-1 h-full">
-        <Heading className="text-white lg:leading-[90px]">
-          Why Choose <span className="text-brand-primary">Springfield?</span>
-        </Heading>
+        <BoxReveal boxColor={"#F0B929"} duration={1}>
+          <Heading className="text-white lg:leading-[90px]">
+            Why Choose <span className="text-brand-primary">Springfield?</span>
+          </Heading>
+        </BoxReveal>
 
         <div className="w-full mt-10">
-          <Image
-            src={Why}
-            alt="Why Springfield"
-            width={1000}
-            height={1000}
-            className="object-cover w-full h-full"
-          />
+          <motion.div
+            initial={{ scale: 0.2, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: false, amount: 0.2 }} // Animates both on scroll up and down
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            <Image
+              src={Why}
+              alt="Why Springfield"
+              width={1000}
+              height={1000}
+              className="object-cover w-full h-full"
+            />
+          </motion.div>
         </div>
       </div>
 

@@ -12,7 +12,7 @@ interface CustomButtonProps {
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({
-  type = "primary",
+  type = "primary | sumbit",
   children,
   onClick,
   className,

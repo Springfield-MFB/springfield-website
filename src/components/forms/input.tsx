@@ -5,7 +5,7 @@ interface FormInputProps {
   label: string;
   id: string;
   type: string;
-  placeholder: string;
+  placeholder?: string;
   register: UseFormRegisterReturn;
   error?: FieldError;
 }

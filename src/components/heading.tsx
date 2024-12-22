@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { HTMLAttributes } from "react";
+import BoxReveal from "./ui/box-reveal";
 
 interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   children: React.ReactNode;
@@ -26,14 +27,16 @@ export const SmallHeading = ({
   ...props
 }: HeadingProps) => {
   return (
-    <h1
-      className={cn(
-        "text-2xl md:text-4xl text-center lg:text-left font-millik text-dark-primary",
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </h1>
+    <BoxReveal boxColor={"#F0B929"} duration={0.8}>
+      <h1
+        className={cn(
+          "text-2xl md:text-4xl text-center lg:text-left font-millik text-dark-primary",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </h1>
+    </BoxReveal>
   );
 };

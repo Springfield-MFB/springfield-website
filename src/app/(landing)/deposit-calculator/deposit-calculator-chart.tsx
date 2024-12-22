@@ -16,7 +16,7 @@ const chartData = [{ browser: "safari", visitors: 200, fill: "#F0B929" }];
 
 export const CalculatorChart = () => {
   return (
-    <div className="relative lg:w-[40%] overflow-hidden px-10 py-20 rounded-[10px] shadow-sm mt-8 max-w-lg bg-[#5F5F5F] text-white">
+    <div className="relative w-full lg:w-[40%] overflow-hidden px-10 py-20 rounded-[10px] shadow-sm mt-8 max-w-lg bg-[#5F5F5F] text-white">
       <Image
         src="/svg/spring-svg.svg"
         alt="Loan Calculator Process"
@@ -39,7 +39,7 @@ export const CalculatorChart = () => {
         </div>
 
         <div className="flex items-center text-sm space-x-2">
-          <div className="size-6 bg-[#8F8F8F] rounded-full" />
+          <div className="size-6 border border-gray-400 bg-[#5F5F5F] rounded-full" />
           <span>Total Return</span>
         </div>
       </div>

@@ -7,10 +7,10 @@ type Member = (typeof TEAM_MEMEBERS)[number];
 
 function Content({ member }: { member: Member }) {
   return (
-    <div className="px-8 pb-8">
-      <div className="overflow-hidden flex flex-col md:flex-row">
+    <div className="lg:px-8 pb-8">
+      <div className="overflow-auto lg:overflow-hidden h-[65vh] lg:h-auto flex flex-col md:flex-row">
         {/* Left Section: Image */}
-        <div className="md:w-1/3 p-4 flex flex-col items-center">
+        <div className="md:w-1/3 px-4 flex flex-col items-center">
           <Image
             src={member.image} // Replace with your image path
             alt="Mr Fakayode Taiwo Olusola"
@@ -36,7 +36,9 @@ function Content({ member }: { member: Member }) {
 const ProfileModal = ({ member }: { member: Member }) => {
   function Title() {
     return (
-      <div className="px-8 py-4 border-b text-2xl font-bold">{member.name}</div>
+      <div className=" lg:px-8 py-4 border-b text-sm lg:text-2xl font-bold">
+        {member.name}
+      </div>
     );
   }
 
@@ -45,7 +47,7 @@ const ProfileModal = ({ member }: { member: Member }) => {
   if (!isOpen) return null;
   return (
     <Modal
-      className="p-0 max-w-6xl"
+      className="p-0 w-[95%] lg:max-w-6xl"
       isOpen={isOpen}
       closeModal={closeModal}
       title={Title()}

@@ -25,17 +25,17 @@ export const AnimatedHamburgerButton: FC<AnimatedHamburgerButtonProps> = ({
       >
         <motion.span
           variants={VARIANTS.top}
-          className="absolute h-1 w-9 bg-gray-400"
+          className="absolute h-[2px] w-9 bg-gray-400"
           style={{ y: "-50%", left: "70%", x: "-50%", top: "35%" }}
         />
         <motion.span
           variants={VARIANTS.middle}
-          className="absolute h-1 w-9 bg-gray-400"
+          className="absolute h-[2px] w-9 bg-gray-400"
           style={{ left: "70%", x: "-50%", top: "50%", y: "-50%" }}
         />
         <motion.span
           variants={VARIANTS.bottom}
-          className="absolute h-1 w-4 bg-gray-400"
+          className="absolute h-[2px] w-4 bg-gray-400"
           style={{
             x: "30%",
             y: "50%",
