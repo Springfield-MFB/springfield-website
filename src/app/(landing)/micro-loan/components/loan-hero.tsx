@@ -8,8 +8,10 @@ import LoanHeroImage from "@/public/images/micro-loan-img.png";
 
 import RateSvg from "@/public/svg/rate-svg.svg";
 import { LOAN_PROPERTIES } from "@/config";
+import { useRouter } from "next/navigation";
 
 export const LoanHero = () => {
+  const router = useRouter();
   return (
     <div>
       <MaxWidthWrapper className="py-16">
@@ -28,7 +30,12 @@ export const LoanHero = () => {
             <p className="text-dark-text mb-6 text-sm">
               Equity Contribution: 30%
             </p>
-            <CustomButton type="primary">Get Started</CustomButton>
+            <CustomButton
+              onClick={() => router.push("/micro-loan/apply")}
+              type="primary"
+            >
+              Get Started
+            </CustomButton>
           </div>
 
           {/* RIGHT CONTENT */}
