@@ -110,7 +110,7 @@ export const Hero = () => {
               exit={{ scale: 0.5, opacity: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              <div className="col-span-3 w-[95%] row-span-3">
+              <div className="col-span-3 w-[95%] mx-auto row-span-3">
                 <Image
                   src={item.image} // Replace with actual path
                   alt="Building"

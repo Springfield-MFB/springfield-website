@@ -5,7 +5,7 @@ import { MaxWidthWrapper } from "../max-width-wrapper";
 
 const Feat = () => {
   return (
-    <div className="mt-20 z-20 lg:mt-0">
+    <div className="mt-36 z-20 lg:mt-12">
       <MaxWidthWrapper>
         <motion.div
           initial={{ scale: 0.4, opacity: 0 }}

@@ -24,7 +24,7 @@ export const ManagementTeamPage = () => {
     <div>
       <PageBoard
         backgroundImage="url('/images/director-bg.png')"
-        heading="Managements"
+        heading="Managements Team"
         desc="Our Management Team comprises skilled professionals dedicated to executing our vision and 
         driving operational excellence. Their expertise and leadership ensure the seamless 
         delivery of our goals and commitment to innovation."

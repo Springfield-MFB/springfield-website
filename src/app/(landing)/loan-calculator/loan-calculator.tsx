@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { LoanProcessCard } from "./loan-process-card";
 import { useRouter } from "next/navigation";
+import BoxReveal from "@/components/ui/box-reveal";
 
 export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
   const router = useRouter();
@@ -23,18 +24,22 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
 
   return (
     <MaxWidthWrapper className="">
-      <Heading className={cn(mode === "dark" ? "text-white" : "")}>
-        Loan Calculator
-      </Heading>
-      <p
-        className={cn(
-          "mt-6 mb-10  text-[13px] md:w-[50%] leading-5",
-          mode === "dark" ? "text-white" : "text-[#606060]"
-        )}
-      >
-        Quickly estimate your monthly payments and total interest for any loan.
-        Make informed decisions and take control of your finances today!
-      </p>
+      <BoxReveal boxColor={"#F0B929"} duration={1}>
+        <Heading className={cn(mode === "dark" ? "text-white" : "")}>
+          Loan Calculator
+        </Heading>
+      </BoxReveal>
+      <BoxReveal boxColor={"#F0B929"} duration={1.2}>
+        <p
+          className={cn(
+            "mt-6 mb-10  text-[13px] md:w-[50%] leading-5",
+            mode === "dark" ? "text-white" : "text-[#606060]"
+          )}
+        >
+          Quickly estimate your monthly payments and total interest for any
+          loan. Make informed decisions and take control of your finances today!
+        </p>
+      </BoxReveal>
 
       <div
         className={cn(

@@ -3,15 +3,21 @@ import { LOAN_BENEFITS } from "@/config";
 
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { Heading } from "@/components/heading";
+import BoxReveal from "@/components/ui/box-reveal";
 
 export const LoanBenefit = () => {
   return (
     <MaxWidthWrapper className="py-16">
-      <Heading className="text-left">Benefit of Loan</Heading>
-      <p className="text-dark-primary mt-6 mb-16 text-[13px] w-full  lg:w-[50%] leading-[24px]">
-        Capacity to empower individuals and businesses to achieve their
-        objectives by providing necessary financial support.
-      </p>
+      <BoxReveal boxColor={"#F0B929"} duration={1}>
+        <Heading className="text-left">Benefit of Loan</Heading>
+      </BoxReveal>
+
+      <BoxReveal boxColor={"#F0B929"} duration={1.2}>
+        <p className="text-dark-primary mt-6 mb-16 text-[13px] w-full  lg:w-[50%] leading-[24px]">
+          Capacity to empower individuals and businesses to achieve their
+          objectives by providing necessary financial support.
+        </p>
+      </BoxReveal>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-satoshi">
         {LOAN_BENEFITS.map((benefit, index) => (

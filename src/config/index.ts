@@ -668,26 +668,14 @@ export const FAQ_DATA = [
   {
     question: "How do I open an account?",
     answer:
-      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+      "Click on open account on our website, talk to our account officers or visit our office at Igando.",
   },
   {
     question: "Can I open an account on my phone?",
-    answer:
-      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
-  },
-  {
-    question: "What is the criteria for obtaining a loan?",
-    answer:
-      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+    answer: "Yes you can open an account on your phone.",
   },
   {
     question: "Is ATM card free?",
-    answer:
-      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
-  },
-  {
-    question: "Can I make international payment with my card?",
-    answer:
-      "Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,aute irure dolor in reprehenderit in voluptate aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+    answer: "No, this is coming soon",
   },
 ];
