@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { LoanHero } from "./loan-hero";
 import { LoanBenefit } from "./loan-benefit";
