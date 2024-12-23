@@ -19,7 +19,7 @@ export const useHover = <T extends HTMLElement = HTMLElement>(
         node.addEventListener("mouseout", handleMouseOut);
       };
     }
-  }, [ref.current]);
+  }, [ref]);
 
   return [ref, value];
 };
