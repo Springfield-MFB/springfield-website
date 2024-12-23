@@ -154,7 +154,7 @@ export const Footer = () => {
             <div className="flex flex-col space-y-4">
               <h3 className="font-bold text-white text-sm">SERVICES</h3>
               <ul className="space-y-3 lg:space-y-6 text-white text-xs font-light">
-                <li>Micro-Insurance</li>
+                <li>fixed deposit</li>
                 <li>Financial Advisory</li>
                 <li>Bill Payments</li>
                 <li>Funds Transfer</li>

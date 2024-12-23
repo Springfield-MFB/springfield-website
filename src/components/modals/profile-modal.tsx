@@ -1,9 +1,9 @@
 import { useStore } from "@/store";
 import Modal from ".";
 import Image from "next/image";
-import { TEAM_MEMEBERS } from "@/config";
+import { DIRECTORS, TEAM_MEMEBERS } from "@/config";
 
-type Member = (typeof TEAM_MEMEBERS)[number];
+type Member = (typeof DIRECTORS)[number];
 
 function Content({ member }: { member: Member }) {
   return (
@@ -20,7 +20,6 @@ function Content({ member }: { member: Member }) {
           />
           <div className="text-center mt-4">
             <h2 className="text-base font-bold text-gray-800">{member.name}</h2>
-            <p className="text-gray-600 text-xs">{member.role}</p>
           </div>
         </div>
 

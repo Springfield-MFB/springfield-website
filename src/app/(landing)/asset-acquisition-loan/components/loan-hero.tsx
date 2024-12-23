@@ -35,11 +35,9 @@ export const LoanHero = () => {
             </BoxReveal>
 
             <BoxReveal boxColor={"#F0B929"} duration={1}>
-              <p className="text-dark-text mb-6 text-sm">
-                Equity Contribution: 30%
-              </p>
+              <p className="text-dark-text mb-6 text-sm">Negotiable: 30%</p>
             </BoxReveal>
-            <CustomButton type="primary">Get Started</CustomButton>
+            <CustomButton type="primary">Apply Now</CustomButton>
           </div>
 
           {/* RIGHT CONTENT */}

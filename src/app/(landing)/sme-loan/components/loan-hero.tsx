@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import { motion } from "framer-motion";
@@ -43,7 +45,7 @@ export const LoanHero = () => {
               onClick={() => router.push("/sme-loan/business-loan")}
               type="primary"
             >
-              Get Started
+              Apply Now
             </CustomButton>
           </div>
 

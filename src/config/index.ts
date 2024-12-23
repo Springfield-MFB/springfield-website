@@ -9,6 +9,7 @@ import {
 import { RiFolderVideoFill, RiUserStarFill } from "react-icons/ri";
 import { PiBankFill, PiHandDepositFill, PiHashFill } from "react-icons/pi";
 import { BsCloudSunFill } from "react-icons/bs";
+
 import {
   TbCalculatorFilled,
   TbPasswordMobilePhone,
@@ -47,11 +48,13 @@ import RepaymentSvg from "@/public/svg/payment-svg.svg";
 
 // TEAM MEMBERS
 import FakoyeImg from "@/public/images/mr-taiwo Fakayode (COO).jpg";
-import FrankImg from "@/public/images/mr-frank Odion. (Head Recovery).jpg";
+import FrankImg from "@/public/images/frank.jpeg";
 import PreciousImg from "@/public/images/mrs-precious (Internal Control).jpeg";
-import ShonayaImg from "@/public/images/mr-tosin (Company Sec and Legal).jpeg";
+import ShonayaImg from "@/public/images/tosin.jpeg";
 import RasaqImg from "@/public/images/mr-rasaq (MD).jpg";
 import IsrealImg from "@/public/images/mr-ogundeyi Israel.jpg";
+import AyodejiImg from "@/public/images/ayodeji.jpeg";
+import NoImg from "@/public/images/no-image.png";
 
 export const NAVBART_ITEMS = [
   // COMPANY
@@ -364,21 +367,21 @@ export const SERVICES = [
     image: LoansImg,
   },
   {
-    title: "Micro-Insurance",
+    title: "fixed deposit",
     description:
       "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
     image: InsuranceImg,
   },
 
   {
-    title: "Micro-Insurance",
+    title: "fixed deposit",
     description:
       "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
     image: BankingImg,
   },
 
   {
-    title: "Micro-Insurance",
+    title: "fixed deposit",
     description:
       "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
     image: LoansImg,
@@ -390,7 +393,7 @@ export const WHY_CHOOSE_SPRINGFIELD = [
     image: Money,
     name: "Convenience:",
     description:
-      "Future Banking lets you manage finances anytime, anywhere—no queues, no paperwork.",
+      "- The loan repayment is typically structured to be convenient for the borrower. The Instalment are deducted directly from accounts, reducing the hassle of manual payments. ",
   },
 
   {
@@ -504,12 +507,12 @@ export const LOAN_PROPERTIES = [
   {
     icon: FastSvg,
     title: "Loan Range",
-    desc: "Between N100 to N1,000,000",
+    desc: "Between N100,000  to N1,000,000",
   },
   {
     icon: RepaymentSvg,
-    title: "Weekly Repayment",
-    desc: "Make manageable repayments that fit your schedule:",
+    title: "Termed Repayment",
+    desc: "Make Daily, Weekly, Monthly:",
   },
 ];
 
@@ -532,8 +535,8 @@ export const ASSETS_ACQUISITION_LOAN_PROPERTIES = [
   },
   {
     icon: RepaymentSvg,
-    title: "Weekly Repayment",
-    desc: "Make manageable repayments that fit your schedule:",
+    title: "Termed Repayment",
+    desc: "Make Daily, Weekly, Monthly:",
   },
 ];
 
@@ -556,8 +559,8 @@ export const SHELTER_LOAN_PROPERTIES = [
   },
   {
     icon: RepaymentSvg,
-    title: "Weekly Repayment",
-    desc: "Make manageable repayments that fit your schedule:",
+    title: "Termed Repayment",
+    desc: "Make Daily, Weekly, Monthly:",
   },
 ];
 
@@ -581,8 +584,8 @@ export const SME_LOAN_PROPERTIES = [
   },
   {
     icon: RepaymentSvg,
-    title: "Weekly Repayment",
-    desc: "Make manageable repayments that fit your schedule:",
+    title: "Termed Repayment",
+    desc: "Make Daily, Weekly, Monthly:",
   },
 ];
 
@@ -593,7 +596,7 @@ export const LOAN_BENEFITS = [
       "Experience the ease of quick access to funds, providing immediate financial solutions at your fingertips. Whether it's an unexpected expense or an exciting opportunity.",
   },
   {
-    title: "No Collateral Required",
+    title: "For loans upto N500,000",
     description:
       "Unlock financial opportunities hassle-free with our no-collateral-required solutions. Enjoy the freedom to secure funds without pledging assets.",
   },
@@ -605,12 +608,12 @@ export const LOAN_BENEFITS = [
   {
     title: "Credit History Not Always a Decisive Factor",
     description:
-      "Some lenders may consider the borrower’s income and employment status more heavily than their credit history when approving a salary loan. This can make salary loans accessible to individuals with a less-than-perfect credit history.",
+      "Some lenders may consider the borrower's income and employment status more heavily than their credit history when approving a salary loan. This can make salary loans accessible to individuals with a less-than-perfect credit history.",
   },
   {
     title: "Predictable Repayments",
     description:
-      "The fixed installment structure of salary loans makes it easier for borrowers to budget and plan for repayments since they know the exact amount that will be deducted from their salary each month.",
+      "The fixed installment structure of loans makes it easier for borrowers to budget and plan for repayments since they know the exact amount that will be deducted from their salary each month.",
   },
   {
     title: "Convenience",
@@ -621,18 +624,39 @@ export const LOAN_BENEFITS = [
 
 export const TEAM_MEMEBERS = [
   {
+    name: "ADETUNJI RASAQ ADESHINA",
+    role: "MD/CEO",
+    image: RasaqImg,
+    summary:
+      "Mr. Rasaq Adeshina is a graduate of Business Administration and Management from Osun State Polytechnic, Iree. He is the current Managing Director of Springfield Microfinance Bank. He is a member of the Chartered Institute of Bankers of Nigeria (CIBN) and the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years’ experience in Microfinance sector, having work in various Microfinance Banks at different positions. Prior to joining Springfield Microfinance Bank, he was the Managing Director of Kayvee Microfinance Bank Limited, Zonal Manager of Hasal Microfinance Bank Limited, Branch Manager/Coordinator of Northern Region at Accion Microfinance Bank Limited amongst others. He has attended several professional training seminars, courses and workshops on Microfinance and Risk Management Culture",
+  },
+  {
     name: "Mr Fakayode Taiwo Olusola",
     role: "Chief Operating Officer",
     image: FakoyeImg,
     summary:
-      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks. Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+  },
+  {
+    name: "A. T. Shonaya Esq.",
+    role: "Company Secretary / Head Legal",
+    image: ShonayaImg,
+    summary:
+      "A committed, diligent and intelligent legal practitioner with a sound understanding of the law, its application and operation, coupled with a vast knowledge in information and communication technology. He is also a skilled and experienced writer with a passion for excellence.",
   },
   {
     name: "Mr. Frank Odion",
     role: "(Head Recovery)",
     image: FrankImg,
     summary:
-      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+      "Mr. Frank Esezobor is a graduate of Political Science from Obafemi Awolowo University, Ile-Ife, Osun State. He has over 10 years’ experience in loan recovery, having commenced work as a Recovery Manager at Stallion Home Savings and Loan Limited from 2010 – 2014, before being promoted to head the loan recovery unit, which he occupied for 9 years.",
+  },
+  {
+    name: "ISRAEL ADEOYE OGUNDEYI",
+    role: "HEAD, CREDICT & RISK",
+    image: IsrealImg,
+    summary:
+      "Mr. Israel Ogundeyi is a graduate of Banking and Finance from Lagos State University. He is a member of the Chartered Institute of Loan and Risk Management of Nigeria. He has over 15 years’ experience in the microfinance sector. Prior to joining Springfield Microfinance Bank. He was once the Chief Operating Officer of Premier Poverty Alleviation Initiative (PPAI). He has attended several professional training seminars, courses and workshops on Microfinance Operations.",
   },
   {
     name: "PRECIOUS NKEMJIKA R.",
@@ -642,25 +666,56 @@ export const TEAM_MEMEBERS = [
       "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
   },
   {
-    name: "A. T. Shonaya Esq.",
-    role: "Company Secretary / Head Legal",
-    image: ShonayaImg,
+    name: "SOWUNMI AYODEJI MICHAEL",
+    role: "HEAD, INFORMATION TECHNOLOGY",
+    image: AyodejiImg,
     summary:
       "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
   },
+];
+
+export const DIRECTORS = [
   {
-    name: "ADETUNJI RASAQ ADESHINA",
-    role: "MD/CEO",
-    image: RasaqImg,
+    name: "Dr. Diran Amosun MBBS",
+    image: NoImg,
     summary:
-      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+      "Dr. Diran Amosun MBBS is a product of College of Medicine, University of Lagos and Royal College of Anesthesiologist, United Kingdom. He is a renowned Anesthesiologist with over 20 years’ experience. He is a member of the American Board of Anesthesiologist, Royal College of Anesthesiologists. He is an anesthesiologist in group practice at Floyd Medical Center, Rome, Georgia, the Anesthesia Associates of Columbus, Georgia, covering three hospitals and one surgery center. He is also an Anesthesiologist with Amsol Physicians of Columbus, Georgia since 2010.",
   },
   {
-    name: "ISRAEL ADEOYE OGUNDEYI",
-    role: "HEAD, CREDICT & RISK",
-    image: IsrealImg,
+    name: "Mr. Johnson Akhidenor",
+    image: NoImg,
     summary:
-      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+      "Mr. Johnson Akhidenor has his first degree from the University of Lagos (1998) and Master of Business Administration (2000) from Ambrose Alli University, Ekpoma, Edo State. He is also an Associate member of the Chartered Institute of Bankers, with over 20 years’ experience in Retail and Corporate Banking Operations, Mortgage Finance and Management Consulting. He has attended several professional training seminars, courses and workshops in commercial and mortgage banking.",
+  },
+  {
+    name: "Mr. Courage Udoka Ogboli Ngbanwa",
+    image: NoImg,
+    summary:
+      "Mr. Courage Ngbanwa is a graduate of Accounting from Babcock University, Ogun State. He holds a Master of Science in Management (Financial Analysis) from the University of Northampton, United Kingdom. He also holds a diploma, Bachelor of Arts and Master of Arts in Theology from the Pentecostal International Bible Seminary",
+  },
+  {
+    name: "Olamide Adeyinka",
+    image: NoImg,
+    summary:
+      "Olamide Adeyinka is a graduate of Arts in Economics, Minor Legal Studies at the University of Massachusetts, Lowell, MA. She received a double Masters in Business Administration and International Development & Social Change at Clark University, Worcester, Massachusetts, USA. She is a certified Project Management Professional at the Project Management Institute, Washington DC. She has almost 10 years of working experience in the USA, West Africa, Middle East, North Africa and Asia. She formerly worked with Chemonics International, Inc. in Washington DC, as a Project Manager. She also worked with the International Centre for Research on Women (ICRW) as a Project Manager in their Consulting and Advisory arm.",
+  },
+  {
+    name: "Mr. Adesemoye Emmanuel Taiwo",
+    image: NoImg,
+    summary:
+      "Mr. Adesemoye Taiwo is a chartered shipping practitioner with over 15 years’ experience in maritime transportation, shipping/haulage, logistics and freight forwarding. He acquired his HND in Maritime Transport (Shipping/Port Management) from College of Maritime Transport Management and Technology. He also has Post Graduate Professional Diploma in Transport and Logistics Management from The Institute of Transport Administration. Mr. Taiwo is a member of the Certified Institute of Shipping and the Chartered Institute of Transport and Administration. He is currently a partner at Kaysar Technology Limited.",
+  },
+  {
+    name: "Mr. Olabode Segun Adedayo MNIM, FCA",
+    image: NoImg,
+    summary:
+      "Mr. Olabode is certified by the Nigerian Institute of Management and also a Chartered Accountant with a wealth of experience in the financial and real estate sector. He is currently the Managing Consultant/CEO of DSS Property Investment Limited. He is also the Managing Partner of Renaissance Professionals. He worked at Sparklight Property Development Company Limited, where he rose through the ranks from the position of an Account Officer to a NonExecutive Director. Mr. Olabode also a post graduate degree in Theology.",
+  },
+  {
+    name: "Mr. Adetunji Rasaq Adeshina",
+    image: NoImg,
+    summary:
+      "Mr. Rasaq Adeshina is a graduate of Business Administration and Management from Osun State Polytechnic, Iree. He is the current Managing Director of Springfield Microfinance Bank. He is a member of the Chartered Institute of Bankers of Nigeria (CIBN) and the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years’ experience in Microfinance sector, having work in various Microfinance Banks at different positions. Prior to joining Springfield Microfinance Bank, he was the Managing Director of Kayvee Microfinance Bank Limited, Zonal Manager of Hasal Microfinance Bank Limited, Branch Manager/Coordinator of Northern Region at Accion Microfinance Bank Limited amongst others. He has attended several professional training seminars, courses and workshops on Microfinance and Risk Management Culture",
   },
 ];
 

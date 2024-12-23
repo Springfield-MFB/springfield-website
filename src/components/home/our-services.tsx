@@ -94,7 +94,7 @@ export const OurServices = () => {
 
             <div className="flex flex-col space-y-4 mt-6">
               {[
-                "Weekly Repayment Facility",
+                "Termed Repayment Facility",
                 "Micro Loan",
                 "Small & Medium Loan",
                 "Daily Saving Scheme",

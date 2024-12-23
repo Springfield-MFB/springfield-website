@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { SavingHero } from "./saving-hero";
 import { DocumentRequired } from "./document-required";
