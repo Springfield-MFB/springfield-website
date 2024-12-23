@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { AboutHero } from "./about-hero";
 import { Aim } from "./aim";
