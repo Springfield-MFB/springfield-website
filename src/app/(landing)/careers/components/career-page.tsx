@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { CareerAim } from "./career-aim";
-import { CoreValues } from "../../about/comoponents/core-values";
 import { Openings } from "./openings";
 import { CareerHero } from "./career-hero";
 
