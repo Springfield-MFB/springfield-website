@@ -5,7 +5,6 @@ import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import BoxReveal from "@/components/ui/box-reveal";
 import DynamicSVG from "@/components/svg/bg-svg";
 
-
 export const CoreValues = () => {
   return (
     <div className="py-16">
@@ -20,7 +19,7 @@ export const CoreValues = () => {
           <p className="px-4 lg:px-0 text-[#424242] lg:w-[55%] text-xs font-normal leading-6 mt-4">
             We're redefining the way you learn, grow, and succeed. Join us on a
             groundbreaking journey that brings innovation, accessibility, and
-            excellence to your career pursuits.
+            excellence to your business pursuits.
           </p>
         </BoxReveal>
 
@@ -33,7 +32,6 @@ export const CoreValues = () => {
                 <div className="absolute bottom-0 right-0 ">
                   <DynamicSVG color="#5D70F2" />
                 </div>
-
 
                 <h3 className="text-xl font-bold mb-2">Integrity:</h3>
                 <ul className="space-y-2 list-disc pl-5">
@@ -50,10 +48,6 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
-
-                <div className="absolute right-0 bottom-0">
-                  <CoreValueBg fill="#5D70F2" width={200} height={200} />
-                </div>
               </div>
 
               {/* row - 2 */}
@@ -77,9 +71,6 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="absolute right-0 bottom-0">
-                  <CoreValueBg fill="#AC7C00" width={200} height={200} />
-                </div>
               </div>
             </div>
 
@@ -107,9 +98,6 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="absolute right-0 bottom-0">
-                  <CoreValueBg fill="#00B8E4" width={200} height={200} />
-                </div>
               </div>
 
               {/* row - 2 */}
@@ -134,10 +122,6 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
-
-                <div className="absolute right-0 bottom-0">
-                  <CoreValueBg fill="#D30000" width={200} height={200} />
-                </div>
               </div>
             </div>
 
@@ -165,10 +149,6 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
-
-                <div className="absolute right-0 bottom-0">
-                  <CoreValueBg fill="#00AA4E" width={200} height={200} />
-                </div>
               </div>
 
               {/* row - 2 */}
@@ -193,10 +173,6 @@ export const CoreValues = () => {
                     </li>
                   ))}
                 </ul>
-
-                <div className="absolute right-0 bottom-0">
-                  <CoreValueBg fill="#AC7C00" width={200} height={200} />
-                </div>
               </div>
             </div>
           </div>
