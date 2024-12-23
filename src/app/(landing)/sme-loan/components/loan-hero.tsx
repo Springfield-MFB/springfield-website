@@ -43,7 +43,7 @@ export const LoanHero = () => {
               onClick={() => router.push("/sme-loan/business-loan")}
               type="primary"
             >
-              Get Started
+              Apply Now
             </CustomButton>
           </div>
 
