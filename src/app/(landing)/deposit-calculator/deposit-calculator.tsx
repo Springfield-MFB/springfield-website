@@ -4,9 +4,9 @@ import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { useState } from "react";
 import { CalculatorChart } from "./deposit-calculator-chart";
+import BoxReveal from "@/components/ui/box-reveal";
 
 export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
   const [depositAmount, setdepositAmount] = useState<number>(2341980);
@@ -20,18 +20,22 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
 
   return (
     <MaxWidthWrapper className="">
-      <Heading className={cn(mode === "dark" ? "text-white" : "")}>
-        Deposit Calculator
-      </Heading>
-      <p
-        className={cn(
-          "mt-6 mb-20  text-[13px] md:w-[50%] leading-5",
-          mode === "dark" ? "text-white" : "text-[#606060]"
-        )}
-      >
-        Quickly estimate your monthly payments and total interest for any loan.
-        Make informed decisions and take control of your finances today!
-      </p>
+      <BoxReveal boxColor={"#F0B929"} duration={1}>
+        <Heading className={cn(mode === "dark" ? "text-white" : "")}>
+          Deposit Calculator
+        </Heading>
+      </BoxReveal>
+      <BoxReveal boxColor={"#F0B929"} duration={1.3}>
+        <p
+          className={cn(
+            "mt-6 mb-20  text-[13px] md:w-[50%] leading-5",
+            mode === "dark" ? "text-white" : "text-[#606060]"
+          )}
+        >
+          Quickly estimate your monthly payments and total interest for any
+          loan. Make informed decisions and take control of your finances today!
+        </p>
+      </BoxReveal>
 
       <div
         className={cn(

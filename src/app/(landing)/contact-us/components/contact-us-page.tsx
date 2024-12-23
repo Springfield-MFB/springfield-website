@@ -7,13 +7,14 @@ import { FiLinkedin } from "react-icons/fi";
 import { IoCall } from "react-icons/io5";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { ContactForm } from "./contact-form";
+import BoxReveal from "@/components/ui/box-reveal";
 
 export const ContactUsPage = () => {
   return (
     <div className="bg-[#FAFAFA]">
       <PageBoard
         backgroundImage="url('/images/help-bg.jpeg')"
-        heading="How can we help?"
+        heading="We Would Love To Hear From you"
         desc="Looking for the solution that best fits your business needs? Fill out the contact form and our Sales team will be in touch."
       />
 
@@ -23,11 +24,16 @@ export const ContactUsPage = () => {
 
           <div className="col-span-1">
             <div className="lg:w-[80%] px-4 lg:px-0">
-              <Heading>Contact Us </Heading>
-              <p className="text-sm text-[#4A4949] leading-6 mt-4">
-                Need assistance with a specific transaction or issue? Our
-                customer support team is available to help you resolve them.
-              </p>
+              <BoxReveal boxColor={"#F0B929"} duration={1}>
+                <Heading>Contact Us </Heading>
+              </BoxReveal>
+
+              <BoxReveal boxColor={"#F0B929"} duration={1.2}>
+                <p className="text-sm text-[#4A4949] leading-6 mt-4">
+                  Need assistance with a specific transaction or issue? Our
+                  customer support team is available to help you resolve them.
+                </p>
+              </BoxReveal>
 
               <div className="flex flex-col space-y-10 mt-10">
                 <div className="flex space-x-3 items-center">
@@ -35,13 +41,17 @@ export const ContactUsPage = () => {
                     <MapPin size={18} color="white" />
                   </span>
                   <div className="flex flex-col space-y-1 text-[#373737] w-[70%]">
-                    <h1 className="text-sm font-bold ">
-                      Corporate Head Office:
-                    </h1>
-                    <p className="text-sm">
-                      Multi-Purpose Market, Behind BRT Bus Stop, Igando, Lagos,
-                      Nigeria
-                    </p>
+                    <BoxReveal boxColor={"#F0B929"} duration={1}>
+                      <h1 className="text-sm font-bold ">
+                        Corporate Head Office:
+                      </h1>
+                    </BoxReveal>
+                    <BoxReveal boxColor={"#F0B929"} duration={1}>
+                      <p className="text-sm">
+                        Multi-Purpose Market, Behind BRT Bus Stop, Igando,
+                        Lagos, Nigeria
+                      </p>
+                    </BoxReveal>
                   </div>
                 </div>
 
@@ -50,8 +60,12 @@ export const ContactUsPage = () => {
                     <Mail size={18} color="white" />
                   </span>
                   <div className="flex flex-col space-y-1 text-[#373737] w-[70%]">
-                    <h1 className="text-sm font-bold ">Email</h1>
-                    <p className="text-sm">Info@springfieldmfb.com</p>
+                    <BoxReveal boxColor="#F0B929" duration={1}>
+                      <h1 className="text-sm font-bold ">Email</h1>
+                    </BoxReveal>
+                    <BoxReveal boxColor="#F0B929" duration={1}>
+                      <p className="text-sm">Info@springfieldmfb.com</p>
+                    </BoxReveal>
                   </div>
                 </div>
 
@@ -60,8 +74,12 @@ export const ContactUsPage = () => {
                     <Phone size={18} color="white" />
                   </span>
                   <div className="flex flex-col space-y-1 text-[#373737] w-[70%]">
-                    <h1 className="text-sm font-bold ">Phone</h1>
-                    <p className="text-sm">08134736720, 07037152272</p>
+                    <BoxReveal boxColor="#F0B929" duration={1}>
+                      <h1 className="text-sm font-bold ">Phone</h1>
+                    </BoxReveal>
+                    <BoxReveal boxColor="#F0B929" duration={1}>
+                      <p className="text-sm">08134736720, 07037152272</p>
+                    </BoxReveal>
                   </div>
                 </div>
               </div>

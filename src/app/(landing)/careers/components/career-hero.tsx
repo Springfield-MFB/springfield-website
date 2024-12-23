@@ -1,10 +1,13 @@
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
 import CareerHeroImage from "@/public/images/career-hero-img.png";
+import BoxReveal from "@/components/ui/box-reveal";
 
 export const CareerHero = () => {
   return (
@@ -14,13 +17,17 @@ export const CareerHero = () => {
           {/* LEFT CONTENT */}
 
           <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
-            <Heading className="w-[90%] lg:w-full text-white">
-              Be on the Frontier of Banking
-            </Heading>
-            <p className="lg:w-[90%] text-white lg:leading-7 text-sm">
-              Joining Springfield Microfinance means joining a family with
-              ambition. Ambition that pave the way for more than 170 years
-            </p>
+            <BoxReveal boxColor={"#F0B929"} duration={1}>
+              <Heading className="w-[90%] lg:w-full text-white">
+                Be on the Frontier of Banking
+              </Heading>
+            </BoxReveal>
+            <BoxReveal boxColor={"#F0B929"} duration={1.4}>
+              <p className="lg:w-[90%] text-white lg:leading-7 text-sm">
+                Joining Springfield Microfinance means joining a family with
+                ambition. Ambition that pave the way for more than 170 years
+              </p>
+            </BoxReveal>
 
             <div className="flex space-y-4 lg:space-y-0 lg:space-x-4 mt-4 flex-col lg:flex-row ">
               <CustomButton
@@ -37,13 +44,20 @@ export const CareerHero = () => {
 
           {/* RIGHT CONTENT */}
           <div className="lg:basis-[45%]">
-            <Image
-              src={CareerHeroImage}
-              alt="Saving Account"
-              width={1000}
-              height={1000}
-              className="object-cover  w-full h-full"
-            />
+            <motion.div
+              initial={{ scale: 0.4, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: false, amount: 0.2 }} // Animates both on scroll up and down
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
+              <Image
+                src={CareerHeroImage}
+                alt="Saving Account"
+                width={1000}
+                height={1000}
+                className="object-cover  w-full h-full"
+              />
+            </motion.div>
           </div>
         </div>
       </MaxWidthWrapper>
