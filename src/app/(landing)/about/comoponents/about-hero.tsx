@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
@@ -8,12 +8,8 @@ import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
 import AboutHeroImage from "@/public/images/about-hero.png";
 import BoxReveal from "@/components/ui/box-reveal";
-import { useRef } from "react";
 
 export const AboutHero = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
     <MaxWidthWrapper>
       <div className="flex flex-col px-4 items-center">
@@ -33,7 +29,6 @@ export const AboutHero = () => {
             communities and MSME through technological innovation.
           </p>
         </BoxReveal>
-
 
         <CustomButton type="ghost">Learn More</CustomButton>
 

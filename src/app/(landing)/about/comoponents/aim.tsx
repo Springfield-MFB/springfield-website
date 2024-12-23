@@ -10,7 +10,6 @@ import { SmallHeading } from "@/components/heading";
 
 import AimImage from "@/public/images/aim-image.png";
 import BoxReveal from "@/components/ui/box-reveal";
-import { Box } from "lucide-react";
 
 export const Aim = () => {
   return (
