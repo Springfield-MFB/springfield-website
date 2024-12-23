@@ -33,7 +33,7 @@ export const SavingHero = () => {
               </p>
             </BoxReveal>
 
-            <CustomButton type="primary">Get Started</CustomButton>
+            <CustomButton type="primary">Apply Now</CustomButton>
           </div>
 
           {/* RIGHT CONTENT */}
