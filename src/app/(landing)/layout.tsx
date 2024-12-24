@@ -23,7 +23,7 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
             <span className="">Licensed by CBN</span>
             <Image
               src={CbnLogo}
-              alt="CBN Logo"
+              alt="photo CBN Logo"
               width={1000}
               height={1000}
               className="size-[30px]"
@@ -31,7 +31,7 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
             <span className="">Insured by NDIC</span>
             <Image
               src={NdicLogo}
-              alt="NDIC Logo"
+              alt="photo NDIC Logo"
               width={1000}
               height={1000}
               className="size-[40px]"
