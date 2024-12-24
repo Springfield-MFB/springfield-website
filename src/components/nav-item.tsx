@@ -53,7 +53,7 @@ export const NavItem: FC<NavItemProps> = ({
             }
           )}
         >
-          <div className="relative  bg-white">
+          <div className="relative  bg-white backdrop-blur-lg transition-all z-20">
             <div className="mx-auto w-full">
               <div className="grid grid-cols-3 gap-x-8 gap-y-10 pt-4 pb-8">
                 <div className="col-span-4 col-start-1 grid  grid-cols-3">
