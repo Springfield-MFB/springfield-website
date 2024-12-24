@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-
 import { MaxWidthWrapper } from "../max-width-wrapper";
 
 const Feat = () => {
@@ -30,10 +29,9 @@ const Feat = () => {
               {/* Counts */}
               <div className="lg:col-span-3 flex flex-col lg:flex-row gap-8 lg:gap-0 mt-6 lg:mt-0  justify-between items-center">
                 <p className="text-black text-3xl font-millik text-center">
-                  Access up to N3m in less than 4hrs
+                  Access up to N3m in less than 4hrs should shift down a bit
                 </p>
               </div>
-
             </div>
           </div>
         </motion.div>

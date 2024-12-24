@@ -21,12 +21,12 @@ export function TestimonialCarousel() {
         {TESTIMONIALS.map((testimonial, index) => (
           <CarouselItem
             key={index}
-            className="  pl-1 md:basis-1/2 lg:basis-[45%]"
+            className=" pl-1 md:basis-1/2 lg:basis-[45%] h-full"
           >
-            <div className="p-1">
-              <Card className="relative overflow-hidden bg-none p-0  border-[0.9px] rounded-[14px] border-[#D6D6D6] bg-[#F2F2F2] shadow-none">
-                <CardContent className="  flex aspect-auto px-8 py-8 mb-8 w-full flex-col ">
-                  <p className="text-black text-sm font-normal mt-2 leading-[30px]">
+            <div className="p-1 h-full">
+              <Card className="relative overflow-hidden bg-none p-0  border-[0.9px] rounded-[14px] border-[#D6D6D6] bg-[#F2F2F2] shadow-none h-full">
+                <CardContent className="  flex aspect-auto px-8 py-8 mb-8 w-full h-full flex-col ">
+                  <p className="text-black text-sm font-normal mt-2 leading-[30px] line-clamp-4 ">
                     {testimonial.testimony}
                   </p>
 

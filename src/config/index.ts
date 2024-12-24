@@ -28,6 +28,8 @@ import { GiBassetHoundHead, GiWhistle } from "react-icons/gi";
 import BankingImg from "@/public/images/banking.png";
 import LoansImg from "@/public/images/loans.png";
 import InsuranceImg from "@/public/images/insurance.png";
+import TailorImg from "@/public/images/tailor-1.jpeg";
+import FinancialAdImg from "@/public/images/financial-adv.jpg";
 
 // WHY CHOOSE SPRINGFIELD
 import Money from "@/public/svg/money.svg";
@@ -367,24 +369,24 @@ export const SERVICES = [
     image: LoansImg,
   },
   {
-    title: "fixed deposit",
+    title: "Fixed Deposit",
     description:
       "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
     image: InsuranceImg,
   },
 
   {
-    title: "fixed deposit",
+    title: "SME Financing",
     description:
-      "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
-    image: BankingImg,
+      "Boost your small or medium-sized enterprise with our specialized SME financing solutions. Springfield MfB supports entrepreneurs with customized financial packages to drive sustainable business growth.",
+    image: TailorImg,
   },
 
   {
-    title: "fixed deposit",
+    title: "Financial Advisory Services",
     description:
-      "Explore our investment products designed to help your business grow and thrive, including asset management and retirement planning.",
-    image: LoansImg,
+      "Benefit from expert guidance to manage your finances effectively. Our financial advisory services help you make informed decisions for personal and business success.",
+    image: FinancialAdImg,
   },
 ];
 
@@ -414,42 +416,34 @@ export const WHY_CHOOSE_SPRINGFIELD = [
 export const TESTIMONIALS = [
   {
     testimony:
-      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
+      '"Springfield MfB has been a lifeline for my business. The loan application process was quick, and the team ensured I understood every step. I was able to purchase more inventory and increase my sales significantly. Thank you, Springfield!"',
     image: Testimonial1Img,
-    name: "Daniel Samuel",
-    role: "Current Account",
+    name: "Mary A.",
+    role: "Igando, Lagos.",
   },
 
   {
     testimony:
-      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
+      '"As a small business owner, accessing funds has always been a challenge. Springfield MfB changed that for me. Their team was supportive, professional, and genuinely interested in helping my business succeed. Today, my shop has grown beyond my expectations."',
     image: Testimonial2Img,
-    name: "John Doe",
-    role: "Saving Account",
+    name: "Adewale O.",
+    role: "Iyana-Ipaja",
   },
 
   {
     testimony:
-      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
+      '"Springfield MfB offers one of the most flexible loan repayment plans I’ve ever encountered. They worked with me to create a schedule that fit my income flow, making it easy to manage my finances without stress. I recommend them to anyone seeking financial support."',
     image: Testimonial3Img,
-    name: "Michael Smith",
-    role: "Saving Account",
+    name: "Funmi T.",
+    role: "Ikeja, Lagos",
   },
 
   {
     testimony:
-      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
+      '"What sets Springfield MfB apart is their dedication to their customers’ success. Beyond providing me with a loan, they gave me financial advice and guidance that have transformed my business operations. I feel valued and supported."',
     image: Testimonial3Img,
-    name: "Evans Smith",
-    role: "Current Account",
-  },
-
-  {
-    testimony:
-      "Switching to [Bank Name] has been the best decision for managing my finances. The mobile app is intuitive and allows me to track my savings, investments, and transactions effortlessly. Their customer service is exceptional—always responsive and helpful. With competitive rates and tailored solutions, I feel confident in achieving my financial goals. [Bank Name] truly puts its customers first!",
-    image: Testimonial4Img,
-    name: "Jasmine Jane",
-    role: "Saving Account",
+    name: "Chinyere E.",
+    role: "Yaba",
   },
 ];
 
@@ -512,7 +506,8 @@ export const LOAN_PROPERTIES = [
   {
     icon: RepaymentSvg,
     title: "Termed Repayment",
-    desc: "Make Daily, Weekly, Monthly:",
+    desc:
+      " Make Manageable repayments that fit your schedule: Daily, Weekly, Monthly.",
   },
 ];
 
@@ -536,7 +531,8 @@ export const ASSETS_ACQUISITION_LOAN_PROPERTIES = [
   {
     icon: RepaymentSvg,
     title: "Termed Repayment",
-    desc: "Make Daily, Weekly, Monthly:",
+    desc:
+      " Make Manageable repayments that fit your schedule: Daily, Weekly, Monthly.",
   },
 ];
 
@@ -560,7 +556,8 @@ export const SHELTER_LOAN_PROPERTIES = [
   {
     icon: RepaymentSvg,
     title: "Termed Repayment",
-    desc: "Make Daily, Weekly, Monthly:",
+    desc:
+      " Make Manageable repayments that fit your schedule: Daily, Weekly, Monthly.",
   },
 ];
 
@@ -585,7 +582,8 @@ export const SME_LOAN_PROPERTIES = [
   {
     icon: RepaymentSvg,
     title: "Termed Repayment",
-    desc: "Make Daily, Weekly, Monthly:",
+    desc:
+      " Make Manageable repayments that fit your schedule: Daily, Weekly, Monthly.",
   },
 ];
 
@@ -608,7 +606,7 @@ export const LOAN_BENEFITS = [
   {
     title: "Credit History Not Always a Decisive Factor",
     description:
-      "Some lenders may consider the borrower's income and employment status more heavily than their credit history when approving a salary loan. This can make salary loans accessible to individuals with a less-than-perfect credit history.",
+      "Some lenders may consider the borrower's income and employment status more heavily than their credit history when approving a loan. This can make loans accessible to individuals with a less-than-perfect credit history.",
   },
   {
     title: "Predictable Repayments",
@@ -618,7 +616,7 @@ export const LOAN_BENEFITS = [
   {
     title: "Convenience",
     description:
-      "The repayment of a salary loan is typically structured to be convenient for the borrower. The installments are deducted directly from the salary, reducing the hassle of manual payments.",
+      "The repayment of a loan is typically structured to be convenient for the borrower. The installments are deducted directly from the salary, reducing the hassle of manual payments.",
   },
 ];
 
@@ -646,7 +644,7 @@ export const TEAM_MEMEBERS = [
   },
   {
     name: "Mr. Frank Odion",
-    role: "(Head Recovery)",
+    role: " Head Recovery/Mortgage",
     image: FrankImg,
     summary:
       "Mr. Frank Esezobor is a graduate of Political Science from Obafemi Awolowo University, Ile-Ife, Osun State. He has over 10 years’ experience in loan recovery, having commenced work as a Recovery Manager at Stallion Home Savings and Loan Limited from 2010 – 2014, before being promoted to head the loan recovery unit, which he occupied for 9 years.",

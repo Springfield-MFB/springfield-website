@@ -37,7 +37,7 @@ export const Navbar = () => {
   }, [active]);
 
   return (
-    <div className="sticky z-[100] lg:h-20 inset-x-0 top-0 bg-white w-full shadow-navbar backdrop-blur-lg transition-all ">
+    <div className="sticky z-[100] lg:h-20 inset-x-0 top-0 bg-white/80 w-full shadow-navbar backdrop-blur-md transition-all">
       {/* MOBILE MENU */}
       <div
         className={`absolute top-[78px] inset-0 z-10 bg-white transition-all duration-500 ease-in-out`}

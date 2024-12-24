@@ -23,7 +23,7 @@ export const Hero = () => {
       image: HeroImage,
     },
     {
-      title: "Guiding you toward ",
+      title: "Guiding you towards",
       highlight: "financial achievement",
       description:
         "Discover the power to unlock your full potential through our automated and secure savings, strategic investment opportunities, agency banking solutions, and a wide array of value-added services tailored to meet your financial goals and beyond.",
@@ -47,12 +47,12 @@ export const Hero = () => {
   }, [heroContent]);
 
   return (
-    <div className="relative h-[90vh] lg:h-[40vh]">
+    <div className="relative h-[90vh] lg:h-[70vh] ">
       {heroContent.map((item, index) => (
         <motion.div
           key={index}
           className={cn(
-            "absolute inset-0 mx-auto flex flex-col lg:flex-row px-2 space-y-10 md:space-y-0 md:space-x-12",
+            "absolute  inset-0 mx-auto flex flex-col  lg:flex-row px-2 lg:pt-24 space-y-4 md:space-y-0 md:space-x-12",
             index === currentIndex
               ? "opacity-100 z-10 pointer-events-auto"
               : "opacity-0 z-0 pointer-events-none"
@@ -110,13 +110,14 @@ export const Hero = () => {
               exit={{ scale: 0.5, opacity: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              <div className="col-span-3 w-[95%] mx-auto row-span-3">
+              <div className="col-span-3 lg:w-[95%] mx-auto row-span-3">
                 <Image
                   src={item.image} // Replace with actual path
                   alt="Building"
                   width={1000}
                   height={1000}
                   className="h-full object-cover"
+                  placeholder="blur"
                 />
               </div>
             </motion.div>

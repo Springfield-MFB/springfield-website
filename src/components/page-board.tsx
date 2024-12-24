@@ -25,10 +25,10 @@ export const PageBoard: React.FC<PageBoardProps> = ({
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/80" />
 
-      <MaxWidthWrapper className="relative flex flex-col items-center text-center lg:w-[80%] mx-auto">
+      <MaxWidthWrapper className="relative flex flex-col items-center text-center lg:w-[70%] mx-auto">
         <Heading className="text-white">{heading}</Heading>
         <BoxReveal boxColor={"#F0B929"} duration={1.2}>
-          <p className="text-xs mt-3 leading-6 text-center">{desc}</p>
+          <p className="text-sm mt-3 leading-6 text-center">{desc}</p>
         </BoxReveal>
       </MaxWidthWrapper>
     </div>

@@ -2,7 +2,7 @@
 
 import { CustomButton } from "@/components/custom-button";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-import ProfileModal from "@/components/modals/profile-modal";
+import ProfileModal from "@/components/modals/mgt-profile-modal";
 import { PageBoard } from "@/components/page-board";
 import { TEAM_MEMEBERS } from "@/config";
 import { openProfileModal } from "@/hooks/useModals";

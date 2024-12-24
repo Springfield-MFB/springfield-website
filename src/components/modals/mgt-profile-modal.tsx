@@ -1,9 +1,10 @@
 import { useStore } from "@/store";
 import Modal from ".";
 import Image from "next/image";
-import { DIRECTORS, TEAM_MEMEBERS } from "@/config";
+import { TEAM_MEMEBERS } from "@/config";
+import { capitalizeWords } from "@/lib";
 
-type Member = (typeof DIRECTORS)[number];
+type Member = (typeof TEAM_MEMEBERS)[number];
 
 function Content({ member }: { member: Member }) {
   return (
@@ -19,7 +20,9 @@ function Content({ member }: { member: Member }) {
             className="rounded-lg h-[250px] w-[300px] object-cover"
           />
           <div className="text-center mt-4">
-            <h2 className="text-base font-bold text-gray-800">{member.name}</h2>
+            <h2 className="text-base font-bold text-gray-800">
+              {capitalizeWords(member.name)}
+            </h2>
           </div>
         </div>
 
@@ -35,8 +38,8 @@ function Content({ member }: { member: Member }) {
 const ProfileModal = ({ member }: { member: Member }) => {
   function Title() {
     return (
-      <div className=" lg:px-8 py-6 border-b text-sm lg:text-2xl font-bold capitalize">
-        {/* {member.name} */}
+      <div className=" lg:px-8 py-4 border-b text-sm lg:text-2xl font-bold capitalize">
+        {capitalizeWords(member.role)}
       </div>
     );
   }
