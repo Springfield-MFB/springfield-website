@@ -43,7 +43,7 @@ export const AboutHero = () => {
           >
             <Image
               src={AboutHeroImage}
-              alt="About Hero"
+              alt="photo About Hero"
               width={1000}
               height={1000}
               className="object-cover w-[100%] h-full"
