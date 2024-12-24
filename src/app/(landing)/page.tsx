@@ -13,19 +13,19 @@ const Page = () => {
   return (
     <>
       {/* Hero section */}
-      <section className="mt-16 relative lg:pb-24 ">
+      <section className="mt-8 lg:mt-16 relative lg:pb-4 ">
         <MaxWidthWrapper>
           <Hero />
         </MaxWidthWrapper>
 
         {/* Optional: Background grid effect */}
-        <div className="absolute -bottom-[20%] -z-10 left-0 right-0 w-full ">
+        <div className="absolute -bottom-[15%] -z-10 left-0 right-0 w-full ">
           <Image
             src="/images/building.png"
             alt="Building"
             width={1000}
             height={1000}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover opacity-60"
           />
         </div>
       </section>
@@ -62,7 +62,6 @@ const Page = () => {
           <Testimonials />
         </MaxWidthWrapper>
       </section>
-      <section></section>
     </>
   );
 };
