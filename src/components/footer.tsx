@@ -131,42 +131,86 @@ export const Footer = () => {
             <div className="flex flex-col space-y-4">
               <h3 className="font-bold text-white text-sm">DEPOSIT</h3>
               <ul className="space-y-3 lg:space-y-6 text-white text-xs font-light">
-                <li>Springfield Saving Account</li>
-                <li>Daily Contribution (SDC)</li>
-                <li>Personal Current Account</li>
-                <li>Corporate Current Account</li>
-                <li>Springfield Target Account</li>
-                <li>Annual Contribution Account</li>
-                <li>Fixed Deposit Account</li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Springfield Saving Account</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Daily Contribution (SDC)</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Personal Current Account</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Corporate Current Account</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Springfield Target Account</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Annual Contribution Account</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Fixed Deposit Account</a>
+                </li>
               </ul>
             </div>
             <div className="flex flex-col space-y-4">
               <h3 className="font-bold text-white text-sm">LOANS</h3>
               <ul className="space-y-3 lg:space-y-6 text-white text-xs font-light">
-                <li>Weekly Repay Facility (SWR)</li>
-                <li>Shelter Loan</li>
-                <li>Micro Loan</li>
-                <li>Small & Medium Loan</li>
-                <li>School Support Product (3SP)</li>
-                <li>Asset Acquisition Loan (SAAL)</li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Weekly Repay Facility (SWR)</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="/shelter-loan">Shelter Loan</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="/micro-loan">Micro Loan</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Small & Medium Loan</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">School Support Product (3SP)</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="/asset-acquisition-loan">
+                    Asset Acquisition Loan (SAAL)
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="flex flex-col space-y-4">
               <h3 className="font-bold text-white text-sm">SERVICES</h3>
               <ul className="space-y-3 lg:space-y-6 text-white text-xs font-light">
-                <li>fixed deposit</li>
-                <li>Financial Advisory</li>
-                <li>Bill Payments</li>
-                <li>Funds Transfer</li>
-                <li>ATM</li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">fixed deposit</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Financial Advisory</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Bill Payments</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">Funds Transfer</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="">ATM</a>
+                </li>
               </ul>
             </div>
             <div className="flex flex-col space-y-4">
               <h3 className="font-bold text-white text-sm">MORE</h3>
               <ul className="space-y-3 lg:space-y-6 text-white text-xs font-light">
-                <li>About Us</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="/about">About Us</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="/carrer">Careers</a>
+                </li>
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="/contact-us">Contact Us</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -190,9 +234,13 @@ export const Footer = () => {
 
                   <div>
                     <p className="text-[#919191] text-[8px]">Partners with</p>
-                    <p className="text-base font-bold text-white">
+                    <a
+                      href="https://www.ppai.ng/"
+                      target="_blank"
+                      className="text-base font-bold text-white hover:text-brand-primary transition-all duration-500"
+                    >
                       Premier Poverty Allegation Initiative (PPAI)
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -228,7 +276,7 @@ export const Footer = () => {
 
             <div className="flex-1  lg:flex lg:flex-col lg:items-end">
               {/* Newsletter Subscription */}
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left z-20">
                 <h4 className="text-base font-semibold mb-3">
                   Join Our Newsletter
                 </h4>
