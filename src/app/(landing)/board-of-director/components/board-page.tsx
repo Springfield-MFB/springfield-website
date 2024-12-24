@@ -8,6 +8,7 @@ import { PageBoard } from "@/components/page-board";
 import { DIRECTORS } from "@/config";
 import { openProfileModal } from "@/hooks/useModals";
 import Image from "next/image";
+import { capitalizeWords } from "@/lib";
 
 type Member = (typeof DIRECTORS)[number];
 
@@ -45,7 +46,9 @@ export const BoardOfDirectorPage = () => {
               {/* Text Content */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent opacity-75  p-4">
                 <div className="transition-transform duration-500 transform group-hover:-translate-x-[150%]">
-                  <p className="text-white text-sm">{member.name}</p>
+                  <p className="text-white text-lg">
+                    {capitalizeWords(member.name)}
+                  </p>
                 </div>
 
                 {/* "View Profile" Button Sliding Right */}
