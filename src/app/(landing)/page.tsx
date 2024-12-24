@@ -22,7 +22,7 @@ const Page = () => {
         <div className="absolute -bottom-[15%] -z-10 left-0 right-0 w-full ">
           <Image
             src="/images/building.png"
-            alt="Building"
+            alt="photo Building"
             width={1000}
             height={1000}
             className="h-full w-full object-cover opacity-60"
