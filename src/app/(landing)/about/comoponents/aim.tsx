@@ -13,7 +13,7 @@ import BoxReveal from "@/components/ui/box-reveal";
 
 export const Aim = () => {
   return (
-    <div className="py-10 lg:py-36">
+    <div id="aim" className="py-10 lg:py-36">
       <MaxWidthWrapper>
         <div className="flex flex-col gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 px-4 lg:px-16">
           <div className="basis-1/2">
