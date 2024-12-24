@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { FlipText } from "./flip-text";
 
 interface CustomButtonProps {
+  link?: string;
   type?: "primary" | "ghost" | any;
   children: string;
   className?: string;
@@ -12,6 +13,7 @@ interface CustomButtonProps {
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({
+  link = "",
   type = "primary | sumbit",
   children,
   onClick,
@@ -29,15 +31,29 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
       )}
       onClick={onClick}
     >
-      <FlipText
-        className={cn(
-          "text-center text-white text-xs font-medium ",
-          type === "ghost" && "text-dark-primary",
-          className
-        )}
-      >
-        {children}
-      </FlipText>
+      {link ? (
+        <a href={link}>
+          <FlipText
+            className={cn(
+              "text-center text-white text-xs font-medium ",
+              type === "ghost" && "text-dark-primary",
+              className
+            )}
+          >
+            {children}
+          </FlipText>
+        </a>
+      ) : (
+        <FlipText
+          className={cn(
+            "text-center text-white text-xs font-medium ",
+            type === "ghost" && "text-dark-primary",
+            className
+          )}
+        >
+          {children}
+        </FlipText>
+      )}
       {type === "primary" && (
         <>
           <motion.span
