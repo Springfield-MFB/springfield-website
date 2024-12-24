@@ -65,7 +65,7 @@ export const Aim = () => {
             >
               <Image
                 src={AimImage}
-                alt="About Hero"
+                alt="photo About Hero"
                 width={1000}
                 height={1000}
                 className="object-cover w-full h-full"
