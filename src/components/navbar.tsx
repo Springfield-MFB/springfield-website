@@ -74,7 +74,7 @@ export const Navbar = () => {
           <Link href="/">
             <Image
               src={Logo}
-              alt="Logo"
+              alt="photo Logo"
               className="w-36 h-auto lg:w-40 lg:h-14 z-40"
               width={1000}
               height={1000}

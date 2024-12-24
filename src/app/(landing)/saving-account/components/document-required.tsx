@@ -23,7 +23,7 @@ export const DocumentRequired = () => {
           >
             <Image
               src={AimImage}
-              alt="About Hero"
+              alt="photo About Hero"
               width={1000}
               height={1000}
               className="object-cover lg:w-[80%] h-full"

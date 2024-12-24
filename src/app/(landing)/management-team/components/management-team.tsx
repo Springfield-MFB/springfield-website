@@ -6,6 +6,7 @@ import ProfileModal from "@/components/modals/mgt-profile-modal";
 import { PageBoard } from "@/components/page-board";
 import { TEAM_MEMEBERS } from "@/config";
 import { openProfileModal } from "@/hooks/useModals";
+import { capitalizeWords } from "@/lib";
 import { set } from "date-fns";
 import Image from "next/image";
 import { useState } from "react";
@@ -24,7 +25,7 @@ export const ManagementTeamPage = () => {
     <div>
       <PageBoard
         backgroundImage="url('/images/director-bg.png')"
-        heading="Managements Team"
+        heading="Management Team"
         desc="Our Management Team comprises skilled professionals dedicated to executing our vision and 
         driving operational excellence. Their expertise and leadership ensure the seamless 
         delivery of our goals and commitment to innovation."
@@ -46,10 +47,10 @@ export const ManagementTeamPage = () => {
               {/* Text Content */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent opacity-75  p-4">
                 <div className="transition-transform duration-500 transform group-hover:-translate-x-[150%]">
-                  <h3 className="text-white text-lg font-bold">
-                    {member.role}
-                  </h3>
-                  <p className="text-white text-sm">{member.name}</p>
+                  <p className="text-white text-xl">
+                    {capitalizeWords(member.name)}
+                  </p>
+                  <h3 className="text-white text-sm ">{member.role}</h3>
                 </div>
 
                 {/* "View Profile" Button Sliding Right */}

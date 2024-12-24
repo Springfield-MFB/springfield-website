@@ -13,7 +13,7 @@ function Content({ member }: { member: Member }) {
         <div className="md:w-1/3 px-4 flex flex-col items-center">
           <Image
             src={member.image} // Replace with your image path
-            alt="Mr Fakayode Taiwo Olusola"
+            alt="photo Mr Fakayode Taiwo Olusola"
             width={1000}
             height={1000}
             className="rounded-lg h-[250px] w-[300px] object-cover"

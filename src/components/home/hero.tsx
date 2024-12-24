@@ -113,7 +113,7 @@ export const Hero = () => {
               <div className="col-span-3 lg:w-[95%] mx-auto row-span-3">
                 <Image
                   src={item.image} // Replace with actual path
-                  alt="Building"
+                  alt="photo Building"
                   width={1000}
                   height={1000}
                   className="h-full object-cover"

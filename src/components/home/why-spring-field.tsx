@@ -26,7 +26,7 @@ export const WhySpringfield = () => {
           >
             <Image
               src={Why}
-              alt="Why Springfield"
+              alt="photo Why Springfield"
               width={1000}
               height={1000}
               className="object-cover w-full h-full"
@@ -44,7 +44,7 @@ export const WhySpringfield = () => {
             <div className="size-[64px]">
               <Image
                 src={item.image}
-                alt="Why Springfield"
+                alt="photo Why Springfield"
                 width={1000}
                 height={1000}
                 className="object-cover w-full h-full"

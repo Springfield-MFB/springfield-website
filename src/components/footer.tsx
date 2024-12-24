@@ -68,7 +68,7 @@ export const Footer = () => {
               <div className="flex items-center mb-2 lg:mb-8">
                 <Image
                   src={FooterLogo}
-                  alt="Springfield Microfinance Bank"
+                  alt="photo Springfield Microfinance Bank"
                   width={1000}
                   height={1000}
                   className="w-[150px]"
@@ -206,7 +206,7 @@ export const Footer = () => {
                   <a href="/about">About Us</a>
                 </li>
                 <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
-                  <a href="/carrer">Careers</a>
+                  <a href="/career">Careers</a>
                 </li>
                 <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
                   <a href="/contact-us">Contact Us</a>
@@ -226,7 +226,7 @@ export const Footer = () => {
                 <div className="flex items-center gap-x-2 mb-4">
                   <Image
                     src={PartnerLogo}
-                    alt="Partner Logo"
+                    alt="photo Partner Logo"
                     width={1000}
                     height={1000}
                     className="size-[50px] object-cover border border-white rounded-full"
@@ -257,7 +257,7 @@ export const Footer = () => {
                   <span className="">Licensed by CBN</span>
                   <Image
                     src={CbnLogo}
-                    alt="CBN Logo"
+                    alt="photo CBN Logo"
                     width={1000}
                     height={1000}
                     className="size-[30px]"
@@ -265,7 +265,7 @@ export const Footer = () => {
                   <span className="">Insured by NDIC</span>
                   <Image
                     src={NdicLogo}
-                    alt="CBN Logo"
+                    alt="photo CBN Logo"
                     width={1000}
                     height={1000}
                     className="size-[40px]"
@@ -309,7 +309,7 @@ export const Footer = () => {
 
           <Image
             src={Placeholder}
-            alt="Footer Logo"
+            alt="photo Footer Logo"
             width={1000}
             height={1000}
             className="absolute bottom-0 right-0 w-[600px] z-0"

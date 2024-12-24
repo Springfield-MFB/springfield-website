@@ -66,7 +66,7 @@ export const OurServices = () => {
             <div className="w-[250px]">
               <Image
                 src={DepositImage}
-                alt="Deposit Image"
+                alt="photo Deposit Image"
                 width={1000}
                 height={1000}
                 className="object-cover w-full h-full"
@@ -114,7 +114,7 @@ export const OurServices = () => {
             <div className="absolute right-0 bottom-4 lg:right-8">
               <Image
                 src={LoanProductImage}
-                alt="Deposit Image"
+                alt="photo Deposit Image"
                 width={1000}
                 height={1000}
                 className="object-cover w-[150px] lg:w-[250px] h-full"
@@ -150,7 +150,7 @@ export const OurServices = () => {
           <div className="absolute  right-0   bottom-4 lg:right-8">
             <Image
               src={OtherServicesImage}
-              alt="Deposit Image"
+              alt="photo Deposit Image"
               width={1000}
               height={1000}
               className="object-cover w-[200px]  lg:w-[350px] h-full"

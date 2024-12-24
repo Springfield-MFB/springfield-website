@@ -155,7 +155,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
         <div className="relative lg:w-[50%] overflow-hidden bg-[#5F5F5F] px-10 py-20 rounded-[10px] shadow-lg mt-8 max-w-lg  text-white">
           <Image
             src="/svg/spring-svg.svg"
-            alt="Loan Calculator Process"
+            alt="photo Loan Calculator Process"
             width={1000}
             height={1000}
             className="absolute size-[200px] bottom-0 right-0 z-10 opacity-70"
@@ -163,7 +163,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
 
           <Image
             src="/svg/spring-svg.svg"
-            alt="Loan Calculator Process"
+            alt="photo Loan Calculator Process"
             width={1000}
             height={1000}
             className="absolute size-[300px] -top-10 left-0 z-10 opacity-70"

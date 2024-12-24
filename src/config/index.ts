@@ -40,7 +40,6 @@ import Analysis from "@/public/svg/analysis.svg";
 import Testimonial1Img from "@/public/images/avatar-1.svg";
 import Testimonial2Img from "@/public/images/avatar-2.png";
 import Testimonial3Img from "@/public/images/avatar-3.png";
-import Testimonial4Img from "@/public/images/avatar-4.png";
 
 // LOAN PROPERTIES
 import RateSvg from "@/public/svg/rate-svg.svg";
@@ -50,12 +49,13 @@ import RepaymentSvg from "@/public/svg/payment-svg.svg";
 
 // TEAM MEMBERS
 import FakoyeImg from "@/public/images/mr-taiwo Fakayode (COO).jpg";
-import FrankImg from "@/public/images/frank.jpeg";
+import FrankImg from "@/public/images/mr-frank Odion. (Head Recovery).jpg";
 import PreciousImg from "@/public/images/mrs-precious (Internal Control).jpeg";
 import ShonayaImg from "@/public/images/tosin.jpeg";
 import RasaqImg from "@/public/images/mr-rasaq (MD).jpg";
 import IsrealImg from "@/public/images/mr-ogundeyi Israel.jpg";
 import AyodejiImg from "@/public/images/ayodeji.jpeg";
+import UdohImg from "@/public/images/uduh.jpeg";
 import NoImg from "@/public/images/no-image.png";
 
 export const NAVBART_ITEMS = [
@@ -643,11 +643,18 @@ export const TEAM_MEMEBERS = [
       "A committed, diligent and intelligent legal practitioner with a sound understanding of the law, its application and operation, coupled with a vast knowledge in information and communication technology. He is also a skilled and experienced writer with a passion for excellence.",
   },
   {
-    name: "Mr. Frank Odion",
-    role: " Head Recovery/Mortgage",
-    image: FrankImg,
+    name: "MR. UDOH EDIDIONG SAMUEL",
+    role: "Head Operations",
+    image: UdohImg,
     summary:
       "Mr. Frank Esezobor is a graduate of Political Science from Obafemi Awolowo University, Ile-Ife, Osun State. He has over 10 years’ experience in loan recovery, having commenced work as a Recovery Manager at Stallion Home Savings and Loan Limited from 2010 – 2014, before being promoted to head the loan recovery unit, which he occupied for 9 years.",
+  },
+  {
+    name: "Mr. Frank Odion Esezobor",
+    role: "Head Recovery/Mortgage",
+    image: FrankImg,
+    summary:
+      "He is a graduate of Ambrose Alli University, Ekpoma, Edo State, where he earned a Bachelor of Science (B.Sc.) degree in Business Administration. With over 18 years of comprehensive banking experience, he has established himself as a seasoned professional in the financial sector. He is a certified banker, holding the prestigious Microfinance Certification (MCIB) and a professional certificate from the Institute of Finance and Control of Nigeria (ACIFCN). His expertise spans various areas of banking operations, financial management, and control, making him a valuable asset in the microfinance banking industry.",
   },
   {
     name: "ISRAEL ADEOYE OGUNDEYI",
@@ -661,7 +668,7 @@ export const TEAM_MEMEBERS = [
     role: " HEAD, INTERNAL CONTROL/AUDIT",
     image: PreciousImg,
     summary:
-      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+      "Precious rich graduate of accounting from the university of Nigeria (unn). Member of institute of chattered accountants of Nigeria (Ican). Has 10 years experience in auditing, financial accounting , taxation and administration.She was once an external auditor with lawman Nzenwa &Co.She has attended several trainings on forensic accounting, auditing etc",
   },
   {
     name: "SOWUNMI AYODEJI MICHAEL",

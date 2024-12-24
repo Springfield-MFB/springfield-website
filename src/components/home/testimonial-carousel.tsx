@@ -51,7 +51,7 @@ export function TestimonialCarousel() {
 
                   <Image
                     src={Placeholder}
-                    alt="Testimonial"
+                    alt="photo Testimonial"
                     width={1000}
                     height={1000}
                     className="absolute right-0 -bottom-28  w-[180px] h-full"

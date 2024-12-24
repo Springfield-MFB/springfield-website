@@ -16,7 +16,7 @@ export const HousingLoanPage = () => {
         <div className="absolute top-[33%] -z-20 opacity-70  left-0 right-0 w-full ">
           <Image
             src="/images/building.png"
-            alt="Building"
+            alt="photo Building"
             width={1000}
             height={1000}
             className="h-full w-full object-cover"

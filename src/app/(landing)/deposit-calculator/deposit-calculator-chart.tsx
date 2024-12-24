@@ -19,14 +19,14 @@ export const CalculatorChart = () => {
     <div className="relative w-full lg:w-[40%] overflow-hidden px-10 py-20 rounded-[10px] shadow-sm mt-8 max-w-lg bg-[#5F5F5F] text-white">
       <Image
         src="/svg/spring-svg.svg"
-        alt="Loan Calculator Process"
+        alt="photo Loan Calculator Process"
         width={1000}
         height={1000}
         className="absolute size-[150px] bottom-0 right-0 z-10 opacity-70"
       />
       <Image
         src="/svg/spring-svg.svg"
-        alt="Loan Calculator Process"
+        alt="photo Loan Calculator Process"
         width={1000}
         height={1000}
         className="absolute size-[250px] -top-8 -left-16 z-10 opacity-70"

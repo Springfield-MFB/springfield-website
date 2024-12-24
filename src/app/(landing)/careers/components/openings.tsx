@@ -24,7 +24,7 @@ export const Openings = () => {
                 <span className="w-[40%] flex justify-center items-center space-x-2 border-r py-1">
                   <Image
                     src="/svg/flag.svg"
-                    alt="flag"
+                    alt="photo flag"
                     width={20}
                     height={20}
                     className="rounded-full "

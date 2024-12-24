@@ -20,7 +20,7 @@ export const LoanHero = () => {
 
           <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
             <BoxReveal boxColor={"#F0B929"} duration={1}>
-              <Heading className="w-[80%] lg:w-[80%]">
+              <Heading className=" mx-auto w-[80%] md:mx-0">
                 Springfield Housing
                 <span className="text-brand-primary">Loan</span>
               </Heading>
@@ -47,7 +47,7 @@ export const LoanHero = () => {
             >
               <Image
                 src={LoanHeroImage}
-                alt="Saving Account"
+                alt="photo Saving Account"
                 width={1000}
                 height={1000}
                 className="object-cover  w-full h-full"
@@ -67,7 +67,7 @@ export const LoanHero = () => {
               <div key={i} className="flex space-x-3">
                 <Image
                   src={item.icon}
-                  alt="Loan Hero"
+                  alt="photo Loan Hero"
                   width={1000}
                   height={1000}
                   className="object-cover size-[32px]"

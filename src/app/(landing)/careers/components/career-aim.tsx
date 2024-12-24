@@ -49,7 +49,7 @@ export const CareerAim = () => {
           <div className="basis-1/2">
             <Image
               src={AimImage}
-              alt="About Hero"
+              alt="photo About Hero"
               width={1000}
               height={1000}
               className="object-cover w-full h-full"
