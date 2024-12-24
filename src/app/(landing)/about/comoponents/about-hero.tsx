@@ -30,7 +30,9 @@ export const AboutHero = () => {
           </p>
         </BoxReveal>
 
-        <CustomButton type="ghost">Learn More</CustomButton>
+        <CustomButton link="#aim" type="ghost">
+          Learn More
+        </CustomButton>
 
         <div className="lg:w-[90%] mt-8">
           <motion.div
