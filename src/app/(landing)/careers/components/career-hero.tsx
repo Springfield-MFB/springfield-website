@@ -24,8 +24,8 @@ export const CareerHero = () => {
             </BoxReveal>
             <BoxReveal boxColor={"#F0B929"} duration={1.4}>
               <p className="lg:w-[90%] text-white lg:leading-7 text-sm">
-                Joining Springfield Microfinance means joining a family with
-                ambition. Ambition that pave the way for more than 170 years
+                Joining Springfield Microfinance Bank means joining a family
+                with ambition. Ambition that pave the way for many years.
               </p>
             </BoxReveal>
 
