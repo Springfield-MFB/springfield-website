@@ -24,7 +24,7 @@ export const NavbarItems = () => {
 
   return (
     <div
-      className="flex justify-between space-x-6 items-center h-full"
+      className="flex  justify-between space-x-6 items-center h-full"
       ref={navRef}
     >
       {NAVBART_ITEMS.map((item, i) => {
