@@ -1,5 +1,6 @@
 import { Openings } from "./openings";
 import { CareerHero } from "./career-hero";
+import { ApplyJobForm } from "./apply-job-form";
 
 function CareerPage() {
   return (
@@ -13,6 +14,9 @@ function CareerPage() {
 
       {/* Openings */}
       <Openings />
+
+      {/* SUBMIT CV */}
+      <ApplyJobForm />
     </>
   );
 }
