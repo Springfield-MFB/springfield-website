@@ -34,9 +34,11 @@ export const LoanHero = () => {
               </p>
             </BoxReveal>
 
-            <p className="text-dark-text mb-6 text-sm">Negotiable: 30%</p>
+            <p className="text-dark-text mb-6 text-sm">
+              Equity Contribution: 10%
+            </p>
             <CustomButton
-              onClick={() => router.push("/micro-loan/apply")}
+              onClick={() => router.push("/loan/apply")}
               type="primary"
             >
               Apply Now
