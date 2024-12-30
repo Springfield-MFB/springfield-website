@@ -21,7 +21,7 @@ export const LoanHero = () => {
           <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
             <BoxReveal boxColor={"#F0B929"} duration={1}>
               <Heading className=" mx-auto w-[80%] md:mx-0">
-                Springfield Asset Aquisation{" "}
+                Springfield Asset Acquisation{" "}
                 <span className="text-brand-primary">Loan (SAAL)</span>
               </Heading>
             </BoxReveal>
@@ -29,13 +29,15 @@ export const LoanHero = () => {
             <BoxReveal boxColor={"#F0B929"} duration={1.2}>
               <p className="lg:w-[90%] text-dark-text lg:leading-7 text-sm">
                 This is a product designed to give our customers access to
-                funding asset acquisition like Home appliances, electronics and
-                phones etc.
+                funding asset acquisition like Home appliances, electronics,
+                cars and phones etc.
               </p>
             </BoxReveal>
 
             <BoxReveal boxColor={"#F0B929"} duration={1}>
-              <p className="text-dark-text mb-6 text-sm">Negotiable: 30%</p>
+              <p className="text-dark-text mb-6 text-sm">
+                Equity Contribution: 30%
+              </p>
             </BoxReveal>
             <CustomButton type="primary">Apply Now</CustomButton>
           </div>
