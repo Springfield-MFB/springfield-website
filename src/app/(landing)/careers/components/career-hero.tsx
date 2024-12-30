@@ -31,12 +31,17 @@ export const CareerHero = () => {
 
             <div className="flex space-y-4 lg:space-y-0 lg:space-x-4 mt-4 flex-col lg:flex-row ">
               <CustomButton
+                link="#openings"
                 type="ghost"
                 className="bg-[#373737] text-white w-full"
               >
                 Search our jobs
               </CustomButton>
-              <CustomButton type="primary" className="bg-[#191919] w-full">
+              <CustomButton
+                link="#apply-job"
+                type="primary"
+                className="bg-[#191919] w-full"
+              >
                 Join our talent network
               </CustomButton>
             </div>
