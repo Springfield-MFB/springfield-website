@@ -167,7 +167,7 @@ export const Footer = () => {
                   <a href="/micro-loan">Micro Loan</a>
                 </li>
                 <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
-                  <a href="">Small & Medium Loan</a>
+                  <a href="">Small & Medium Enterprise Loan</a>
                 </li>
                 <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
                   <a href="">School Support Product (3SP)</a>
@@ -254,7 +254,7 @@ export const Footer = () => {
               {/* Licensing Info */}
               <div className="text-center lg:text-left mb-8 flex justify-center lg:justify-start">
                 <div className="text-sm font-normal flex gap-x-2 items-center">
-                  <span className="">Licensed by CBN</span>
+                  <span className="">Approved by CBN</span>
                   <Image
                     src={CbnLogo}
                     alt="photo CBN Logo"

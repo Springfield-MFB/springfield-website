@@ -13,7 +13,8 @@ export const WhySpringfield = () => {
       <div className="col-span-1 h-full">
         <BoxReveal boxColor={"#F0B929"} duration={1}>
           <Heading className="text-white lg:leading-[90px]">
-            Why Choose <span className="text-brand-primary">Springfield?</span>
+            Why Choose{" "}
+            <span className="text-brand-primary">Springfield MfB?</span>
           </Heading>
         </BoxReveal>
 

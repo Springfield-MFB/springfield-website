@@ -3,14 +3,18 @@
 import { CustomButton } from "@/components/custom-button";
 import FormInput from "@/components/forms/input";
 import FormTextArea from "@/components/forms/text-area";
+import { FormField } from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useForm } from "react-hook-form";
 
 interface IWhistleBlowingForm {
-  fullName: string;
-  nricNumber: string;
-  phone: string;
-  email: string;
-  employmentDetails: string;
+  category: string;
   disclosure: string;
 }
 
@@ -44,68 +48,34 @@ export const WhistleBlowingForm = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col gap-4"
         >
-          <p className="text-black font-bold text-sm">
-            A. Your contact information
-          </p>
-          <FormInput
-            label="Full Name*"
-            id="fullName"
-            type="text"
-            register={register("fullName", {
-              required: "Please enter your name",
-            })}
-            error={errors.fullName}
+          <FormField
+            control={form.control}
+            name="category"
+            render={({ field }) => (
+              <div className="flex flex-col space-y-1">
+                <label className="text-sm" htmlFor="natureOfEnquiry">
+                  Name of Enquiry
+                </label>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a category" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Harassment">Harassment</SelectItem>
+                    <SelectItem value="Fraud">Fraud</SelectItem>
+                    <SelectItem value="Corruption">Corruption</SelectItem>
+                    <SelectItem value="Others">Others</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
           />
-
-          <FormInput
-            label="NRIC Number*"
-            id="nricNumber"
-            type="text"
-            register={register("nricNumber", {
-              required: "Please enter NRIC number",
-            })}
-            error={errors.nricNumber}
-          />
-
-          <FormInput
-            label="Phone Number*"
-            placeholder="Office | Mobile | Home"
-            id="phone"
-            type="text"
-            register={register("phone", {
-              required: "Office | Mobile | Home is required",
-            })}
-            error={errors.phone}
-          />
-
-          <FormInput
-            label="Email*"
-            id="email"
-            type="text"
-            register={register("email", {
-              required: "Please enter your email",
-            })}
-            error={errors.email}
-          />
-
-          <FormInput
-            label="Employment Details* (for Employee Only)"
-            placeholder="e.g. Current Job, Previous Job"
-            id="employmentDetails"
-            type="text"
-            register={register("employmentDetails", {
-              required: "Please enter employment details",
-            })}
-            error={errors.employmentDetails}
-          />
-
-          <p className="text-black font-bold text-sm">B. Disclosure </p>
-          <p className="mt-3 text-sm">
-            Please include the details of the person alleged, nature of
-            allegation and when the alleged conduct took place.
-          </p>
 
           <FormTextArea
+            label="Report Details"
             id="disclosure"
             type="text"
             register={register("disclosure", {

@@ -27,9 +27,9 @@ const Feat = () => {
               </div>
 
               {/* Counts */}
-              <div className="lg:col-span-3 flex flex-col lg:flex-row gap-8 lg:gap-0 mt-6 lg:mt-0  justify-between items-center">
-                <p className="text-black text-3xl font-millik text-center">
-                  Access up to N3m in less than 4hrs should shift down a bit
+              <div className="lg:col-span-3 flex lg:flex-row  lg:gap-0 mt-6 lg:mt-0  justify-end items-center">
+                <p className="text-black text-center lg:text-right text-3xl font-millik ">
+                  Access up to N3m within 24hrs
                 </p>
               </div>
             </div>

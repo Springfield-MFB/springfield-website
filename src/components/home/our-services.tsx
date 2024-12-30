@@ -94,12 +94,11 @@ export const OurServices = () => {
 
             <div className="flex flex-col space-y-4 mt-6">
               {[
-                "Termed Repayment Facility",
                 "Micro Loan",
-                "Small & Medium Loan",
-                "Daily Saving Scheme",
+                "Small & Medium Enterprise Loan",
+                "SDC Loan",
                 "School Supports",
-                "Asset Acquisization",
+                "Asset Acquisation",
                 "Shelter Loan",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-x-1.5">
@@ -134,7 +133,6 @@ export const OurServices = () => {
           <div className="flex flex-col space-y-4 mt-6">
             {[
               "Micro-insurance,",
-              "financial advisory,",
               "Bill Payments,",
               "Funds Transfer,",
               "ATM Card for Transaction",

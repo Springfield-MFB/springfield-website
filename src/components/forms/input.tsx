@@ -8,6 +8,8 @@ interface FormInputProps {
   placeholder?: string;
   register: UseFormRegisterReturn;
   error?: FieldError;
+  className?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const FormInput: React.FC<FormInputProps> = ({
@@ -17,6 +19,8 @@ const FormInput: React.FC<FormInputProps> = ({
   placeholder,
   register,
   error,
+  className,
+  onChange,
 }) => {
   return (
     <div className="flex flex-col space-y-2">
@@ -29,6 +33,8 @@ const FormInput: React.FC<FormInputProps> = ({
         placeholder={placeholder}
         {...register}
         error={error}
+        className={className}
+        onChange={onChange}
       />
     </div>
   );

@@ -1,4 +1,11 @@
-import { MdInfo } from "react-icons/md";
+import {
+  MdCalendarMonth,
+  MdEnergySavingsLeaf,
+  MdGpsNotFixed,
+  MdInfo,
+  MdPayment,
+} from "react-icons/md";
+import { SlCalender } from "react-icons/sl";
 import { HiCreditCard, HiUsers } from "react-icons/hi2";
 import {
   FaBriefcase,
@@ -15,8 +22,9 @@ import {
   TbPasswordMobilePhone,
   TbTargetArrow,
 } from "react-icons/tb";
-import { IoHelpCircleSharp, IoSchool } from "react-icons/io5";
+import { IoHelpCircleSharp, IoSchool, IoSchoolSharp } from "react-icons/io5";
 import {
+  BiCurrentLocation,
   BiSolidChat,
   BiSolidCreditCardAlt,
   BiSolidMobileVibration,
@@ -143,7 +151,7 @@ export const NAVBART_ITEMS = [
       {
         icon: BsCloudSunFill,
         iconColor: "#B900AA",
-        href: "/saving-account",
+        href: "#",
         color: "#FFE8FD",
         title: "Springfield Daily Contribution (SDC)",
         desc:
@@ -151,13 +159,23 @@ export const NAVBART_ITEMS = [
       },
 
       {
+        icon: MdEnergySavingsLeaf,
+        iconColor: "#03C15E",
+        href: "/savings-account",
+        color: "#E6FFF2",
+        title: "Springfield Savings Account (SSA)",
+        desc:
+          "This is normal savings account with attractive interest for individuals, business owners, students and traders",
+      },
+
+      {
         icon: TbTargetArrow,
         iconColor: "#1818D9",
-        href: "#",
+        href: "/current-account",
         color: "#E8E8FF",
-        title: "Springfield Target Account (STA)",
+        title: "Springfield Current Account (SCA)",
         desc:
-          "Special savings account crafted for customers to save for their financial goals. This is built on encouraging financial discipline.",
+          "current account product designed to satisfy our customer’s dynamic business needs",
       },
 
       {
@@ -167,7 +185,36 @@ export const NAVBART_ITEMS = [
         color: "#E2EBF7",
         title: "Springfield Target Account (STA)",
         desc:
-          "Fixed and tenured investment account with a goal to maximize financial returns on short, medium or long term bases.",
+          "This a special savings account crafted for customers to save for their financial goals. ",
+      },
+
+      {
+        icon: MdGpsNotFixed,
+        iconColor: "#EE5A02",
+        href: "#",
+        color: "#FFE9DC",
+        title: "Springfield Fixed Deposit Account (SPDA)",
+        desc:
+          "This is a fixed and tenured investment account with a goal to maximize financial returns on short, medium or long term bases.  ",
+      },
+
+      {
+        icon: BiCurrentLocation,
+        iconColor: "#CE6401",
+        href: "#",
+        color: "#FFF3E8",
+        title: "Springfield Corporate Current Account (SCCA)",
+        desc:
+          "a product designed to satisfy our customer’s dynamic business needs.",
+      },
+      {
+        icon: MdCalendarMonth,
+        iconColor: "#4E4EFE",
+        href: "#",
+        color: "#E8E8FF",
+        title: "Springfield Annual Contribution Account (SACA):",
+        desc:
+          "This is a contribution account built to meet financial goals set for year-end achievements. ",
       },
     ],
   },
@@ -203,9 +250,9 @@ export const NAVBART_ITEMS = [
         iconColor: "#D500C3",
         href: "/asset-acquisition-loan",
         color: "#FFE8FD",
-        title: "Springfield Asset Aquisation Loan (SAAL)",
+        title: "Springfield Asset Acquisation Loan (SAAL)",
         desc:
-          "This is a product designed to give our customers access to funding asset acquisition like Home appliances, electronics and phones etc.",
+          "This is a product designed to give our customers access to funding asset acquisition like Home appliances, electronics, cars and phones etc.",
       },
 
       {
@@ -213,9 +260,37 @@ export const NAVBART_ITEMS = [
         iconColor: "#D80A12",
         href: "/shelter-loan",
         color: "#FFE6E7",
-        title: "Springfield Shelter Loan",
+        title: "Springfield Housing Loan",
         desc:
           "Loan designed to help you build, renovate, or own your dream home with flexible repayment options tailored to your needs.",
+      },
+
+      {
+        icon: IoSchoolSharp,
+        iconColor: "#4E4EFE",
+        href: "#",
+        color: "#E8E8FF",
+        title: "Springfield School Support Product (3SP)",
+        desc:
+          "Designed for school owners, parents/guardian and tertiary students who seek financial empowerment toachieve their educational goals.",
+      },
+
+      {
+        icon: SlCalender,
+        iconColor: "#1818D9",
+        href: "#",
+        color: "#E8E8FF",
+        title: "Springfield Annual Contribution Account (SACA)",
+        desc:
+          "This is a contribution account built to meet financial goals set for year-end achievements. ",
+      },
+      {
+        icon: MdPayment,
+        iconColor: "#CE6401",
+        href: "#",
+        color: "#FFF3E8",
+        title: "Springfield Weekly Repayment Facility (SWR) Features ",
+        desc: "This is a weekly repayment loan for small businesses. ",
       },
     ],
   },
@@ -380,13 +455,6 @@ export const SERVICES = [
     description:
       "Boost your small or medium-sized enterprise with our specialized SME financing solutions. Springfield MfB supports entrepreneurs with customized financial packages to drive sustainable business growth.",
     image: TailorImg,
-  },
-
-  {
-    title: "Financial Advisory Services",
-    description:
-      "Benefit from expert guidance to manage your finances effectively. Our financial advisory services help you make informed decisions for personal and business success.",
-    image: FinancialAdImg,
   },
 ];
 
@@ -570,14 +638,13 @@ export const SME_LOAN_PROPERTIES = [
   },
   {
     icon: CalenderSvg,
-    title: "3-6 Months Tenor",
-    desc: "Borrow for a short-term period and enjoy flexible repayment terms",
+    title: "Tenor",
+    desc: "Up to 12 Months",
   },
   {
     icon: FastSvg,
     title: "Loan Range",
-    desc:
-      "Get quick access to the funds you need with our streamlined loan application process. ",
+    desc: "Above N1m",
   },
   {
     icon: RepaymentSvg,
@@ -594,7 +661,7 @@ export const LOAN_BENEFITS = [
       "Experience the ease of quick access to funds, providing immediate financial solutions at your fingertips. Whether it's an unexpected expense or an exciting opportunity.",
   },
   {
-    title: "For loans upto N500,000",
+    title: "For loans up to N500,000",
     description:
       "Unlock financial opportunities hassle-free with our no-collateral-required solutions. Enjoy the freedom to secure funds without pledging assets.",
   },
@@ -611,19 +678,19 @@ export const LOAN_BENEFITS = [
   {
     title: "Predictable Repayments",
     description:
-      "The fixed installment structure of loans makes it easier for borrowers to budget and plan for repayments since they know the exact amount that will be deducted from their salary each month.",
+      "The fixed installment structure of loans makes it easier for borrowers to budget and plan for repayments since they know the exact amount that will be deducted from their each month.",
   },
   {
     title: "Convenience",
     description:
-      "The repayment of a loan is typically structured to be convenient for the borrower. The installments are deducted directly from the salary, reducing the hassle of manual payments.",
+      "The repayment of a loan is typically structured to be convenient for the borrower. The installments are deducted directly from the, reducing the hassle of manual payments.",
   },
 ];
 
 export const TEAM_MEMEBERS = [
   {
     name: "ADETUNJI RASAQ ADESHINA",
-    role: "MD/CEO",
+    role: "Managing Director / CEO",
     image: RasaqImg,
     summary:
       "Mr. Rasaq Adeshina is a graduate of Business Administration and Management from Osun State Polytechnic, Iree. He is the current Managing Director of Springfield Microfinance Bank. He is a member of the Chartered Institute of Bankers of Nigeria (CIBN) and the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years’ experience in Microfinance sector, having work in various Microfinance Banks at different positions. Prior to joining Springfield Microfinance Bank, he was the Managing Director of Kayvee Microfinance Bank Limited, Zonal Manager of Hasal Microfinance Bank Limited, Branch Manager/Coordinator of Northern Region at Accion Microfinance Bank Limited amongst others. He has attended several professional training seminars, courses and workshops on Microfinance and Risk Management Culture",
@@ -640,42 +707,42 @@ export const TEAM_MEMEBERS = [
     role: "Company Secretary / Head Legal",
     image: ShonayaImg,
     summary:
-      "A committed, diligent and intelligent legal practitioner with a sound understanding of the law, its application and operation, coupled with a vast knowledge in information and communication technology. He is also a skilled and experienced writer with a passion for excellence.",
+      "A. T. Shonaya Esq. is a committed, diligent and intelligent legal practitioner with a sound understanding of the law, its application and operation, coupled with a vast knowledge in information and communication technology. He acquired his LL.B from the University of Ilorin, Ilorin, Kwara State. He proceeded to the Nigerian Law School and acquired his B.L the following year. He is a member of the Nigerian Bar Association. He has over 6 years’ experience in the legal field, having worked in both the corporate and litigation sectors. Prior to joining Springfield Microfinance Bank, he was a Legal Officer at Sparklight Group,Legal Adviser of Orljaa Group, United Arab Emirates amongst others.He has attended various trainings on banking and finance law, corporatelaw, NHF etc.",
   },
   {
     name: "MR. UDOH EDIDIONG SAMUEL",
-    role: "Head Operations",
+    role: "Head of Operations",
     image: UdohImg,
     summary:
-      "Mr. Frank Esezobor is a graduate of Political Science from Obafemi Awolowo University, Ile-Ife, Osun State. He has over 10 years’ experience in loan recovery, having commenced work as a Recovery Manager at Stallion Home Savings and Loan Limited from 2010 – 2014, before being promoted to head the loan recovery unit, which he occupied for 9 years.",
+      "He is a graduate of Ambrose Alli University, Ekpoma, Edo State, where he earned a Bachelor of Science (B.Sc.) degree in Business Administration. With over 18 years of comprehensive banking experience, he has established himself as a seasoned professional in the financial sector. He is a certified banker, holding the prestigious Microfinance Certification (MCIB) and a professional certificate from the Institute of Finance and Control of Nigeria (ACIFCN). His expertise spans various areas of banking operations, financial management, and control, making him a valuable asset in the microfinance banking industry.",
   },
   {
     name: "Mr. Frank Odion Esezobor",
     role: "Head Recovery/Mortgage",
     image: FrankImg,
     summary:
-      "He is a graduate of Ambrose Alli University, Ekpoma, Edo State, where he earned a Bachelor of Science (B.Sc.) degree in Business Administration. With over 18 years of comprehensive banking experience, he has established himself as a seasoned professional in the financial sector. He is a certified banker, holding the prestigious Microfinance Certification (MCIB) and a professional certificate from the Institute of Finance and Control of Nigeria (ACIFCN). His expertise spans various areas of banking operations, financial management, and control, making him a valuable asset in the microfinance banking industry.",
+      "Mr. Frank Esezobor is a graduate of Political Science from Obafemi Awolowo University, Ile-Ife, Osun State. He has over 10 years’ experience in loan recovery, having commenced work as a Recovery Manager at Stallion Home Savings and Loan Limited from 2010 – 2014, before being promoted to head the loan recovery unit, which he occupied for 9 years.",
   },
   {
     name: "ISRAEL ADEOYE OGUNDEYI",
-    role: "HEAD, CREDICT & RISK",
+    role: "Head, Credit & Risk",
     image: IsrealImg,
     summary:
       "Mr. Israel Ogundeyi is a graduate of Banking and Finance from Lagos State University. He is a member of the Chartered Institute of Loan and Risk Management of Nigeria. He has over 15 years’ experience in the microfinance sector. Prior to joining Springfield Microfinance Bank. He was once the Chief Operating Officer of Premier Poverty Alleviation Initiative (PPAI). He has attended several professional training seminars, courses and workshops on Microfinance Operations.",
   },
   {
     name: "PRECIOUS NKEMJIKA R.",
-    role: " HEAD, INTERNAL CONTROL/AUDIT",
+    role: "Head, Internal Control/Audit",
     image: PreciousImg,
     summary:
       "Precious rich graduate of accounting from the university of Nigeria (unn). Member of institute of chattered accountants of Nigeria (Ican). Has 10 years experience in auditing, financial accounting , taxation and administration.She was once an external auditor with lawman Nzenwa &Co.She has attended several trainings on forensic accounting, auditing etc",
   },
   {
     name: "SOWUNMI AYODEJI MICHAEL",
-    role: "HEAD, INFORMATION TECHNOLOGY",
+    role: "Head, Information Technology",
     image: AyodejiImg,
     summary:
-      "Mr Fakayode Taiwo is a graduate of Accounting from Osun State College of Technology, Esa Oke. He is a member of the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years of experience in the banking sector, having worked in different financial institutions such as commercial banks, microfinance banks and mortgage banks.  Prior to joining Springfield Microfinance Bank Limited, he was Head of Audit and Compliance at Stallion Microfinance Bank Limited, Chief Operation Officer at Hertrade Professional Management, Head, Credit and Risk at Mutual Alliance Mortgage Bank Limited amongst others.",
+      "Mr. Sowunmi Ayodeji is an experienced IT professional with a strong academic background in Computer Science from Yaba College of Technology, Lagos. With over  eight years of experience in IT infrastructure management, system administration, and technical support, he has developed expertise in designing, implementing, and maintaining IT systems. Certified in CompTIA A+, Microsoft 365 Fundamentals, and CCNA, Mr. Sowunmi has led strategic technology initiatives as Head of IT, improving system efficiency and ensuring smooth IT operations in a microfinance banking environment. He has also provided consultancy services, helping businesses adopt innovative IT solutions for growth and success. A results-driven leader, he is committed to leveraging technology to achieve organizational goals.",
   },
 ];
 

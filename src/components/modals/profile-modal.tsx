@@ -1,7 +1,7 @@
 import { useStore } from "@/store";
 import Modal from ".";
 import Image from "next/image";
-import { DIRECTORS, TEAM_MEMEBERS } from "@/config";
+import { DIRECTORS } from "@/config";
 
 type Member = (typeof DIRECTORS)[number];
 

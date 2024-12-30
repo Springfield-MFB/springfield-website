@@ -21,16 +21,16 @@ export const LoanHero = () => {
           <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
             <BoxReveal boxColor={"#F0B929"} duration={1}>
               <Heading className=" mx-auto w-[80%] md:mx-0">
-                Springfield Housing
+                Springfield Shelter{" "}
                 <span className="text-brand-primary">Loan</span>
               </Heading>
             </BoxReveal>
             <BoxReveal boxColor={"#F0B929"} duration={1.2}>
               <p className="lg:w-[90%] my-6 text-dark-text lg:leading-7 text-sm">
                 This is a loan product designed to provide suitable financial
-                solution to our housing needs of our customers. This is suitable
-                for home improvements and repair, House construction (in
-                practicable milages).
+                solution to the housing needs of our customers. This is suitable
+                for home improvements and Repairs, Rents and House construction
+                (in practicable milages).
               </p>
             </BoxReveal>
 

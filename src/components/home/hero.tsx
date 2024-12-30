@@ -19,7 +19,7 @@ export const Hero = () => {
       title: "Your Spring to ",
       highlight: "Success",
       description:
-        "Springfield Micro Finance Bank Limited (SMFB), situated in Igando, Lagos State, is a licensed Microfinance Bank dedicated to providing cutting-edge microfinance services/products to underserved communities and MSME through technological innovation.",
+        "Springfield Microfinance Bank Limited (SMFB), situated in Igando, Lagos State, is a licensed Microfinance Bank dedicated to providing cutting-edge microfinance services/products to underserved communities and MSME through technological innovation.",
       image: HeroImage,
     },
     {
@@ -90,7 +90,7 @@ export const Hero = () => {
             <div className="mt-8 flex  flex-col md:flex-row gap-4">
               <CustomButton
                 className=""
-                onClick={() => router.push("/micro-loan/apply")}
+                onClick={() => router.push("/loan/apply")}
                 type="primary"
               >
                 Apply For Loan

@@ -39,7 +39,7 @@ const ProfileModal = ({ member }: { member: Member }) => {
   function Title() {
     return (
       <div className=" lg:px-8 py-4 border-b text-sm lg:text-2xl font-bold capitalize">
-        {capitalizeWords(member.role)}
+        {member.role}
       </div>
     );
   }
