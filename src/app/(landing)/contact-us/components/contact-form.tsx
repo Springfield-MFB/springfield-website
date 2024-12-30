@@ -8,9 +8,7 @@ import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -19,13 +17,15 @@ import React from "react";
 import { Form, useForm } from "react-hook-form";
 
 enum natureOfEnquiry {
-  female = "female",
-  male = "male",
-  other = "other",
+  general_enquiry = "General enquiry",
+  loan_related = "Loan Related",
+  business_idea = "Business Idea",
+  know_more = "Know more about our product",
 }
 
 interface IContactForm {
   fullName: string;
+  phone: string;
   email: string;
   subject: string;
   natureOfEnquiry: natureOfEnquiry;
@@ -65,6 +65,17 @@ export const ContactForm = () => {
         />
 
         <FormInput
+          label="Phone Mobile Number"
+          id="phone"
+          type="text"
+          placeholder="Enter your phone mobile number"
+          register={register("phone", {
+            required: "Please enter your phone number",
+          })}
+          error={errors.phone}
+        />
+
+        <FormInput
           label="Email"
           id="email"
           type="email"
@@ -96,16 +107,21 @@ export const ContactForm = () => {
           render={({ field }) => (
             <div className="flex flex-col space-y-1">
               <label className="text-sm" htmlFor="natureOfEnquiry">
-                Name of Enquiry
+                Type of Enquiry
               </label>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <SelectTrigger>
                   <SelectValue placeholder="Select a verified email to display" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="m@example.com">m@example.com</SelectItem>
-                  <SelectItem value="m@google.com">m@google.com</SelectItem>
-                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                  <SelectItem value="General enquiry">
+                    General enquiry
+                  </SelectItem>
+                  <SelectItem value="Loan Related">Loan Related</SelectItem>
+                  <SelectItem value="Business Idea">Business Idea</SelectItem>
+                  <SelectItem value="Know more about our product">
+                    Know more about our product
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
