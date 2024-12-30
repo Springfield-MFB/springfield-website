@@ -20,7 +20,7 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
       <div className="fixed -bottom-6 left-2 lg:left-20 z-50">
         <div className="bg-white/40 backdrop-blur-sm p-2 rounded-md text-center lg:text-left mb-8 flex justify-center lg:justify-start">
           <div className="text-sm font-normal flex gap-x-2 items-center">
-            <span className="">Licensed by CBN</span>
+            <span className="">Approved by CBN</span>
             <Image
               src={CbnLogo}
               alt="photo CBN Logo"
