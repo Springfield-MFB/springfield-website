@@ -7,7 +7,6 @@ import { PageBoard } from "@/components/page-board";
 import { TEAM_MEMEBERS } from "@/config";
 import { openProfileModal } from "@/hooks/useModals";
 import { capitalizeWords } from "@/lib";
-import { set } from "date-fns";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -26,9 +25,7 @@ export const ManagementTeamPage = () => {
       <PageBoard
         backgroundImage="url('/images/director-bg.png')"
         heading="Management Team"
-        desc="Our Management Team comprises skilled professionals dedicated to executing our vision and 
-        driving operational excellence. Their expertise and leadership ensure the seamless 
-        delivery of our goals and commitment to innovation."
+        desc="Our management team comprises of skilled professionals dedicated to executing our vision and driving operational excellence. Their expertise and leadership ensure the seamless delivery of our goals and commitment to innovation."
       />
 
       <MaxWidthWrapper className="py-16">
