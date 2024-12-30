@@ -25,9 +25,7 @@ export const BoardOfDirectorPage = () => {
       <PageBoard
         backgroundImage="url('/images/director-bg.png')"
         heading="Board Of Directors"
-        desc="Our Board of Directors brings together experienced leaders dedicated to guiding our 
-        organization toward sustained growth and excellence. With their strategic vision and commitment,
-         they ensure we remain true to our mission and values."
+        desc="Our board comprises seasoned leaders committed to steering our organization toward sustained growth and excellence. Their strategic vision and dedication ensure we stay aligned with our mission and uphold our core values."
       />
 
       <MaxWidthWrapper className="py-16">
