@@ -9,7 +9,7 @@ const Feat = () => {
         <motion.div
           initial={{ scale: 0.4, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: false, amount: 0.2 }} // Animates both on scroll up and down
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
         >
           <div className="px-8 lg:px-24 py-12 bg-brand-primary rounded-[24px]">
