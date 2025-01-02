@@ -155,11 +155,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
             </div>
           </div>
 
-          <CustomButton
-            type="ghost"
-            onClick={() => router.push("/loan/apply")}
-            className="bg-[#585858] text-white"
-          >
+          <CustomButton type="ghost" className="bg-[#585858] text-white">
             Apply Now
           </CustomButton>
         </div>

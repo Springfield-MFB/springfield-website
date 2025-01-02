@@ -146,7 +146,11 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
             </div>
           </div>
 
-          <CustomButton type="ghost" className="bg-[#585858] text-white">
+          <CustomButton
+            link="/loan/apply"
+            type="ghost"
+            className="bg-[#585858] text-white"
+          >
             Apply Now
           </CustomButton>
         </div>

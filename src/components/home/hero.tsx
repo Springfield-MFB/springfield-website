@@ -88,14 +88,10 @@ export const Hero = () => {
             {/* Buttons */}
 
             <div className="mt-8 flex  flex-col md:flex-row gap-4">
-              <CustomButton
-                className=""
-                onClick={() => router.push("/loan/apply")}
-                type="primary"
-              >
+              <CustomButton className="" link="/loan/apply" type="primary">
                 Apply For Loan
               </CustomButton>
-              <CustomButton className="" type="ghost">
+              <CustomButton link="/open-account" type="ghost">
                 Open An Account
               </CustomButton>
             </div>

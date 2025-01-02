@@ -37,10 +37,7 @@ export const LoanHero = () => {
             <p className="text-dark-text mb-6 text-sm">
               Equity Contribution: 10%
             </p>
-            <CustomButton
-              onClick={() => router.push("/loan/apply")}
-              type="primary"
-            >
+            <CustomButton link="/loan/apply" type="primary">
               Apply Now
             </CustomButton>
           </div>

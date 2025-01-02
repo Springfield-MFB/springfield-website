@@ -4,7 +4,7 @@ import { CustomButton } from "@/components/custom-button";
 import FormInput from "@/components/forms/input";
 import FormTextArea from "@/components/forms/text-area";
 import { FormControl, FormField } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+
 import {
   Select,
   SelectContent,
@@ -111,7 +111,7 @@ export const ContactForm = () => {
               </label>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Select a verified email to display" />
+                  <SelectValue placeholder="Select a type of enquiry" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="General enquiry">

@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-
-import SavingAccountImage from "@/public/images/saving-hero-image.png";
-import { Box } from "lucide-react";
 import BoxReveal from "@/components/ui/box-reveal";
+
+import SavingAccountImage from "@/public/images/personal-current-hero.jpeg";
 
 export const Hero = () => {
   return (
@@ -33,7 +32,9 @@ export const Hero = () => {
               </p>
             </BoxReveal>
 
-            <CustomButton type="primary">Apply Now</CustomButton>
+            <CustomButton link="/open-account" type="primary">
+              Open Account
+            </CustomButton>
           </div>
 
           {/* RIGHT CONTENT */}

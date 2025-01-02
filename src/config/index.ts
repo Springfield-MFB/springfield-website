@@ -89,7 +89,7 @@ export const NAVBART_ITEMS = [
         color: "#E6FFF2",
         title: "Board Of Directors",
         desc:
-          "Our management team is committed to leading by example, fostering a culture of innovation, and driving excellence in everything we do. ",
+          "Our board of seasoned leaders drives sustained growth and excellence, ensuring alignment with our mission and core values.",
       },
 
       {
@@ -149,16 +149,6 @@ export const NAVBART_ITEMS = [
     value: "savings_&_deposit" as const,
     content: [
       {
-        icon: BsCloudSunFill,
-        iconColor: "#B900AA",
-        href: "#",
-        color: "#FFE8FD",
-        title: "Springfield Daily Contribution (SDC)",
-        desc:
-          "daily contribution account to encourage goal oriented savings of our customers. No Monthly charge and sms. Opportunity for loan.",
-      },
-
-      {
         icon: MdEnergySavingsLeaf,
         iconColor: "#03C15E",
         href: "/savings-account",
@@ -173,15 +163,35 @@ export const NAVBART_ITEMS = [
         iconColor: "#1818D9",
         href: "/current-account",
         color: "#E8E8FF",
-        title: "Springfield Current Account (SCA)",
+        title: "Springfield Personal Current Account (SCA)",
         desc:
           "current account product designed to satisfy our customer’s dynamic business needs",
       },
 
       {
+        icon: BiCurrentLocation,
+        iconColor: "#CE6401",
+        href: "/corporate-current-account",
+        color: "#FFF3E8",
+        title: "Springfield Corporate Current Account (SCCA)",
+        desc:
+          "a product designed to satisfy our customer’s dynamic business needs.",
+      },
+
+      {
+        icon: BsCloudSunFill,
+        iconColor: "#B900AA",
+        href: "",
+        color: "#FFE8FD",
+        title: "Springfield Daily Contribution (SDC)",
+        desc:
+          "daily contribution account to encourage goal oriented savings of our customers. No Monthly charge and sms. Opportunity for loan.",
+      },
+
+      {
         icon: PiBankFill,
         iconColor: "#54606E",
-        href: "#",
+        href: "",
         color: "#E2EBF7",
         title: "Springfield Target Account (STA)",
         desc:
@@ -191,7 +201,7 @@ export const NAVBART_ITEMS = [
       {
         icon: MdGpsNotFixed,
         iconColor: "#EE5A02",
-        href: "#",
+        href: "",
         color: "#FFE9DC",
         title: "Springfield Fixed Deposit Account (SPDA)",
         desc:
@@ -201,16 +211,17 @@ export const NAVBART_ITEMS = [
       {
         icon: BiCurrentLocation,
         iconColor: "#CE6401",
-        href: "#",
+        href: "",
         color: "#FFF3E8",
         title: "Springfield Corporate Current Account (SCCA)",
         desc:
           "a product designed to satisfy our customer’s dynamic business needs.",
       },
+
       {
         icon: MdCalendarMonth,
         iconColor: "#4E4EFE",
-        href: "#",
+        href: "",
         color: "#E8E8FF",
         title: "Springfield Annual Contribution Account (SACA):",
         desc:
@@ -268,7 +279,7 @@ export const NAVBART_ITEMS = [
       {
         icon: IoSchoolSharp,
         iconColor: "#4E4EFE",
-        href: "#",
+        href: "/school-support-product",
         color: "#E8E8FF",
         title: "Springfield School Support Product (3SP)",
         desc:
@@ -276,21 +287,22 @@ export const NAVBART_ITEMS = [
       },
 
       {
+        icon: MdPayment,
+        iconColor: "#CE6401",
+        href: "/weekly-repayment-facility",
+        color: "#FFF3E8",
+        title: "Springfield Weekly Repayment Facility (SWR) Features ",
+        desc: "This is a weekly repayment loan for small businesses. ",
+      },
+
+      {
         icon: SlCalender,
         iconColor: "#1818D9",
-        href: "#",
+        href: "",
         color: "#E8E8FF",
         title: "Springfield Annual Contribution Account (SACA)",
         desc:
           "This is a contribution account built to meet financial goals set for year-end achievements. ",
-      },
-      {
-        icon: MdPayment,
-        iconColor: "#CE6401",
-        href: "#",
-        color: "#FFF3E8",
-        title: "Springfield Weekly Repayment Facility (SWR) Features ",
-        desc: "This is a weekly repayment loan for small businesses. ",
       },
     ],
   },
@@ -563,7 +575,7 @@ export const LOAN_PROPERTIES = [
   },
   {
     icon: CalenderSvg,
-    title: "3-6 Months Tenor",
+    title: "3-6 Months Tenure",
     desc: "Borrow for a short-term period and enjoy flexible repayment terms",
   },
   {
@@ -588,19 +600,18 @@ export const ASSETS_ACQUISITION_LOAN_PROPERTIES = [
   },
   {
     icon: CalenderSvg,
-    title: "3-6 Months Tenor",
+    title: "3-6 Months Tenure",
     desc: "Borrow for a short-term period and enjoy flexible repayment terms",
   },
   {
     icon: FastSvg,
     title: "Loan Range",
-    desc: "Get up to 3,000,000.00",
+    desc: "Up to N12m",
   },
   {
     icon: RepaymentSvg,
-    title: "Termed Repayment",
-    desc:
-      " Make Manageable repayments that fit your schedule: Daily, Weekly, Monthly.",
+    title: "Frequency of Repayment",
+    desc: "Monthly",
   },
 ];
 
@@ -613,8 +624,8 @@ export const SHELTER_LOAN_PROPERTIES = [
   },
   {
     icon: CalenderSvg,
-    title: "3-6 Months Tenor",
-    desc: "Borrow for a short-term period and enjoy flexible repayment terms",
+    title: " Tenure",
+    desc: "Up to 24 Months",
   },
   {
     icon: FastSvg,
@@ -623,9 +634,8 @@ export const SHELTER_LOAN_PROPERTIES = [
   },
   {
     icon: RepaymentSvg,
-    title: "Termed Repayment",
-    desc:
-      " Make Manageable repayments that fit your schedule: Daily, Weekly, Monthly.",
+    title: "Tenor Repayment Frequency",
+    desc: "Monthly",
   },
 ];
 
@@ -638,7 +648,7 @@ export const SME_LOAN_PROPERTIES = [
   },
   {
     icon: CalenderSvg,
-    title: "Tenor",
+    title: "Tenure",
     desc: "Up to 12 Months",
   },
   {
@@ -649,8 +659,56 @@ export const SME_LOAN_PROPERTIES = [
   {
     icon: RepaymentSvg,
     title: "Termed Repayment",
+    desc: "Make Manageable repayments that fit your schedule",
+  },
+];
+
+export const SCHOOL_LOAN_PROPERTIES = [
+  {
+    icon: RateSvg,
+    title: "Competitive Interest Rate",
     desc:
-      " Make Manageable repayments that fit your schedule: Daily, Weekly, Monthly.",
+      "Apply for a loan today and take advantage of our competitive interest rate",
+  },
+  {
+    icon: CalenderSvg,
+    title: "Tenure",
+    desc: "Borrow for a short-term period and enjoy flexible repayment terms",
+  },
+  {
+    icon: FastSvg,
+    title: "Loan Range",
+    desc: "Get up to 3,000,000.00",
+  },
+  {
+    icon: RepaymentSvg,
+    title: "Termed Repayment",
+    desc:
+      "Make Manageable repayments that fit your schedule: Monthly, Quarterly etc.",
+  },
+];
+
+export const WEEKLY_REPAYMENT_LOAN_PROPERTIES = [
+  {
+    icon: RateSvg,
+    title: "Competitive Interest Rate",
+    desc:
+      "Apply for a loan today and take advantage of our competitive interest rate",
+  },
+  {
+    icon: CalenderSvg,
+    title: "Tenure",
+    desc: "3-6 months (ie.12-24weeks)",
+  },
+  {
+    icon: FastSvg,
+    title: "Loan Range",
+    desc: "Starting from N100k to Above N1m",
+  },
+  {
+    icon: RepaymentSvg,
+    title: "Termed Repayment",
+    desc: "Weekly",
   },
 ];
 

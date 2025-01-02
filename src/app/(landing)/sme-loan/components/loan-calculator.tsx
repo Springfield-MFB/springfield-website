@@ -152,7 +152,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
 
           <CustomButton
             type="ghost"
-            onClick={() => router.push("/sme-loan/business-loan")}
+            link="/loan/apply"
             className="bg-[#585858] text-white"
           >
             Apply Now

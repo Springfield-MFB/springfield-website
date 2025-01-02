@@ -10,12 +10,12 @@ import BoxReveal from "@/components/ui/box-reveal";
 
 export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
   const [depositAmount, setdepositAmount] = useState<number>(2341980);
-  const [tenor, setTenor] = useState<number>(30);
+  const [tenure, setTenure] = useState<number>(30);
 
   // Calculate total repayment
   const interestRate = 0.15; // Example interest rate
   const totalRepayment = Math.round(
-    depositAmount * (1 + interestRate * (tenor / 365))
+    depositAmount * (1 + interestRate * (tenure / 365))
   );
 
   return (
@@ -93,9 +93,9 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
           </label>
 
           <div className="flex items-center justify-between">
-            <p className={cn("text-sm mb-4")}>Tenor(days)</p>
+            <p className={cn("text-sm mb-4")}>tenure(days)</p>
             <div className="p-4 bg-[#585858] rounded-[4px] text-white text-sm font-medium">
-              {tenor} days
+              {tenure} days
             </div>
           </div>
 
@@ -105,8 +105,8 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
               type="range"
               min={30}
               max={365}
-              value={tenor}
-              onChange={(e) => setTenor(Number(e.target.value))}
+              value={tenure}
+              onChange={(e) => setTenure(Number(e.target.value))}
               className="custom-range w-full  accent-brand-primary mt-2"
               style={{
                 background:
@@ -114,14 +114,14 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
                     ? `linear-gradient(
                     to right,
                     #f0b929 0%,
-                    #f0b929 ${((tenor - 30) / (365 - 30)) * 100}%,
-                    #3E3E3E ${((tenor - 30) / (365 - 30)) * 100}%,
+                    #f0b929 ${((tenure - 30) / (365 - 30)) * 100}%,
+                    #3E3E3E ${((tenure - 30) / (365 - 30)) * 100}%,
                     #3E3E3E 100%`
                     : `linear-gradient(
                     to right,
                     #f0b929 0%,
-                    #f0b929 ${((tenor - 30) / (365 - 30)) * 100}%,
-                    #DFDFDF ${((tenor - 30) / (365 - 30)) * 100}%,
+                    #f0b929 ${((tenure - 30) / (365 - 30)) * 100}%,
+                    #DFDFDF ${((tenure - 30) / (365 - 30)) * 100}%,
                     #DFDFDF 100%`,
               }}
             />

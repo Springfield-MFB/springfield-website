@@ -34,7 +34,9 @@ export const LoanHero = () => {
               </p>
             </BoxReveal>
 
-            <CustomButton type="primary">Apply Now</CustomButton>
+            <CustomButton link="/loan/apply" type="primary">
+              Apply Now
+            </CustomButton>
           </div>
 
           {/* RIGHT CONTENT */}

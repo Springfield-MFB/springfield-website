@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-
-import SavingAccountImage from "@/public/images/saving-hero-image.png";
-import { Box } from "lucide-react";
 import BoxReveal from "@/components/ui/box-reveal";
 
-export const SavingHero = () => {
+import SavingAccountImage from "@/public/images/corporate-hero.jpeg";
+
+export const Hero = () => {
   return (
     <div>
       <MaxWidthWrapper>
@@ -20,16 +19,16 @@ export const SavingHero = () => {
           <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
             <BoxReveal boxColor={"#F0B929"} duration={1}>
               <Heading className="lg:w-[90%]">
-                Springfield <span className="text-brand-primary">Saving</span>{" "}
+                Springfield{" "}
+                <span className="text-brand-primary">Corporate Current</span>{" "}
                 Account
               </Heading>
             </BoxReveal>
 
             <BoxReveal boxColor={"#F0B929"} duration={1.3}>
               <p className="my-6 lg:w-[90%] text-dark-text lg:leading-7 text-sm">
-                This is normal savings account with attractive interest for
-                individuals, business owners, students and traders. Up to 3
-                times withdrawals allowed with interest.
+                Springfield’s corporate current account is a product designed to
+                satisfy our customer’s dynamic business needs.
               </p>
             </BoxReveal>
 

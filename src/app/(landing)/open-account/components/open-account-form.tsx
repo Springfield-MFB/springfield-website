@@ -25,7 +25,7 @@ interface IMicroLoanForm {
   loanTenure: string;
 }
 
-export const LoanForm = () => {
+export const AccountOpeningForm = () => {
   const {
     register,
     handleSubmit,
@@ -186,7 +186,7 @@ export const LoanForm = () => {
           </div>
 
           <div className=" w-full lg:w-[30%]">
-            <CustomButton type="submit">Apply</CustomButton>
+            <CustomButton type="submit">Submit</CustomButton>
           </div>
         </form>
       </div>

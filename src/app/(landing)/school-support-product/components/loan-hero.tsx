@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 import { motion } from "framer-motion";
@@ -7,16 +5,15 @@ import { motion } from "framer-motion";
 import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-
-import LoanHeroImage from "@/public/images/sme-hero.jpeg";
-
-import { LOAN_PROPERTIES, SME_LOAN_PROPERTIES } from "@/config";
-import { useRouter } from "next/navigation";
 import BoxReveal from "@/components/ui/box-reveal";
+
+import LoanHeroImage from "@/public/images/school-hero.jpeg";
+
+import { SCHOOL_LOAN_PROPERTIES } from "@/config";
+import { useRouter } from "next/navigation";
 
 export const LoanHero = () => {
   const router = useRouter();
-
   return (
     <div>
       <MaxWidthWrapper className="py-16">
@@ -26,21 +23,22 @@ export const LoanHero = () => {
           <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
             <BoxReveal boxColor={"#F0B929"} duration={1}>
               <Heading className=" mx-auto w-[80%] md:mx-0">
-                Springfield SME <span className="text-brand-primary">Loan</span>
+                School{" "}
+                <span className="text-brand-primary">Support Product</span>{" "}
+                (3SP)
               </Heading>
             </BoxReveal>
-            <BoxReveal boxColor={"#F0B929"} duration={1}>
-              <p className="lg:w-[90%] text-dark-text lg:leading-7 text-sm">
-                This is a loan specially crafted for SME business owners whose
-                goals are business expansion and working capital enhancement.
+            <BoxReveal boxColor={"#F0B929"} duration={1.2}>
+              <p className="lg:w-[90%] text-dark-text lg:leading-7 text-sm mb-6">
+                This product is designed for school owners, parents/guardian and
+                tertiary students who seek financial empowerment to achieve
+                their educational goals.
               </p>
             </BoxReveal>
 
-            <BoxReveal boxColor={"#F0B929"} duration={1.2}>
-              <p className="text-dark-text mb-6 text-sm">
-                Interest Rate: Competitive interest rate
-              </p>
-            </BoxReveal>
+            {/* <p className="text-dark-text mb-6 text-sm">
+              Equity Contribution: 10%
+            </p> */}
             <CustomButton link="/loan/apply" type="primary">
               Apply Now
             </CustomButton>
@@ -72,7 +70,7 @@ export const LoanHero = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <div className="w-full p-8 lg:p-14 grid lg:grid-cols-4 gap-8 bg-dark-primary rounded-[32px]">
-            {SME_LOAN_PROPERTIES.map((item, i) => (
+            {SCHOOL_LOAN_PROPERTIES.map((item, i) => (
               <div key={i} className="flex space-x-3">
                 <Image
                   src={item.icon}
