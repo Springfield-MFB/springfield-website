@@ -6,7 +6,7 @@ import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
-import LoanHeroImage from "@/public/images/assets-acquisition-img.png";
+import LoanHeroImage from "@/public/images/asset-hero.jpeg";
 
 import { ASSETS_ACQUISITION_LOAN_PROPERTIES } from "@/config";
 import BoxReveal from "@/components/ui/box-reveal";
@@ -39,7 +39,9 @@ export const LoanHero = () => {
                 Equity Contribution: 30%
               </p>
             </BoxReveal>
-            <CustomButton type="primary">Apply Now</CustomButton>
+            <CustomButton link="/loan/apply" type="primary">
+              Apply Now
+            </CustomButton>
           </div>
 
           {/* RIGHT CONTENT */}
