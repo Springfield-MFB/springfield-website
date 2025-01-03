@@ -45,7 +45,7 @@ export const LoanHero = () => {
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="lg:basis-[45%]">
+          <div className="lg:basis-[48%]">
             <motion.div
               initial={{ scale: 0.2, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
