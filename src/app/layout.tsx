@@ -6,6 +6,7 @@ import { ReactQueryClientProvider } from "@/context/ReactQueryClientProvider";
 
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,6 +45,8 @@ export default function RootLayout({
             "antialiased min-h-screen"
           )}
         >
+          <Toaster closeButton position="top-center" richColors />
+
           <TanStackQueryProvider>{children}</TanStackQueryProvider>
         </body>
       </html>
