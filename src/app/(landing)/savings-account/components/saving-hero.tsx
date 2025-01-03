@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 
 import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
+import BoxReveal from "@/components/ui/box-reveal";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
-import SavingAccountImage from "@/public/images/saving-hero-image.png";
-import { Box } from "lucide-react";
-import BoxReveal from "@/components/ui/box-reveal";
+import SavingAccountImage from "@/public/images/savings-hero.jpeg";
 
 export const SavingHero = () => {
   return (

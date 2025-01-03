@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { NAVBART_ITEMS } from "@/config";
 import AnimatedBackground from "./core/animated-background";
 import { FlipText } from "./flip-text";
+import { toast } from "sonner";
 
 type NavItem = (typeof NAVBART_ITEMS)[number];
 
@@ -66,38 +67,49 @@ export const NavItem: FC<NavItemProps> = ({
                     }}
                     enableHover
                   >
-                    {navItem.content.map((item, i) => (
-                      <Link
-                        onClick={close}
-                        href={item.href}
-                        key={i}
-                        data-id={`card-${i}`}
-                      >
-                        <div className="flex rounded-lg p-4">
-                          <div className="flex gap-x-2 ">
-                            <div
-                              style={{ backgroundColor: item.color }}
-                              className={`flex size-[48px] bg-[${item.color}] items-center justify-center rounded-[8px]`}
-                            >
-                              <item.icon
-                                color={item.iconColor}
-                                className="size-[24px] text-muted-foreground"
-                                aria-hidden="true"
-                              />
-                            </div>
+                    {navItem.content.map((item, i) => {
+                      const handleClick = () => {
+                        if (!item.href) {
+                          close();
+                          toast.success("Coming Soon");
+                          return;
+                        }
 
-                            <div className="flex flex-col flex-1 ">
-                              <span className="text-xs text-grey-200 font-bold">
-                                {item.title}
-                              </span>
-                              <span className="text-xs font-light text-grey-150 leading-6">
-                                {item.desc}
-                              </span>
+                        close();
+                      };
+                      return (
+                        <Link
+                          onClick={handleClick}
+                          href={item.href}
+                          key={i}
+                          data-id={`card-${i}`}
+                        >
+                          <div className="flex rounded-lg p-4">
+                            <div className="flex gap-x-2 ">
+                              <div
+                                style={{ backgroundColor: item.color }}
+                                className={`flex size-[48px] bg-[${item.color}] items-center justify-center rounded-[8px]`}
+                              >
+                                <item.icon
+                                  color={item.iconColor}
+                                  className="size-[24px] text-muted-foreground"
+                                  aria-hidden="true"
+                                />
+                              </div>
+
+                              <div className="flex flex-col flex-1 ">
+                                <span className="text-xs text-grey-200 font-bold">
+                                  {item.title}
+                                </span>
+                                <span className="text-xs font-light text-grey-150 leading-6">
+                                  {item.desc}
+                                </span>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </Link>
-                    ))}
+                        </Link>
+                      );
+                    })}
                   </AnimatedBackground>
                 </div>
               </div>

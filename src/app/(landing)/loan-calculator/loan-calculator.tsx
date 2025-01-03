@@ -1,25 +1,21 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { CustomButton } from "@/components/custom-button";
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { useState } from "react";
 import { LoanProcessCard } from "./loan-process-card";
-import { useRouter } from "next/navigation";
 import BoxReveal from "@/components/ui/box-reveal";
 
 export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
-  const router = useRouter();
-
   const [loanAmount, setLoanAmount] = useState<number>(2341980);
-  const [loanDuration, setLoanDuration] = useState<number>(213);
+  const [loanDuration, setLoanDuration] = useState<number>(4);
 
   // Calculate total repayment
   const interestRate = 0.15; // Example interest rate
   const totalRepayment = Math.round(
-    loanAmount * (1 + interestRate * (loanDuration / 365))
+    loanAmount * (1 + interestRate * (loanDuration / 12))
   );
 
   return (
@@ -64,6 +60,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
               type="range"
               min={50000}
               max={10000000}
+              step={5000}
               value={loanAmount}
               onChange={(e) => setLoanAmount(Number(e.target.value))}
               className="custom-range  w-full accent-brand-primary mt-2"
@@ -106,8 +103,8 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
           <label className="block mb-6">
             <input
               type="range"
-              min={30}
-              max={365}
+              min={1}
+              max={12}
               value={loanDuration}
               onChange={(e) => setLoanDuration(Number(e.target.value))}
               className="custom-range w-full  accent-brand-primary mt-2"
@@ -117,21 +114,21 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
                     ? `linear-gradient(
                     to right,
                     #f0b929 0%,
-                    #f0b929 ${((loanDuration - 30) / (365 - 30)) * 100}%,
-                    #3E3E3E ${((loanDuration - 30) / (365 - 30)) * 100}%,
+                    #f0b929 ${((loanDuration - 1) / (12 - 1)) * 100}%,
+                    #3E3E3E ${((loanDuration - 1) / (12 - 1)) * 100}%,
                     #3E3E3E 100%`
                     : `linear-gradient(
                     to right,
                     #f0b929 0%,
-                    #f0b929 ${((loanDuration - 30) / (365 - 30)) * 100}%,
-                    #DFDFDF ${((loanDuration - 30) / (365 - 30)) * 100}%,
+                    #f0b929 ${((loanDuration - 1) / (12 - 1)) * 100}%,
+                    #DFDFDF ${((loanDuration - 1) / (12 - 1)) * 100}%,
                     #DFDFDF 100%`,
               }}
             />
             <div className="w-full mt-3 text-xs flex items-center justify-between">
-              <p>30 days</p>
-              <p className="text-brand-primary">{loanDuration} days</p>
-              <p>365 days</p>
+              <p>1 month</p>
+              <p className="text-brand-primary">{loanDuration} months</p>
+              <p>12 months</p>
             </div>
           </label>
 
@@ -145,7 +142,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
             </div>
             <div className="flex flex-col space-y-2 text-xs">
               <span>Duration:</span>{" "}
-              <span className="font-bold">{loanDuration} days</span>
+              <span className="font-bold">{loanDuration} months</span>
             </div>
             <div className="flex flex-col space-y-2 text-xs">
               <span>Total Repayment:</span>
@@ -153,9 +150,21 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
                 NGN {totalRepayment.toLocaleString()}
               </span>
             </div>
+            <div className="flex flex-col space-y-2 text-xs">
+              <span>Total Rate:</span>
+              <span className="font-bold">
+                {/* NGN {totalRepayment.toLocaleString()}
+                 */}
+                {interestRate.toFixed(2)}%
+              </span>
+            </div>
           </div>
 
-          <CustomButton type="ghost" className="bg-[#585858] text-white">
+          <CustomButton
+            link="/loan/apply"
+            type="ghost"
+            className="bg-[#585858] text-white"
+          >
             Apply Now
           </CustomButton>
         </div>

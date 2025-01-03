@@ -47,7 +47,7 @@ export const Footer = () => {
             {/* Right Button Section */}
             <div>
               <Link
-                href=""
+                href="/contact-us"
                 className="group bg-brand-primary text-black px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-yellow-600 font-satoshi transition duration-300"
               >
                 <span>Get In Touch</span>

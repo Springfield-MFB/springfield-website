@@ -1,6 +1,7 @@
 "use client";
 
 import { CustomButton } from "@/components/custom-button";
+import { DatePickerWithPresets } from "@/components/data-picker";
 import FormInput from "@/components/forms/input";
 import { FormField } from "@/components/ui/form";
 import {
@@ -10,6 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { STATES_IN_NIGERIA } from "@/config";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 interface IMicroLoanForm {
@@ -20,12 +23,13 @@ interface IMicroLoanForm {
   phone: string;
   contactAddress: string;
   stateOfResidence: string;
-  loanAmount: string;
-  loanPurpose: string;
-  loanTenure: string;
+  bvn: string;
+  nin: string;
 }
 
 export const AccountOpeningForm = () => {
+  const [date, setDate] = useState<Date>();
+
   const {
     register,
     handleSubmit,
@@ -37,6 +41,7 @@ export const AccountOpeningForm = () => {
 
   const onSubmit = (data: IMicroLoanForm) => {
     console.log(data);
+    console.log("date", date);
   };
 
   return (
@@ -85,13 +90,20 @@ export const AccountOpeningForm = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
+            <div className="flex flex-col space-y-2">
+              <label className="text-sm" htmlFor="date">
+                Date of Birth
+              </label>
+              <DatePickerWithPresets date={date} setDate={setDate} />
+            </div>
+
             <FormInput
               id="email"
-              label="Email"
+              label="Email Address (Optional)"
               type="email"
               placeholder="Enter your full name"
               register={register("email", {
-                required: "Email is required",
+                required: "Email Address is required",
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                   message: "Please enter a valid email address",
@@ -99,20 +111,20 @@ export const AccountOpeningForm = () => {
               })}
               error={errors.email}
             />
+          </div>
 
+          <div className="grid lg:grid-cols-2 gap-6">
             <FormInput
               id="phone"
               label="Phone Number"
-              type="phone"
+              type="number"
               placeholder="Enter phone number"
               register={register("phone", {
                 required: "phone is required",
               })}
               error={errors.phone}
             />
-          </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
             <FormField
               control={form.control}
               name="stateOfResidence"
@@ -129,13 +141,19 @@ export const AccountOpeningForm = () => {
                       <SelectValue placeholder="Select state" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Lagos">Lagos</SelectItem>
+                      {STATES_IN_NIGERIA.map((state) => (
+                        <SelectItem key={state} value={state}>
+                          {state}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
               )}
             />
+          </div>
 
+          <div className="grid lg:grid-cols-2 gap-6">
             <FormInput
               id="contactAddress"
               label="Contact Address"
@@ -146,46 +164,33 @@ export const AccountOpeningForm = () => {
               })}
               error={errors.contactAddress}
             />
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-6">
-            <FormInput
-              id="businessName"
-              label="Business Name"
-              type="businessName"
-              placeholder="Enter business name "
-              register={register("loanAmount", {
-                required: "Business name is required",
-              })}
-              error={errors.loanAmount}
-            />
 
             <FormInput
-              id="loanPurpose"
-              label="Purpose of Loan"
-              type="text"
-              placeholder="Enter what you will use the loan for"
-              register={register("loanPurpose", {
-                required: "loan purpose is required",
+              id="bvn"
+              label="BVN"
+              type="number"
+              placeholder="Enter your BVN "
+              register={register("bvn", {
+                required: "BVN is required",
               })}
-              error={errors.loanPurpose}
+              error={errors.bvn}
             />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
             <FormInput
-              id="loanTenure"
-              label="Loan Tenure"
-              type="text"
-              placeholder="Specify how long you want the the money"
-              register={register("loanTenure", {
-                required: "Loan Tenure is required",
+              id="nin"
+              label="NIN"
+              type="number"
+              placeholder="Enter your NIN"
+              register={register("nin", {
+                required: "NIN is required",
               })}
-              error={errors.loanTenure}
+              error={errors.nin}
             />
           </div>
 
-          <div className=" w-full lg:w-[30%]">
+          <div className=" w-full lg:w-[30%] z-40">
             <CustomButton type="submit">Submit</CustomButton>
           </div>
         </form>

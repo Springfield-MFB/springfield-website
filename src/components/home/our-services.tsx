@@ -9,8 +9,10 @@ import DepositImage from "@/public/images/deposit-product.png";
 import LoanProductImage from "@/public/images/loan-product.png";
 import OtherServicesImage from "@/public/images/other-services.png";
 import BoxReveal from "../ui/box-reveal";
+import { useRouter } from "next/navigation";
 
 export const OurServices = () => {
+  const router = useRouter();
   return (
     <div className="">
       {/* Heading */}
@@ -108,7 +110,12 @@ export const OurServices = () => {
               ))}
             </div>
 
-            <Button className="mt-8">Use Calculator</Button>
+            <Button
+              onClick={() => router.push("/loan-calculator")}
+              className="mt-8"
+            >
+              Use Calculator
+            </Button>
 
             <div className="absolute right-0 bottom-4 lg:right-8">
               <Image

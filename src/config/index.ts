@@ -115,7 +115,7 @@ export const NAVBART_ITEMS = [
       {
         icon: RiFolderVideoFill,
         iconColor: "#54606E",
-        href: "#",
+        href: "",
         color: "#E2EBF7",
         title: "Media",
         desc:
@@ -124,7 +124,7 @@ export const NAVBART_ITEMS = [
       {
         icon: PiBankFill,
         iconColor: "#EFAD00",
-        href: "#",
+        href: "",
         color: "#FFF7E2",
         title: "ESG",
         desc:
@@ -134,7 +134,7 @@ export const NAVBART_ITEMS = [
       {
         icon: RiUserStarFill,
         iconColor: "#1818D9",
-        href: "#",
+        href: "",
         color: "#E8E8FF",
         title: "CSR",
         desc:
@@ -316,7 +316,7 @@ export const NAVBART_ITEMS = [
       {
         icon: HiCreditCard,
         iconColor: "#0099B7",
-        href: "#",
+        href: "",
         color: "#E6FBFF",
         title: "Instant Debit Card",
         desc:
@@ -326,7 +326,7 @@ export const NAVBART_ITEMS = [
       {
         icon: BiSolidMobileVibration,
         iconColor: "#00B457",
-        href: "#",
+        href: "",
         color: "#E6FFF2",
         title: "Mobile Banking",
         desc:
@@ -336,7 +336,7 @@ export const NAVBART_ITEMS = [
       {
         icon: TbPasswordMobilePhone,
         iconColor: "#CB06B3",
-        href: "#",
+        href: "",
         color: "#FFE6FC",
         title: "Agency Banking",
         desc:
@@ -346,7 +346,7 @@ export const NAVBART_ITEMS = [
       {
         icon: FaCalendarDays,
         iconColor: "#3333F5",
-        href: "#",
+        href: "",
         color: "#E8E8FF",
         title: "Buy Now Pay Later",
         desc:
@@ -356,7 +356,7 @@ export const NAVBART_ITEMS = [
       {
         icon: PiHashFill,
         iconColor: "#CE6401",
-        href: "#",
+        href: "",
         color: "#FFF3E8",
         title: "USSD",
         desc:
@@ -412,7 +412,7 @@ export const NAVBART_ITEMS = [
       {
         icon: TiLocation,
         iconColor: "#D202C1",
-        href: "#",
+        href: "",
         color: "#FFE8FD",
         title: "Branch Locator",
         desc:
@@ -863,4 +863,44 @@ export const FAQ_DATA = [
     question: "Is ATM card free?",
     answer: "No, this is coming soon",
   },
+];
+
+export const STATES_IN_NIGERIA = [
+  "Abia",
+  "Adamawa",
+  "Akwa Ibom",
+  "Anambra",
+  "Bauchi",
+  "Bayelsa",
+  "Benue",
+  "Borno",
+  "Cross River",
+  "Delta",
+  "Ebonyi",
+  "Edo",
+  "Ekiti",
+  "Enugu",
+  "Gombe",
+  "Imo",
+  "Jigawa",
+  "Kaduna",
+  "Kano",
+  "Katsina",
+  "Kebbi",
+  "Kogi",
+  "Kwara",
+  "Lagos",
+  "Nasarawa",
+  "Niger",
+  "Ogun",
+  "Ondo",
+  "Osun",
+  "Oyo",
+  "Plateau",
+  "Rivers",
+  "Sokoto",
+  "Taraba",
+  "Yobe",
+  "Zamfara",
+  "FCT",
 ];
