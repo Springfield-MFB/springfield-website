@@ -16,6 +16,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 interface IMicroLoanForm {
+  accountCategory: string;
   fullName: string;
   gender: string;
   dob: string;
@@ -25,6 +26,9 @@ interface IMicroLoanForm {
   stateOfResidence: string;
   bvn: string;
   nin: string;
+  id: string;
+  utilityBill: string;
+  otherDoc: string;
 }
 
 export const AccountOpeningForm = () => {
@@ -38,6 +42,21 @@ export const AccountOpeningForm = () => {
   } = useForm<IMicroLoanForm>({
     mode: "onTouched",
   });
+
+  const [selectedDocs, setSelectedDocs] = useState({
+    id: false,
+    utilityBill: false,
+    otherDoc: false,
+  });
+
+  const handleFileChange =
+    (type: keyof typeof selectedDocs) =>
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      setSelectedDocs((prevState) => ({
+        ...prevState,
+        [type]: event?.target?.files?.length! > 0 || false,
+      }));
+    };
 
   const onSubmit = (data: IMicroLoanForm) => {
     console.log(data);
@@ -53,6 +72,43 @@ export const AccountOpeningForm = () => {
           className="flex flex-col gap-8"
         >
           <div className="grid lg:grid-cols-2 gap-6">
+            <FormField
+              control={form.control}
+              name="accountCategory"
+              render={({ field }) => (
+                <div className="flex flex-col space-y-1">
+                  <label className="text-sm" htmlFor="accountCategory">
+                    Type of Deposit Product
+                  </label>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select the Account Category" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Springfield Daily Contributions">
+                        Springfield Daily Contributions (SDC)
+                      </SelectItem>
+                      <SelectItem value="Springfield Savings Account (SSA)">
+                        Springfield Savings Account (SSA)
+                      </SelectItem>
+                      <SelectItem value="Springfield Current Account (SCA)">
+                        Springfield Current Account (SCA)
+                      </SelectItem>
+                      <SelectItem value="Springfield Target Account (STA)">
+                        Springfield Target Account (STA)
+                      </SelectItem>
+                      <SelectItem value="Springfield Fixed Deposit Account (SPDA)">
+                        Springfield Fixed Deposit Account (SPDA)
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
+            />
+
             <FormInput
               id="fullName"
               label="Full Name"
@@ -87,16 +143,15 @@ export const AccountOpeningForm = () => {
                 </div>
               )}
             />
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-6">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-1">
               <label className="text-sm" htmlFor="date">
                 Date of Birth
               </label>
               <DatePickerWithPresets date={date} setDate={setDate} />
             </div>
+          </div>
 
+          <div className="grid lg:grid-cols-2 gap-6">
             <FormInput
               id="email"
               label="Email Address (Optional)"
@@ -111,9 +166,7 @@ export const AccountOpeningForm = () => {
               })}
               error={errors.email}
             />
-          </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
             <FormInput
               id="phone"
               label="Phone Number"
@@ -124,7 +177,9 @@ export const AccountOpeningForm = () => {
               })}
               error={errors.phone}
             />
+          </div>
 
+          <div className="grid lg:grid-cols-2 gap-6">
             <FormField
               control={form.control}
               name="stateOfResidence"
@@ -151,9 +206,7 @@ export const AccountOpeningForm = () => {
                 </div>
               )}
             />
-          </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
             <FormInput
               id="contactAddress"
               label="Contact Address"
@@ -164,7 +217,9 @@ export const AccountOpeningForm = () => {
               })}
               error={errors.contactAddress}
             />
+          </div>
 
+          <div className="grid lg:grid-cols-2 gap-6">
             <FormInput
               id="bvn"
               label="BVN"
@@ -175,9 +230,7 @@ export const AccountOpeningForm = () => {
               })}
               error={errors.bvn}
             />
-          </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
             <FormInput
               id="nin"
               label="NIN"
@@ -187,6 +240,84 @@ export const AccountOpeningForm = () => {
                 required: "NIN is required",
               })}
               error={errors.nin}
+            />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-6">
+            <FormField
+              control={form.control}
+              name="gender"
+              render={({ field }) => (
+                <div className="flex flex-col space-y-1">
+                  <label className="text-sm" htmlFor="gender">
+                    Means of Identification
+                  </label>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select available valid ID" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Driver’s License">
+                        Driver’s License
+                      </SelectItem>
+                      <SelectItem value="International Passport">
+                        International Passport
+                      </SelectItem>
+                      <SelectItem value="Permanent Voter’s Card">
+                        Permanent Voter’s Card
+                      </SelectItem>
+                      <SelectItem value="National Identity Number (NIN) Card">
+                        National Identity Number (NIN) Card
+                      </SelectItem>
+                      <SelectItem value="Residence/Work Permit (For Foreigners)">
+                        Residence/Work Permit (For Foreigners)
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
+            />
+
+            <FormInput
+              id="id"
+              label="Upload Scan Document/ Image"
+              type="file"
+              accept="image/*" // Allows camera and file options
+              capture="user" // Prefers the rear camera on devices with multiple cameras
+              placeholder="Upload Scan Document/ Image"
+              register={register("id", {
+                required: "Document/ Image is required",
+              })}
+              error={errors.id}
+              className="flex items-center justify-center pt-3"
+              onChange={handleFileChange("id")}
+            />
+
+            <FormInput
+              id="utilityBill"
+              label="Upload Utility Bill"
+              type="file"
+              placeholder="Upload Utility Bill"
+              register={register("utilityBill", {
+                required: "Utility Bill is required",
+              })}
+              error={errors.utilityBill}
+              className="flex items-center justify-center pt-3"
+              onChange={handleFileChange("utilityBill")}
+            />
+
+            <FormInput
+              id="otherDoc"
+              label="Upload Other Doc"
+              type="file"
+              placeholder="Upload Other Doc"
+              register={register("otherDoc", {})}
+              error={errors.otherDoc}
+              className="flex items-center justify-center pt-3"
+              onChange={handleFileChange("otherDoc")}
             />
           </div>
 

@@ -13,9 +13,9 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
   const [loanDuration, setLoanDuration] = useState<number>(4);
 
   // Calculate total repayment
-  const interestRate = 0.15; // Example interest rate
+  const interestRate = 5; // Example interest rate
   const totalRepayment = Math.round(
-    loanAmount * (1 + interestRate * (loanDuration / 12))
+    loanAmount * (1 + 0.01 * interestRate * loanDuration)
   );
 
   return (

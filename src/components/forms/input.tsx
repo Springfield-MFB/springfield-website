@@ -1,7 +1,8 @@
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 import { Input } from "@/components/ui/input";
+import { InputHTMLAttributes } from "react";
 
-interface FormInputProps {
+interface FormInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   id: string;
   type: string;
