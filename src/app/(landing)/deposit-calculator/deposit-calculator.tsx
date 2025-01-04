@@ -52,7 +52,7 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
           <div className="flex items-center justify-between">
             <p className={cn("text-sm mb-4")}>Total Amount to Deposit</p>
             <div className="p-4 bg-[#585858] rounded-[4px] text-white text-sm font-medium">
-              NGN{depositAmount.toLocaleString()}
+              NGN {depositAmount.toLocaleString()}
             </div>
           </div>
 
@@ -146,14 +146,14 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
 
           <div className="flex justify-between  items-center mt-8 mb-16">
             <div className="flex flex-col space-y-2 text-xs">
-              <span>Total Amount Invested</span>
+              <span>Total Amount At Maturity</span>
               <span className="font-bold">
                 NGN {depositAmount.toLocaleString()}
               </span>
             </div>
 
             <div className="flex flex-col space-y-2 text-xs">
-              <span>10% Withholding Tax</span>
+              <span>Est. Return Interest(Amount)</span>
               <span className="font-bold">
                 NGN {totalRepayment.toLocaleString()}
               </span>
