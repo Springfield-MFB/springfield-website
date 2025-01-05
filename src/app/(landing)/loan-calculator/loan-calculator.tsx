@@ -18,6 +18,13 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
     loanAmount * (1 + 0.01 * interestRate * loanDuration)
   );
 
+  const handleLoanAmountInputChange = (value: string) => {
+    const numericValue = parseInt(value.replace(/\D/g, ""), 10);
+    if (!isNaN(numericValue)) {
+      setLoanAmount(Math.min(Math.max(numericValue, 50000), 500000000));
+    }
+  };
+
   return (
     <MaxWidthWrapper className="">
       <BoxReveal boxColor={"#F0B929"} duration={1}>
@@ -53,6 +60,15 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
             How much money do you need?
           </h2>
           <p className={cn("text-sm mb-6")}>Calculate Your Loan</p>
+
+          <label className="block mb-4 ">
+            <input
+              type="text"
+              value={loanAmount.toLocaleString()}
+              onChange={(e) => handleLoanAmountInputChange(e.target.value)}
+              className="w-[50%] border p-4 rounded text-sm focus-visible:ring-brand-primary focus-visible:outline-none focus-visible:ring-1"
+            />
+          </label>
 
           {/* Loan Amount Slider */}
           <label className="block mb-10">
