@@ -14,7 +14,23 @@ import {
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
 const chartData = [{ browser: "safari", visitors: 200, fill: "#F0B929" }];
 
-export const CalculatorChart = () => {
+export const CalculatorChart = ({
+  totalInvestment,
+  totalReturn,
+  withholdingTax,
+  duration,
+}: {
+  totalInvestment: number;
+  totalReturn: number;
+  withholdingTax: number;
+  duration: number;
+}) => {
+  // Convert values for the radial chart
+  const totalInvestmentInDegrees =
+    (totalInvestment / (totalInvestment + totalReturn)) * 360;
+  const totalReturnInDegrees =
+    (totalReturn / (totalInvestment + totalReturn)) * 360;
+
   return (
     <div className="relative w-full lg:w-[40%] overflow-hidden px-10 py-20 rounded-[10px] shadow-sm mt-8 max-w-lg bg-[#5F5F5F] text-white">
       <Image
@@ -44,7 +60,22 @@ export const CalculatorChart = () => {
         </div>
       </div>
 
-      <Chart />
+      <Chart
+        totalInvestmentInDegrees={totalInvestmentInDegrees}
+        totalReturnInDegrees={totalReturnInDegrees}
+      />
+
+      <div className="font-satoshi leading-7">
+        The total amount invested is{" "}
+        <span className="font-bold">
+          NGN {totalInvestment.toLocaleString()}
+        </span>
+        , for a duration of <span className="font-bold">{duration} days</span>,
+        with a withholding tax of{" "}
+        <span className="font-bold">NGN {withholdingTax.toLocaleString()}</span>{" "}
+        , resulting in a maturity amount of NGN{" "}
+        <span className="font-bold">{totalReturn.toLocaleString()}</span>.
+      </div>
     </div>
   );
 };
@@ -59,7 +90,13 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-function Chart() {
+function Chart({
+  totalInvestmentInDegrees,
+  totalReturnInDegrees,
+}: {
+  totalInvestmentInDegrees: number;
+  totalReturnInDegrees: number;
+}) {
   return (
     <ChartContainer
       config={chartConfig}
@@ -68,7 +105,7 @@ function Chart() {
       <RadialBarChart
         data={chartData}
         startAngle={0}
-        endAngle={250}
+        endAngle={totalInvestmentInDegrees}
         innerRadius={105}
         outerRadius={64}
       >
