@@ -66,7 +66,10 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
               type="text"
               value={loanAmount.toLocaleString()}
               onChange={(e) => handleLoanAmountInputChange(e.target.value)}
-              className="w-[50%] border p-4 rounded text-sm focus-visible:ring-brand-primary focus-visible:outline-none focus-visible:ring-1"
+              className={cn(
+                "w-[50%] border p-4 rounded text-sm focus-visible:ring-brand-primary focus-visible:outline-none focus-visible:ring-1",
+                mode === "dark" ? "text-black bg-gray-200" : ""
+              )}
             />
           </label>
 
@@ -150,28 +153,28 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
 
           {/* Calculated Values */}
           <div className="flex justify-between  items-center mt-8 mb-16">
-            <div className="flex flex-col space-y-2 text-xs">
+            <div className="flex flex-col items-center space-y-2 text-xs">
               <span>You are getting:</span>
               <span className="font-bold">
                 NGN {loanAmount.toLocaleString()}
               </span>
             </div>
-            <div className="flex flex-col space-y-2 text-xs">
+            <div className="flex flex-col items-center space-y-2 text-xs">
               <span>Duration:</span>{" "}
               <span className="font-bold">{loanDuration} months</span>
             </div>
-            <div className="flex flex-col space-y-2 text-xs">
+            <div className="flex flex-col items-center space-y-2 text-xs">
               <span>Total Repayment:</span>
               <span className="font-bold">
                 NGN {totalRepayment.toLocaleString()}
               </span>
             </div>
-            <div className="flex flex-col space-y-2 text-xs">
-              <span>Total Rate:</span>
+            <div className="flex flex-col items-center space-y-2 text-xs">
+              <span>Est. Monthly repayment:</span>
               <span className="font-bold">
                 {/* NGN {totalRepayment.toLocaleString()}
                  */}
-                {interestRate.toFixed(2)}%
+                NGN {(totalRepayment / loanDuration).toLocaleString()}
               </span>
             </div>
           </div>

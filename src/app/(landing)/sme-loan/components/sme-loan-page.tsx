@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { LoanHero } from "./loan-hero";
-import { LoanCalculator } from "./loan-calculator";
-import { LoanBenefit } from "./loan-benefit";
+import { LoanCalculator } from "../../loan-calculator/loan-calculator";
+import { LoanBenefit } from "../../micro-loan/components/loan-benefit";
 
 export const SMELoanPage = () => {
   return (
