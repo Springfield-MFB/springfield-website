@@ -173,7 +173,12 @@ export const AccountOpeningForm = () => {
               type="number"
               placeholder="Enter phone number"
               register={register("phone", {
-                required: "phone is required",
+                required: "Phone number is required",
+                pattern: {
+                  value: /^[0-9]{11}$/,
+                  message:
+                    "Phone number must contain only numbers and be 11 digits",
+                },
               })}
               error={errors.phone}
             />

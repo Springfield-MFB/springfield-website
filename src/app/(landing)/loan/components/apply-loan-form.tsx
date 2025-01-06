@@ -102,7 +102,7 @@ export const LoanForm = () => {
               id="email"
               label="Email Address (Optional)"
               type="email"
-              placeholder="Enter your full name"
+              placeholder="Enter your email"
               register={register("email", {
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
