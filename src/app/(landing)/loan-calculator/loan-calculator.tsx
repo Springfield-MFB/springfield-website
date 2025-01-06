@@ -7,21 +7,29 @@ import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { useState } from "react";
 import { LoanProcessCard } from "./loan-process-card";
 import BoxReveal from "@/components/ui/box-reveal";
+import { toast } from "sonner";
 
 export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
-  const [loanAmount, setLoanAmount] = useState<number>(2341980);
+  const [loanAmount, setLoanAmount] = useState<number | "">(2341980);
   const [loanDuration, setLoanDuration] = useState<number>(4);
 
   // Calculate total repayment
   const interestRate = 5; // Example interest rate
-  const totalRepayment = Math.round(
-    loanAmount * (1 + 0.01 * interestRate * loanDuration)
-  );
+  const totalRepayment = loanAmount
+    ? Math.round(loanAmount * (1 + 0.01 * interestRate * loanDuration))
+    : 0;
 
   const handleLoanAmountInputChange = (value: string) => {
-    const numericValue = parseInt(value.replace(/\D/g, ""), 10);
-    if (!isNaN(numericValue)) {
-      setLoanAmount(Math.min(Math.max(numericValue, 50000), 500000000));
+    if (value === "") {
+      setLoanAmount("");
+    } else {
+      const numericValue = parseInt(value.replace(/\D/g, ""), 10);
+      if (!isNaN(numericValue)) {
+        if (numericValue < 50000) {
+          toast.error("Loan amount must be at least NGN 50,000.");
+        }
+        setLoanAmount(Math.min(Math.max(numericValue, 0), 10000000));
+      }
     }
   };
 
@@ -64,12 +72,13 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
           <label className="block mb-4 ">
             <input
               type="text"
-              value={loanAmount.toLocaleString()}
+              value={loanAmount === "" ? "" : loanAmount.toLocaleString()}
               onChange={(e) => handleLoanAmountInputChange(e.target.value)}
               className={cn(
                 "w-[50%] border p-4 rounded text-sm focus-visible:ring-brand-primary focus-visible:outline-none focus-visible:ring-1",
                 mode === "dark" ? "text-black bg-gray-200" : ""
               )}
+              placeholder="Enter loan amount"
             />
           </label>
 
@@ -80,7 +89,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
               min={50000}
               max={10000000}
               step={5000}
-              value={loanAmount}
+              value={loanAmount === "" ? 50000 : loanAmount}
               onChange={(e) => setLoanAmount(Number(e.target.value))}
               className="custom-range  w-full accent-brand-primary mt-2"
               style={{
@@ -90,20 +99,28 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
                     to right,
                     #f0b929 0%,
                     #f0b929 ${
-                      ((loanAmount - 50000) / (10000000 - 50000)) * 100
+                      (((loanAmount === "" ? 50000 : loanAmount) - 50000) /
+                        (10000000 - 50000)) *
+                      100
                     }%,
                     #3E3E3E ${
-                      ((loanAmount - 50000) / (10000000 - 50000)) * 100
+                      (((loanAmount === "" ? 50000 : loanAmount) - 50000) /
+                        (10000000 - 50000)) *
+                      100
                     }%,
                     #3E3E3E 100%`
                     : `linear-gradient(
                     to right,
                     #f0b929 0%,
                     #f0b929 ${
-                      ((loanAmount - 50000) / (10000000 - 50000)) * 100
+                      (((loanAmount === "" ? 50000 : loanAmount) - 50000) /
+                        (10000000 - 50000)) *
+                      100
                     }%,
                     #DFDFDF ${
-                      ((loanAmount - 50000) / (10000000 - 50000)) * 100
+                      (((loanAmount === "" ? 50000 : loanAmount) - 50000) /
+                        (10000000 - 50000)) *
+                      100
                     }%,
                     #DFDFDF 100%`,
               }}
@@ -112,7 +129,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
             <div className="w-full mt-3 text-xs flex items-center justify-between">
               <p>NGN 50,000</p>
               <p className="text-brand-primary">
-                NGN {loanAmount.toLocaleString()}
+                NGN {loanAmount ? loanAmount.toLocaleString() : "0"}
               </p>
               <p>NGN 10,000,000</p>
             </div>
@@ -133,14 +150,14 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
                     ? `linear-gradient(
                     to right,
                     #f0b929 0%,
-                    #f0b929 ${((loanDuration - 1) / (12 - 1)) * 100}%,
-                    #3E3E3E ${((loanDuration - 1) / (12 - 1)) * 100}%,
+                    #f0b929 ${((loanDuration - 1) / (12 - 1)) * 100}% ,
+                    #3E3E3E ${((loanDuration - 1) / (12 - 1)) * 100}% ,
                     #3E3E3E 100%`
                     : `linear-gradient(
                     to right,
                     #f0b929 0%,
-                    #f0b929 ${((loanDuration - 1) / (12 - 1)) * 100}%,
-                    #DFDFDF ${((loanDuration - 1) / (12 - 1)) * 100}%,
+                    #f0b929 ${((loanDuration - 1) / (12 - 1)) * 100}% ,
+                    #DFDFDF ${((loanDuration - 1) / (12 - 1)) * 100}% ,
                     #DFDFDF 100%`,
               }}
             />
@@ -156,11 +173,11 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
             <div className="flex flex-col items-center space-y-2 text-xs">
               <span>You are getting:</span>
               <span className="font-bold">
-                NGN {loanAmount.toLocaleString()}
+                NGN {loanAmount ? loanAmount.toLocaleString() : "0"}
               </span>
             </div>
             <div className="flex flex-col items-center space-y-2 text-xs">
-              <span>Duration:</span>{" "}
+              <span>Duration:</span>
               <span className="font-bold">{loanDuration} months</span>
             </div>
             <div className="flex flex-col items-center space-y-2 text-xs">
@@ -172,8 +189,6 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
             <div className="flex flex-col items-center space-y-2 text-xs">
               <span>Est. Monthly repayment:</span>
               <span className="font-bold">
-                {/* NGN {totalRepayment.toLocaleString()}
-                 */}
                 NGN {(totalRepayment / loanDuration).toLocaleString()}
               </span>
             </div>
