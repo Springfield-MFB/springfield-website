@@ -1,33 +1,24 @@
+import { API_URL, CHANNEL_ID, CHANNEL_SECRET } from "@/config";
 import axios, { AxiosRequestConfig } from "axios";
 
-import { sessionStorageService } from "./storage";
-
-const TOKEN_KEY = "auth_token";
-
-const getToken = () => sessionStorageService.getItem(TOKEN_KEY);
-
 const request = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  baseURL: API_URL,
   timeout: 5000,
   withCredentials: true,
   headers: {
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": "http://localhost:3000",
     "Content-Type": "application/json",
   },
 });
 
-// Add request interceptor to manage Authorization token
+// Add request interceptor to include Channel-ID and Channel-Secret headers
 request.interceptors.request.use(
   (config: AxiosRequestConfig<any>) => {
-    let token = getToken();
-    token = token ? token : "";
-
-    if (token) {
-      config.headers = {
-        ...config.headers,
-        Authorization: `Bearer ${token}`,
-      };
-    }
+    config.headers = {
+      ...config.headers,
+      "Channel-ID": CHANNEL_ID,
+      "Channel-Secret": CHANNEL_SECRET,
+    };
 
     return config as any;
   },
