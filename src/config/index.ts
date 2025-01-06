@@ -209,16 +209,6 @@ export const NAVBART_ITEMS = [
       },
 
       {
-        icon: BiCurrentLocation,
-        iconColor: "#CE6401",
-        href: "",
-        color: "#FFF3E8",
-        title: "Springfield Corporate Current Account (SCCA)",
-        desc:
-          "a product designed to satisfy our customer’s dynamic business needs.",
-      },
-
-      {
         icon: MdCalendarMonth,
         iconColor: "#4E4EFE",
         href: "",
@@ -904,3 +894,8 @@ export const STATES_IN_NIGERIA = [
   "Zamfara",
   "FCT",
 ];
+
+// API URL
+export const API_URL = "https://uat.springfieldmfb.com";
+export const CHANNEL_ID = "WEBSITE";
+export const CHANNEL_SECRET = "test";
