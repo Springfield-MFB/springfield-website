@@ -7,10 +7,11 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { CalculatorChart } from "./deposit-calculator-chart";
 import BoxReveal from "@/components/ui/box-reveal";
+import { toast } from "sonner";
 
 export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
-  const [depositAmount, setDepositAmount] = useState<number>(2341980);
-  const [tenure, setTenure] = useState<number>(30);
+  const [depositAmount, setDepositAmount] = useState<number | "">(2341980);
+  const [tenure, setTenure] = useState<number | "">(30);
 
   // Function to get the interest rate based on the deposit amount and tenure
   const getInterestRate = (amount: number, days: number): number => {
@@ -41,24 +42,47 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
   };
 
   const handleDepositInputChange = (value: string) => {
-    const numericValue = parseInt(value.replace(/\D/g, ""), 10);
-    if (!isNaN(numericValue)) {
-      setDepositAmount(Math.min(Math.max(numericValue, 50000), 500000000));
+    if (value === "") {
+      setDepositAmount(""); // Allow clearing the input
+    } else {
+      const numericValue = parseInt(value.replace(/\D/g, ""), 10);
+      if (!isNaN(numericValue)) {
+        if (numericValue < 50000) {
+          toast.error("Deposit amount should be at least NGN 50,000.");
+        }
+        setDepositAmount(Math.min(numericValue, 500000000)); // Allow values less than 50,000
+      }
     }
   };
 
   const handleTenureInputChange = (value: string) => {
-    const numericValue = parseInt(value.replace(/\D/g, ""), 10);
-    if (!isNaN(numericValue)) {
-      setTenure(Math.min(Math.max(numericValue, 30), 365));
+    if (value === "") {
+      setTenure(""); // Allow clearing the input field
+    } else {
+      const numericValue = parseInt(value.replace(/\D/g, ""), 10);
+      if (!isNaN(numericValue)) {
+        if (numericValue < 30) {
+          toast.error("Minimum tenure is 30 days.");
+        }
+        setTenure(Math.min(numericValue, 365)); // Allow input but restrict to valid range
+      }
     }
   };
 
   // Calculate total repayment
-  const interestRate = getInterestRate(depositAmount, tenure);
-  const accuredInterest = Math.round(
-    (depositAmount * interestRate * (tenure / 365)) / 100
-  );
+  const interestRate =
+    depositAmount && tenure && depositAmount >= 50000
+      ? getInterestRate(depositAmount as number, tenure as number)
+      : 0;
+  const accuredInterest =
+    depositAmount && tenure && depositAmount >= 50000
+      ? Math.round(
+          ((depositAmount as number) *
+            interestRate *
+            ((tenure as number) / 365)) /
+            100
+        )
+      : 0;
 
   // Calculate Withholding Tax (10% of the interest)
   const withholdingTax = Math.round(accuredInterest * 0.1);
@@ -67,7 +91,10 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
   const netInterest = accuredInterest - withholdingTax;
 
   // Calculate Maturity Amount
-  const maturityAmount = depositAmount + netInterest;
+  const maturityAmount =
+    depositAmount && depositAmount >= 50000
+      ? (depositAmount as number) + netInterest
+      : 0;
 
   return (
     <MaxWidthWrapper className="">
@@ -103,16 +130,17 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
           <div className="flex items-center justify-between">
             <p className={cn("text-sm mb-4")}>Total Amount to Deposit</p>
             <div className="p-4 bg-[#585858] rounded-[4px] text-white text-sm font-medium">
-              NGN {depositAmount.toLocaleString()}
+              NGN {depositAmount ? depositAmount.toLocaleString() : "0"}
             </div>
           </div>
 
           <label className="block mb-4 ">
             <input
               type="text"
-              value={depositAmount.toLocaleString()}
+              value={depositAmount === "" ? "" : depositAmount.toLocaleString()}
               onChange={(e) => handleDepositInputChange(e.target.value)}
               className="w-[50%] border p-4 rounded text-sm focus-visible:ring-brand-primary focus-visible:outline-none focus-visible:ring-1"
+              placeholder="Enter deposit amount"
             />
           </label>
 
@@ -122,7 +150,7 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
               type="range"
               min={50000}
               max={500000000}
-              value={depositAmount}
+              value={depositAmount === "" ? 50000 : depositAmount}
               onChange={(e) => setDepositAmount(Number(e.target.value))}
               className="custom-range  w-full accent-brand-primary mt-2"
               style={{
@@ -132,20 +160,40 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
                     to right,
                     #f0b929 0%,
                     #f0b929 ${
-                      ((depositAmount - 50000) / (500000000 - 50000)) * 100
+                      (((depositAmount === ""
+                        ? 50000
+                        : (depositAmount as number)) -
+                        50000) /
+                        (500000000 - 50000)) *
+                      100
                     }%,
                     #3E3E3E ${
-                      ((depositAmount - 50000) / (500000000 - 50000)) * 100
+                      (((depositAmount === ""
+                        ? 50000
+                        : (depositAmount as number)) -
+                        50000) /
+                        (500000000 - 50000)) *
+                      100
                     }%,
                     #3E3E3E 100%`
                     : `linear-gradient(
                     to right,
                     #f0b929 0%,
                     #f0b929 ${
-                      ((depositAmount - 50000) / (500000000 - 50000)) * 100
+                      (((depositAmount === ""
+                        ? 50000
+                        : (depositAmount as number)) -
+                        50000) /
+                        (500000000 - 50000)) *
+                      100
                     }%,
                     #DFDFDF ${
-                      ((depositAmount - 50000) / (500000000 - 50000)) * 100
+                      (((depositAmount === ""
+                        ? 50000
+                        : (depositAmount as number)) -
+                        50000) /
+                        (500000000 - 50000)) *
+                      100
                     }%,
                     #DFDFDF 100%`,
               }}
@@ -155,16 +203,17 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
           <div className="flex items-center justify-between">
             <p className={cn("text-sm mb-4")}>Tenure(days)</p>
             <div className="p-4 bg-[#585858] rounded-[4px] text-white text-sm font-medium">
-              {tenure} days
+              {tenure ? tenure : 0} days
             </div>
           </div>
 
           <label className="block mb-4 ">
             <input
               type="text"
-              value={tenure.toLocaleString()}
+              value={tenure === "" ? "" : tenure}
               onChange={(e) => handleTenureInputChange(e.target.value)}
               className="w-[20%] border p-4 rounded text-sm focus-visible:ring-brand-primary focus-visible:outline-none focus-visible:ring-1"
+              placeholder="Enter tenure"
             />
           </label>
 
@@ -174,7 +223,7 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
               type="range"
               min={30}
               max={365}
-              value={tenure}
+              value={tenure === "" ? 30 : tenure}
               onChange={(e) => setTenure(Number(e.target.value))}
               className="custom-range w-full  accent-brand-primary mt-2"
               style={{
@@ -183,14 +232,22 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
                     ? `linear-gradient(
                     to right,
                     #f0b929 0%,
-                    #f0b929 ${((tenure - 30) / (365 - 30)) * 100}%,
-                    #3E3E3E ${((tenure - 30) / (365 - 30)) * 100}%,
+                    #f0b929 ${
+                      (((tenure === "" ? 30 : tenure) - 30) / (365 - 30)) * 100
+                    }%,
+                    #3E3E3E ${
+                      (((tenure === "" ? 30 : tenure) - 30) / (365 - 30)) * 100
+                    }%,
                     #3E3E3E 100%`
                     : `linear-gradient(
                     to right,
                     #f0b929 0%,
-                    #f0b929 ${((tenure - 30) / (365 - 30)) * 100}%,
-                    #DFDFDF ${((tenure - 30) / (365 - 30)) * 100}%,
+                    #f0b929 ${
+                      (((tenure === "" ? 30 : tenure) - 30) / (365 - 30)) * 100
+                    }%,
+                    #DFDFDF ${
+                      (((tenure === "" ? 30 : tenure) - 30) / (365 - 30)) * 100
+                    }%,
                     #DFDFDF 100%`,
               }}
             />
@@ -198,14 +255,14 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
 
           {/* Calculated Values */}
           <div className="flex justify-between  items-center mt-8 mb-4">
-            <div className="flex flex-col space-y-2 text-xs">
+            <div className="flex flex-col items-center space-y-2 text-xs">
               <span>Total Amount Invested</span>
               <span className="font-bold">
-                NGN {depositAmount.toLocaleString()}
+                NGN {depositAmount ? depositAmount.toLocaleString() : "0"}
               </span>
             </div>
 
-            <div className="flex flex-col space-y-2 text-xs">
+            <div className="flex flex-col items-center space-y-2 text-xs">
               <span>Est. Return Interest(Amount)</span>
               <span className="font-bold">
                 NGN {accuredInterest.toLocaleString()}
@@ -214,13 +271,13 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
           </div>
 
           <div className="flex justify-between  items-center mt-8 mb-16">
-            <div className="flex flex-col space-y-2 text-xs">
+            <div className="flex flex-col items-center space-y-2 text-xs">
               <span>10% Withholding Tax</span>
               <span className="font-bold">
                 NGN {withholdingTax.toLocaleString()}
               </span>
             </div>
-            <div className="flex flex-col space-y-2 text-xs">
+            <div className="flex flex-col items-center space-y-2 text-xs">
               <span>Total Amount At Maturity</span>
               <span className="font-bold">
                 NGN {maturityAmount.toLocaleString()}
@@ -239,10 +296,10 @@ export const DepositCalculator = ({ mode }: { mode: "dark" | "light" }) => {
 
         {/* Loan Application Process Section */}
         <CalculatorChart
-          totalInvestment={depositAmount}
-          totalReturn={maturityAmount}
+          totalInvestment={depositAmount || 0}
+          totalReturn={maturityAmount || 0}
           withholdingTax={withholdingTax}
-          duration={tenure}
+          duration={tenure || 0}
         />
       </div>
     </MaxWidthWrapper>
