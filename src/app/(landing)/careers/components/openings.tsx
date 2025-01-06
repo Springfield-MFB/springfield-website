@@ -1,8 +1,13 @@
 import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
+import { useGetJobsQuery } from "@/services/queries/job";
 import Image from "next/image";
 
 export const Openings = () => {
+  const { data: jobs } = useGetJobsQuery();
+
+  console.log("jobs", jobs?.responseData);
+
   return (
     <div id="openings">
       <MaxWidthWrapper>
