@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { subYears, format } from "date-fns";
+import { isBefore, subYears, format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -25,15 +25,9 @@ export function DatePickerWithPresets({
   setDate,
 }: {
   date?: Date;
-  setDate: (date: Date) => void;
+  setDate: any;
 }) {
-  const handlePresetSelection = (value: string) => {
-    const yearsAgo = parseInt(value, 10);
-    if (!isNaN(yearsAgo)) {
-      const calculatedDate = subYears(new Date(), yearsAgo);
-      setDate(calculatedDate);
-    }
-  };
+  const today = new Date();
 
   return (
     <Popover>
@@ -53,7 +47,9 @@ export function DatePickerWithPresets({
         align="start"
         className="flex w-auto flex-col space-y-2 p-2 bg-white"
       >
-        <Select onValueChange={handlePresetSelection}>
+        <Select
+          onValueChange={(value) => setDate(subYears(today, parseInt(value)))}
+        >
           <SelectTrigger>
             <SelectValue placeholder="Select" />
           </SelectTrigger>
@@ -68,9 +64,10 @@ export function DatePickerWithPresets({
           <Calendar
             mode="single"
             selected={date}
-            // onSelect={setDate}
-            // initialFocus={date} // Focus the calendar on the selected date
-            disabled={(date) => date > new Date()} // Disable future dates
+            onSelect={(selectedDate: any) =>
+              isBefore(selectedDate, today) ? setDate(selectedDate) : null
+            }
+            disabled={(date) => !isBefore(date, today)}
           />
         </div>
       </PopoverContent>

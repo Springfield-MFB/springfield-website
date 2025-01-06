@@ -158,7 +158,6 @@ export const AccountOpeningForm = () => {
               type="email"
               placeholder="Enter your full name"
               register={register("email", {
-                required: "Email Address is required",
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                   message: "Please enter a valid email address",

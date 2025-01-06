@@ -3,7 +3,7 @@
 import { CustomButton } from "@/components/custom-button";
 import FormInput from "@/components/forms/input";
 import FormTextArea from "@/components/forms/text-area";
-import { FormControl, FormField } from "@/components/ui/form";
+import { FormField } from "@/components/ui/form";
 
 import {
   Select,
@@ -12,9 +12,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import React from "react";
-import { Form, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 enum natureOfEnquiry {
   general_enquiry = "General enquiry",
@@ -65,12 +64,17 @@ export const ContactForm = () => {
         />
 
         <FormInput
-          label="Phone Mobile Number"
           id="phone"
-          type="text"
-          placeholder="Enter your phone mobile number"
+          label="Phone Number"
+          type="number"
+          placeholder="Enter phone number"
           register={register("phone", {
-            required: "Please enter your phone number",
+            required: "Phone number is required",
+            pattern: {
+              value: /^[0-9]{11}$/,
+              message:
+                "Phone number must contain only numbers and be 11 digits",
+            },
           })}
           error={errors.phone}
         />
