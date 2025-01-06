@@ -45,7 +45,7 @@ export default function RootLayout({
             "antialiased min-h-screen"
           )}
         >
-          <Toaster closeButton position="top-center" richColors />
+          <Toaster closeButton position="bottom-right" richColors />
 
           <TanStackQueryProvider>{children}</TanStackQueryProvider>
         </body>
