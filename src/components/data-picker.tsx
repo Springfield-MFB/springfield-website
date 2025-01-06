@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { addDays, format } from "date-fns";
+import { subYears, format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -25,8 +25,16 @@ export function DatePickerWithPresets({
   setDate,
 }: {
   date?: Date;
-  setDate: any;
+  setDate: (date: Date) => void;
 }) {
+  const handlePresetSelection = (value: string) => {
+    const yearsAgo = parseInt(value, 10);
+    if (!isNaN(yearsAgo)) {
+      const calculatedDate = subYears(new Date(), yearsAgo);
+      setDate(calculatedDate);
+    }
+  };
+
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -37,7 +45,7 @@ export function DatePickerWithPresets({
             !date && "text-muted-foreground"
           )}
         >
-          <CalendarIcon />
+          <CalendarIcon className="mr-2" />
           {date ? format(date, "PPP") : <span>Pick a date</span>}
         </Button>
       </PopoverTrigger>
@@ -45,23 +53,25 @@ export function DatePickerWithPresets({
         align="start"
         className="flex w-auto flex-col space-y-2 p-2 bg-white"
       >
-        <Select
-          onValueChange={(value) =>
-            setDate(addDays(new Date(), parseInt(value)))
-          }
-        >
+        <Select onValueChange={handlePresetSelection}>
           <SelectTrigger>
             <SelectValue placeholder="Select" />
           </SelectTrigger>
           <SelectContent position="popper">
-            <SelectItem value="0">Today</SelectItem>
-            <SelectItem value="1">Tomorrow</SelectItem>
-            <SelectItem value="3">In 3 days</SelectItem>
-            <SelectItem value="7">In a week</SelectItem>
+            <SelectItem value="18">18 years ago</SelectItem>
+            <SelectItem value="25">25 years ago</SelectItem>
+            <SelectItem value="30">30 years ago</SelectItem>
+            <SelectItem value="50">50 years ago</SelectItem>
           </SelectContent>
         </Select>
         <div className="rounded-md border bg-white">
-          <Calendar mode="single" selected={date} onSelect={setDate} />
+          <Calendar
+            mode="single"
+            selected={date}
+            // onSelect={setDate}
+            // initialFocus={date} // Focus the calendar on the selected date
+            disabled={(date) => date > new Date()} // Disable future dates
+          />
         </div>
       </PopoverContent>
     </Popover>
