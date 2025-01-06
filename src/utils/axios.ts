@@ -3,10 +3,9 @@ import axios, { AxiosRequestConfig } from "axios";
 
 const request = axios.create({
   baseURL: API_URL,
-  timeout: 5000,
-  withCredentials: true,
+  timeout: 500000,
+  withCredentials: false,
   headers: {
-    "Access-Control-Allow-Origin": "http://localhost:3000",
     "Content-Type": "application/json",
   },
 });

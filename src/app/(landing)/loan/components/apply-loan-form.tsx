@@ -12,8 +12,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { STATES_IN_NIGERIA } from "@/config";
+import { useApplyForLoanMutation } from "@/services/mutations/loan";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 interface IMicroLoanForm {
   fullName: string;
@@ -34,15 +36,50 @@ export const LoanForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
     ...form
   } = useForm<IMicroLoanForm>({
-    mode: "onChange",
+    mode: "onTouched",
   });
 
-  const onSubmit = (data: IMicroLoanForm) => {
-    console.log(data);
-    console.log("date", date);
+  const { mutate, isPending } = useApplyForLoanMutation();
+
+  const onSubmit = ({
+    contactAddress,
+    dob,
+    email,
+    fullName,
+    gender,
+    loanAmount,
+    loanPurpose,
+    loanTenure,
+    phone,
+    stateOfResidence,
+  }: IMicroLoanForm) => {
+    mutate(
+      {
+        fullName,
+        dateOfBirth: dob,
+        gender,
+        phoneNumber: phone,
+        stateOfResidence,
+        contactAddress,
+        loanAmount: Number(loanAmount),
+        loanPurpose,
+        loanTenure: Number(loanTenure),
+        email,
+      },
+      {
+        onSuccess: (response) => {
+          toast.success(response.responseMessage);
+          reset(); // Reset the form after successful submission
+        },
+        onError: (error) => {
+          toast.error(error.message);
+        },
+      }
+    );
   };
 
   return (
@@ -68,6 +105,7 @@ export const LoanForm = () => {
             <FormField
               control={form.control}
               name="gender"
+              rules={{ required: "Please select a gender" }}
               render={({ field }) => (
                 <div className="flex flex-col space-y-1">
                   <label className="text-sm" htmlFor="gender">
@@ -85,6 +123,11 @@ export const LoanForm = () => {
                       <SelectItem value="Female">Female</SelectItem>
                     </SelectContent>
                   </Select>
+                  {errors.gender && (
+                    <p className="text-red-500 text-xs">
+                      {errors.gender.message}
+                    </p>
+                  )}
                 </div>
               )}
             />
@@ -133,6 +176,7 @@ export const LoanForm = () => {
             <FormField
               control={form.control}
               name="stateOfResidence"
+              rules={{ required: "Please select a state" }}
               render={({ field }) => (
                 <div className="flex flex-col space-y-1">
                   <label className="text-sm" htmlFor="stateOfResidence">
@@ -153,6 +197,11 @@ export const LoanForm = () => {
                       ))}
                     </SelectContent>
                   </Select>
+                  {errors.stateOfResidence && (
+                    <p className="text-red-500 text-xs">
+                      {errors.stateOfResidence.message}
+                    </p>
+                  )}
                 </div>
               )}
             />
@@ -207,7 +256,9 @@ export const LoanForm = () => {
           </div>
 
           <div className=" w-full lg:w-[30%] z-40">
-            <CustomButton type="submit">Apply</CustomButton>
+            <CustomButton type="submit">
+              {isPending ? "Applying..." : "Apply"}
+            </CustomButton>
           </div>
         </form>
       </div>

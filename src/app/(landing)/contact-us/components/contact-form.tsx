@@ -12,8 +12,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useSubmitContactUsEnquiryMutation } from "@/services/mutations/contact-us";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 enum natureOfEnquiry {
   general_enquiry = "General enquiry",
@@ -34,6 +36,7 @@ interface IContactForm {
 export const ContactForm = () => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
     ...form
@@ -41,8 +44,35 @@ export const ContactForm = () => {
     mode: "onTouched",
   });
 
-  const onSubmit = (data: IContactForm) => {
-    console.log(data);
+  const { mutate, isPending } = useSubmitContactUsEnquiryMutation();
+
+  const onSubmit = ({
+    fullName,
+    description,
+    email,
+    natureOfEnquiry,
+    phone,
+    subject,
+  }: IContactForm) => {
+    mutate(
+      {
+        fullName,
+        description,
+        email,
+        enquiryType: natureOfEnquiry,
+        phoneNumber: phone,
+        subject,
+      },
+      {
+        onSuccess: (response) => {
+          toast.success(response.responseMessage);
+          reset(); // Reset form after success
+        },
+        onError: (error) => {
+          toast.error(error.message);
+        },
+      }
+    );
   };
 
   return (
@@ -108,6 +138,7 @@ export const ContactForm = () => {
         <FormField
           control={form.control}
           name="natureOfEnquiry"
+          rules={{ required: "Please select a type of enquiry" }}
           render={({ field }) => (
             <div className="flex flex-col space-y-1">
               <label className="text-sm" htmlFor="natureOfEnquiry">
@@ -128,6 +159,11 @@ export const ContactForm = () => {
                   </SelectItem>
                 </SelectContent>
               </Select>
+              {errors.natureOfEnquiry && (
+                <p className="text-red-500 text-xs">
+                  {errors.natureOfEnquiry.message}
+                </p>
+              )}
             </div>
           )}
         />
@@ -142,7 +178,9 @@ export const ContactForm = () => {
           error={errors.description}
         />
 
-        <CustomButton type="submit">Send Message</CustomButton>
+        <CustomButton type="submit">
+          {isPending ? "Sending Message..." : "Send Message"}
+        </CustomButton>
       </form>
     </div>
   );

@@ -12,8 +12,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { STATES_IN_NIGERIA } from "@/config";
+import { useAccountOpeningMutation } from "@/services/mutations/account";
+import { useUploadFileMutation } from "@/services/mutations/file";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 interface IMicroLoanForm {
   accountCategory: string;
@@ -26,9 +29,10 @@ interface IMicroLoanForm {
   stateOfResidence: string;
   bvn: string;
   nin: string;
-  id: string;
-  utilityBill: string;
-  otherDoc: string;
+  id: FileList;
+  meansOfIdentification: string;
+  utilityBill: FileList;
+  otherDoc: FileList;
 }
 
 export const AccountOpeningForm = () => {
@@ -36,6 +40,7 @@ export const AccountOpeningForm = () => {
 
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
     ...form
@@ -58,9 +63,62 @@ export const AccountOpeningForm = () => {
       }));
     };
 
-  const onSubmit = (data: IMicroLoanForm) => {
-    console.log(data);
-    console.log("date", date);
+  const { mutate: uploadFile, isPending: isUploading } =
+    useUploadFileMutation();
+  const { mutate: submitAccountOpening, isPending: isSubmitting } =
+    useAccountOpeningMutation();
+
+  const uploadDocument = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      uploadFile(file, {
+        onSuccess: (response) => resolve(response.responseData.publicLink),
+        onError: (error) => reject(error.message),
+      });
+    });
+  };
+
+  const onSubmit = async (data: IMicroLoanForm) => {
+    try {
+      // Upload files and get their URLs
+      const idDocumentUrl = data.id ? await uploadDocument(data.id[0]) : "";
+      const utilityBillUrl = data.utilityBill
+        ? await uploadDocument(data.utilityBill[0])
+        : "";
+      const otherDocumentUrl = data.otherDoc
+        ? await uploadDocument(data.otherDoc[0])
+        : "";
+
+      // Submit the account opening form
+      submitAccountOpening(
+        {
+          productType: data.accountCategory,
+          fullName: data.fullName,
+          gender: data.gender,
+          dateOfBirth: date?.toISOString() || "",
+          emailAddress: data.email,
+          phoneNumber: data.phone,
+          stateOfResidence: data.stateOfResidence,
+          contactAddress: data.contactAddress,
+          bvn: data.bvn,
+          nin: data.nin,
+          meansOfIdentification: idDocumentUrl,
+          documentUrl: idDocumentUrl,
+          utilityBillUrl: utilityBillUrl,
+          otherDocUrl: otherDocumentUrl,
+        },
+        {
+          onSuccess: (response) => {
+            toast.success(response.responseMessage);
+            reset();
+          },
+          onError: (error) => {
+            toast.error(error.message);
+          },
+        }
+      );
+    } catch (error) {
+      toast.error(`Failed to upload documents`);
+    }
   };
 
   return (
@@ -75,6 +133,7 @@ export const AccountOpeningForm = () => {
             <FormField
               control={form.control}
               name="accountCategory"
+              rules={{ required: "Please select an account category" }}
               render={({ field }) => (
                 <div className="flex flex-col space-y-1">
                   <label className="text-sm" htmlFor="accountCategory">
@@ -105,6 +164,11 @@ export const AccountOpeningForm = () => {
                       </SelectItem>
                     </SelectContent>
                   </Select>
+                  {errors.accountCategory && (
+                    <p className="text-red-500 text-xs">
+                      {errors.accountCategory.message}
+                    </p>
+                  )}
                 </div>
               )}
             />
@@ -123,6 +187,7 @@ export const AccountOpeningForm = () => {
             <FormField
               control={form.control}
               name="gender"
+              rules={{ required: "Please select a gender" }}
               render={({ field }) => (
                 <div className="flex flex-col space-y-1">
                   <label className="text-sm" htmlFor="gender">
@@ -140,6 +205,11 @@ export const AccountOpeningForm = () => {
                       <SelectItem value="Female">Female</SelectItem>
                     </SelectContent>
                   </Select>
+                  {errors.gender && (
+                    <p className="text-red-500 text-xs">
+                      {errors.gender.message}
+                    </p>
+                  )}
                 </div>
               )}
             />
@@ -187,6 +257,7 @@ export const AccountOpeningForm = () => {
             <FormField
               control={form.control}
               name="stateOfResidence"
+              rules={{ required: "Please select a state" }}
               render={({ field }) => (
                 <div className="flex flex-col space-y-1">
                   <label className="text-sm" htmlFor="stateOfResidence">
@@ -207,6 +278,12 @@ export const AccountOpeningForm = () => {
                       ))}
                     </SelectContent>
                   </Select>
+
+                  {errors.stateOfResidence && (
+                    <p className="text-red-500 text-xs">
+                      {errors.stateOfResidence.message}
+                    </p>
+                  )}
                 </div>
               )}
             />
@@ -250,7 +327,8 @@ export const AccountOpeningForm = () => {
           <div className="grid lg:grid-cols-2 gap-6">
             <FormField
               control={form.control}
-              name="gender"
+              name="meansOfIdentification"
+              rules={{ required: "Please select a means of identification" }}
               render={({ field }) => (
                 <div className="flex flex-col space-y-1">
                   <label className="text-sm" htmlFor="gender">
@@ -258,7 +336,7 @@ export const AccountOpeningForm = () => {
                   </label>
                   <Select
                     onValueChange={field.onChange}
-                    defaultValue={field.value}
+                    defaultValue={field.value || ""}
                   >
                     <SelectTrigger>
                       <SelectValue placeholder="Select available valid ID" />
@@ -281,6 +359,9 @@ export const AccountOpeningForm = () => {
                       </SelectItem>
                     </SelectContent>
                   </Select>
+                  {errors.id && (
+                    <p className="text-red-500 text-xs">{errors.id.message}</p>
+                  )}
                 </div>
               )}
             />
@@ -326,7 +407,13 @@ export const AccountOpeningForm = () => {
           </div>
 
           <div className=" w-full lg:w-[30%] z-40">
-            <CustomButton type="submit">Submit</CustomButton>
+            <CustomButton type="submit">
+              {isUploading
+                ? "Uploading Documents..."
+                : isSubmitting
+                ? "Submitting Request..."
+                : "Submit"}
+            </CustomButton>
           </div>
         </form>
       </div>

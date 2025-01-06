@@ -1,4 +1,8 @@
-import { JobResponse } from "@/types/job/type";
+import {
+  ApplyJobPayload,
+  ApplyJobResponse,
+  JobResponse,
+} from "@/types/job/type";
 import request from "@/utils/axios";
 
 const fetchJobs = async (
@@ -17,4 +21,15 @@ const fetchJobs = async (
   return data;
 };
 
-export { fetchJobs };
+const applyForJob = async (
+  payload: ApplyJobPayload
+): Promise<ApplyJobResponse> => {
+  const { data } = await request.post<ApplyJobResponse>(
+    "/careers/jobs/apply",
+    payload
+  );
+
+  return data;
+};
+
+export { fetchJobs, applyForJob };

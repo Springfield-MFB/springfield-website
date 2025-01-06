@@ -1,7 +1,6 @@
 "use client";
 
 import { CustomButton } from "@/components/custom-button";
-import FormInput from "@/components/forms/input";
 import FormTextArea from "@/components/forms/text-area";
 import { FormField } from "@/components/ui/form";
 import {
@@ -11,7 +10,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useSubmitWhistleEnquiryMutation } from "@/services/mutations/whistle-blowing";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 interface IWhistleBlowingForm {
   category: string;
@@ -22,14 +23,37 @@ export const WhistleBlowingForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
+    setValue,
     formState: { errors },
     ...form
   } = useForm<IWhistleBlowingForm>({
     mode: "onTouched",
+    defaultValues: {
+      category: "", // Default value for category
+      disclosure: "", // Default value for disclosure
+    },
   });
 
+  const { mutate, isPending } = useSubmitWhistleEnquiryMutation();
+
   const onSubmit = (data: IWhistleBlowingForm) => {
-    console.log(data);
+    mutate(
+      {
+        enquiryType: data.category,
+        details: data.disclosure,
+      },
+      {
+        onSuccess: (response) => {
+          toast.success(response.responseMessage);
+          reset(); // Reset all form fields
+          setValue("category", ""); // Explicitly reset the category field
+        },
+        onError: (error) => {
+          toast.error(error.message);
+        },
+      }
+    );
   };
 
   return (
@@ -51,14 +75,15 @@ export const WhistleBlowingForm = () => {
           <FormField
             control={form.control}
             name="category"
+            rules={{ required: "Please select a category" }}
             render={({ field }) => (
               <div className="flex flex-col space-y-1">
                 <label className="text-sm" htmlFor="natureOfEnquiry">
                   Name of Enquiry
                 </label>
                 <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
+                  onValueChange={(value) => setValue("category", value)}
+                  defaultValue={field.value || ""}
                 >
                   <SelectTrigger>
                     <SelectValue placeholder="Select a category" />
@@ -70,6 +95,11 @@ export const WhistleBlowingForm = () => {
                     <SelectItem value="Others">Others</SelectItem>
                   </SelectContent>
                 </Select>
+                {errors.category && (
+                  <p className="text-red-500 text-sm">
+                    {errors.category.message}
+                  </p>
+                )}
               </div>
             )}
           />
@@ -84,7 +114,9 @@ export const WhistleBlowingForm = () => {
             error={errors.disclosure}
           />
 
-          <CustomButton type={"submit"}>Submit</CustomButton>
+          <CustomButton type={"submit"}>
+            {isPending ? "Submitting..." : "Submit"}
+          </CustomButton>
         </form>
       </div>
     </div>

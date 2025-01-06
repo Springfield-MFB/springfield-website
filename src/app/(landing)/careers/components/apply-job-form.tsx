@@ -3,39 +3,69 @@
 import { CustomButton } from "@/components/custom-button";
 import FormInput from "@/components/forms/input";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
+import { useUploadFileMutation } from "@/services/mutations/file";
+import { useApplyForJobMutation } from "@/services/mutations/job";
 import { useState } from "react";
 
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 interface IMicroLoanForm {
   fullName: string;
   email: string;
   phone: string;
-  cv: string;
+  cv: FileList;
 }
 
 export const ApplyJobForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
     ...form
   } = useForm<IMicroLoanForm>({
     mode: "onTouched",
   });
 
-  const [fileSelected, setFileSelected] = useState<boolean>(false);
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFileSelected(event?.target?.files?.length! > 0 || false);
-  };
+  const { mutate: uploadFile, isPending: isUploading } =
+    useUploadFileMutation();
+  const { mutate: applyForJob, isPending: isApplying } =
+    useApplyForJobMutation();
 
   const onSubmit = (data: IMicroLoanForm) => {
-    if (!fileSelected) {
-      alert("Please upload a CV before submitting.");
-    }
+    const file = data.cv[0];
 
-    console.log(data);
+    // step 1
+    uploadFile(file, {
+      onSuccess: (fileResponse) => {
+        const resumeLink = fileResponse.responseData.publicLink;
+
+        // setp 2
+        applyForJob(
+          {
+            fullName: data.fullName,
+            email: data.email,
+            mobileNumber: data.phone,
+            resumeLink,
+          },
+          {
+            onSuccess: (res) => {
+              toast.success(res.responseMessage);
+              reset();
+            },
+            onError: (error) => {
+              console.error("Error submitting application:", error);
+              toast.error(error.message);
+            },
+          }
+        );
+      },
+      onError: (error) => {
+        console.error("Error uploading file:", error);
+        toast.error(error.message);
+      },
+    });
   };
 
   return (
@@ -75,10 +105,15 @@ export const ApplyJobForm = () => {
             <FormInput
               id="phone"
               label="Phone Number"
-              type="phone"
+              type="number"
               placeholder="Enter phone number"
               register={register("phone", {
-                required: "phone is required",
+                required: "Phone number is required",
+                pattern: {
+                  value: /^[0-9]{11}$/,
+                  message:
+                    "Phone number must contain only numbers and be 11 digits",
+                },
               })}
               error={errors.phone}
             />
@@ -93,11 +128,16 @@ export const ApplyJobForm = () => {
               })}
               error={errors.cv}
               className="flex items-center justify-center pt-3"
-              onChange={handleFileChange}
             />
 
             <div className=" w-full lg:w-[30%]">
-              <CustomButton type="submit">Apply</CustomButton>
+              <CustomButton type="submit">
+                {isUploading
+                  ? "Uploading CV"
+                  : isApplying
+                  ? "Submitting Application..."
+                  : "Apply"}
+              </CustomButton>
             </div>
           </form>
         </div>

@@ -40,3 +40,23 @@ interface ResponseData {
 }
 
 export type JobResponse = ApiResponse<ResponseData>;
+
+export interface ApplyJobPayload {
+  fullName: string;
+  email: string;
+  mobileNumber: string;
+  resumeLink: string;
+}
+
+interface ApplyJobResponseData {
+  fullName: string;
+  email: string;
+  mobileNumber: string;
+  resumeLink: string;
+  createdAt: string;
+  updatedAt: string;
+  status: string;
+}
+
+// Generic API Response Interface
+export type ApplyJobResponse = ApiResponse<ApplyJobResponseData>;
