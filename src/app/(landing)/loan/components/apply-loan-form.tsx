@@ -37,7 +37,7 @@ export const LoanForm = () => {
     formState: { errors },
     ...form
   } = useForm<IMicroLoanForm>({
-    mode: "onTouched",
+    mode: "onChange",
   });
 
   const onSubmit = (data: IMicroLoanForm) => {
@@ -120,7 +120,12 @@ export const LoanForm = () => {
               type="number"
               placeholder="Enter phone number"
               register={register("phone", {
-                required: "phone is required",
+                required: "Phone number is required",
+                pattern: {
+                  value: /^[0-9]{11}$/,
+                  message:
+                    "Phone number must contain only numbers and be 11 digits",
+                },
               })}
               error={errors.phone}
             />
@@ -171,7 +176,7 @@ export const LoanForm = () => {
               type="number"
               placeholder="Enter how much you need "
               register={register("loanAmount", {
-                required: "Business name is required",
+                required: "Loan amount is required",
               })}
               error={errors.loanAmount}
             />
