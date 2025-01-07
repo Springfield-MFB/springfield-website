@@ -51,7 +51,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
                     initial: { opacity: 1, x: 0 },
                     hovered: { opacity: 1, x: 10 },
                   }}
-                  className={cn("text-black", arrowClassName)}
+                  className={cn("text-black text-xs", arrowClassName)}
                 >
                   →
                 </motion.span>
@@ -64,7 +64,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
           initial="initial"
           whileHover="hovered"
           className={cn(
-            "flex space-x-2 rounded-md justify-center items-center px-12 py-4 bg-dark-primary",
+            "flex  rounded-md justify-center items-center px-12 py-4 bg-dark-primary",
             type === "ghost" && "bg-[#E4E4E4]",
             className
           )}

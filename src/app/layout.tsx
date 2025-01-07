@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   },
   description:
     "Springfield Micro Finance Bank Limited (SMFB), situated in Igando, Lagos State, is a licensed Microfinance Bank dedicated to providing cutting-edge microfinance services/products to underserved communities and MSME through technological innovation.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -37,6 +41,15 @@ export default function RootLayout({
   return (
     <ReactQueryClientProvider>
       <html lang="en">
+        <head>
+          {/* Add favicon links manually */}
+          <link rel="icon" href="/favicon.ico" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+        </head>
         <body
           className={cn(
             inter.className,

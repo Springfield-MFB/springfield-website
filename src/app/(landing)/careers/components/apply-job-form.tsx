@@ -5,7 +5,6 @@ import FormInput from "@/components/forms/input";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { useUploadFileMutation } from "@/services/mutations/file";
 import { useApplyForJobMutation } from "@/services/mutations/job";
-import { useState } from "react";
 
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
