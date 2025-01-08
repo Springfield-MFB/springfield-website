@@ -47,6 +47,7 @@ export const AboutHero = () => {
               width={1000}
               height={1000}
               className="object-cover w-[100%] h-full"
+              placeholder="blur"
             />
           </motion.div>
         </div>

@@ -78,6 +78,7 @@ export const LoanHero = () => {
                   width={1000}
                   height={1000}
                   className="object-cover size-[32px]"
+                  placeholder="blur"
                 />
 
                 <div className="flex flex-col space-y-2">

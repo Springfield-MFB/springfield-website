@@ -61,6 +61,7 @@ export const CareerHero = () => {
                 width={1000}
                 height={1000}
                 className="object-cover  w-full h-full"
+                placeholder="blur"
               />
             </motion.div>
           </div>
