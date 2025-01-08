@@ -42,12 +42,9 @@ export default function RootLayout({
     <ReactQueryClientProvider>
       <html lang="en">
         <head>
-          {/* Add favicon links manually */}
-          <link rel="icon" href="/favicon.ico" />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
+          <meta
+            property="og:image"
+            content="https://ogcdn.net/c18cb916-bf7d-431f-9466-adfc47762c77/v1/og.png"
           />
         </head>
         <body
@@ -58,7 +55,7 @@ export default function RootLayout({
             "antialiased min-h-screen"
           )}
         >
-          <Toaster closeButton position="bottom-right" richColors />
+          <Toaster closeButton position="top-center" richColors />
 
           <TanStackQueryProvider>{children}</TanStackQueryProvider>
         </body>
