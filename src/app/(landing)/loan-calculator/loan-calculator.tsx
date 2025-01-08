@@ -169,7 +169,7 @@ export const LoanCalculator = ({ mode }: { mode: "dark" | "light" }) => {
           </label>
 
           {/* Calculated Values */}
-          <div className="flex justify-between  items-center mt-8 mb-16">
+          <div className="flex justify-between flex-wrap gap-8 lg:gap-0 items-center mt-8 mb-16">
             <div className="flex flex-col items-center space-y-2 text-xs">
               <span>You are getting:</span>
               <span className="font-bold">
