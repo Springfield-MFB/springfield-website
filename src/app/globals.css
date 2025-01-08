@@ -7,11 +7,31 @@
 } */
 
 /* Alternatively, to hide the scrollbar but allow scrolling */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
+/* } */
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px; /* Scrollbar width */
+  height: 10px; /* Scrollbar height (for horizontal scrollbars) */
 }
 
-html {
+::-webkit-scrollbar-thumb {
+  background: gray; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: yellow; /* Darker color when hovered */
+}
+
+::-webkit-scrollbar-track {
+  background: white; /* Background color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+*/ html {
   scroll-behavior: smooth;
 }
 
