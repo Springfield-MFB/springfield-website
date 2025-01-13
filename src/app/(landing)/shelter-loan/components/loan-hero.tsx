@@ -21,7 +21,7 @@ export const LoanHero = () => {
           <div className="text-center flex flex-col items-center lg:items-start md:w-[55%] md:text-left">
             <BoxReveal boxColor={"#F0B929"} duration={1}>
               <Heading className=" mx-auto w-[80%] md:mx-0">
-                Springfield Shelter{" "}
+                Springfield Micro-Shelter{" "}
                 <span className="text-brand-primary">Loan</span>
               </Heading>
             </BoxReveal>
