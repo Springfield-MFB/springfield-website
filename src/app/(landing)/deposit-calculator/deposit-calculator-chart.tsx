@@ -76,6 +76,8 @@ export const CalculatorChart = ({
         , resulting in a maturity amount of NGN{" "}
         <span className="font-bold">{totalReturn.toLocaleString()}</span>.
       </div>
+
+      <p className="mt-3">Note: Fixed Deposit Rate is Negotiable</p>
     </div>
   );
 };
