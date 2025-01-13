@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { STATES_IN_NIGERIA } from "@/config";
 import { useApplyForLoanMutation } from "@/services/mutations/loan";
+import { useBusinessTypesQuery } from "@/services/queries/loan";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -28,6 +29,10 @@ interface IMicroLoanForm {
   loanAmount: string;
   loanPurpose: string;
   loanTenure: string;
+  businessAddress: string;
+  typeOfBusiness: string;
+  bvn: string;
+  nin: string;
 }
 
 export const LoanForm = () => {
@@ -44,6 +49,8 @@ export const LoanForm = () => {
   });
 
   const { mutate, isPending } = useApplyForLoanMutation();
+  const { data: businessTypes, isLoading: isBusinessTypesLoading } =
+    useBusinessTypesQuery(); // Fetch business types
 
   const onSubmit = ({
     contactAddress,
@@ -56,7 +63,14 @@ export const LoanForm = () => {
     loanTenure,
     phone,
     stateOfResidence,
+    businessAddress,
+    typeOfBusiness,
+    bvn,
+    nin,
+    ...rest
   }: IMicroLoanForm) => {
+    console.log(typeOfBusiness);
+
     mutate(
       {
         fullName,
@@ -65,6 +79,10 @@ export const LoanForm = () => {
         phoneNumber: phone,
         stateOfResidence,
         contactAddress,
+        businessAddress,
+        businessType: typeOfBusiness,
+        bvn,
+        nin,
         loanAmount: Number(loanAmount),
         loanPurpose,
         loanTenure: Number(loanTenure),
@@ -72,8 +90,12 @@ export const LoanForm = () => {
       },
       {
         onSuccess: (response) => {
-          toast.success(response.responseMessage);
-          reset(); // Reset the form after successful submission
+          if (response.responseCode === "00") {
+            toast.success(response.responseMessage);
+            reset(); // Reset the form after successful submission
+          }
+
+          toast.error(response.responseMessage);
         },
         onError: (error) => {
           toast.error(error.message);
@@ -153,6 +175,85 @@ export const LoanForm = () => {
                 },
               })}
               error={errors.email}
+            />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-6">
+            <FormInput
+              id="bvn"
+              label="BVN"
+              type="text"
+              pattern="\d{11}"
+              maxLength={11}
+              minLength={11}
+              placeholder="Enter your BVN"
+              register={register("bvn", {
+                required: "Enter your BVN, it is required",
+              })}
+              error={errors.bvn}
+            />
+
+            <FormInput
+              id="nin"
+              label="NIN"
+              type="text"
+              pattern="\d{11}"
+              maxLength={11}
+              minLength={11}
+              placeholder="Enter your NIN "
+              register={register("nin", {
+                required: "NIN is required",
+              })}
+              error={errors.nin}
+            />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-6">
+            <FormInput
+              id="businessAddress"
+              label="Business Address"
+              type="text"
+              placeholder="Enter your Business address"
+              register={register("businessAddress", {
+                required: "Enter your business address, it is required",
+              })}
+              error={errors.businessAddress}
+            />
+
+            <FormField
+              control={form.control}
+              name="typeOfBusiness"
+              rules={{ required: "Please select a business type" }}
+              render={({ field }) => (
+                <div className="flex flex-col space-y-1">
+                  <label className="text-sm" htmlFor="typeOfBusiness">
+                    Type of Business
+                  </label>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select business type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {businessTypes?.responseData.map((businessType) => (
+                        <SelectItem
+                          key={businessType.id}
+                          value={businessType.type}
+                        >
+                          {businessType.prettyName}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {errors.typeOfBusiness && (
+                    <p className="text-red-500 text-xs">
+                      {errors.typeOfBusiness.message}
+                    </p>
+                  )}
+                </div>
+              )}
             />
           </div>
 
