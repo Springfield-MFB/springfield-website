@@ -11,9 +11,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { STATES_IN_NIGERIA } from "@/config";
 import { useAccountOpeningMutation } from "@/services/mutations/account";
 import { useUploadFileMutation } from "@/services/mutations/file";
+import { useLGAsQuery, useStatesQuery } from "@/services/queries/generic";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -27,6 +27,9 @@ interface IMicroLoanForm {
   phone: string;
   contactAddress: string;
   stateOfResidence: string;
+  lga: string;
+  city: string;
+  lastBustop: string;
   bvn: string;
   nin: string;
   id: FileList;
@@ -37,6 +40,14 @@ interface IMicroLoanForm {
 
 export const AccountOpeningForm = () => {
   const [date, setDate] = useState<Date>();
+  const [selectedState, setSelectedState] = useState("");
+
+  const { data } = useStatesQuery();
+  const { data: lgasData } = useLGAsQuery("NG", selectedState);
+
+  const handleStateChange = (state: string) => {
+    setSelectedState(state);
+  };
 
   const {
     register,
@@ -135,9 +146,9 @@ export const AccountOpeningForm = () => {
               name="accountCategory"
               rules={{ required: "Please select an account category" }}
               render={({ field }) => (
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-2">
                   <label className="text-sm" htmlFor="accountCategory">
-                    Type of Deposit Product
+                    Type of Account Product
                   </label>
                   <Select
                     onValueChange={field.onChange}
@@ -161,6 +172,12 @@ export const AccountOpeningForm = () => {
                       </SelectItem>
                       <SelectItem value="Springfield Fixed Deposit Account (SPDA)">
                         Springfield Fixed Deposit Account (SPDA)
+                      </SelectItem>
+                      <SelectItem value="Springfield Corporate Current Account (SCCA)">
+                        Springfield Corporate Current Account (SCCA)
+                      </SelectItem>
+                      <SelectItem value="Springfield Annual Contribution Account (SACA)">
+                        Springfield Annual Contribution Account (SACA)
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -189,7 +206,7 @@ export const AccountOpeningForm = () => {
               name="gender"
               rules={{ required: "Please select a gender" }}
               render={({ field }) => (
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-2">
                   <label className="text-sm" htmlFor="gender">
                     Gender
                   </label>
@@ -213,7 +230,7 @@ export const AccountOpeningForm = () => {
                 </div>
               )}
             />
-            <div className="flex flex-col space-y-1">
+            <div className="flex flex-col space-y-2">
               <label className="text-sm" htmlFor="date">
                 Date of Birth
               </label>
@@ -259,21 +276,21 @@ export const AccountOpeningForm = () => {
               name="stateOfResidence"
               rules={{ required: "Please select a state" }}
               render={({ field }) => (
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-2">
                   <label className="text-sm" htmlFor="stateOfResidence">
                     State of Residence
                   </label>
                   <Select
-                    onValueChange={field.onChange}
+                    onValueChange={handleStateChange}
                     defaultValue={field.value}
                   >
                     <SelectTrigger>
                       <SelectValue placeholder="Select state" />
                     </SelectTrigger>
                     <SelectContent>
-                      {STATES_IN_NIGERIA.map((state) => (
-                        <SelectItem key={state} value={state}>
-                          {state}
+                      {data?.responseData.map((state) => (
+                        <SelectItem key={state.slug} value={state.slug}>
+                          {state.name}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -286,6 +303,55 @@ export const AccountOpeningForm = () => {
                   )}
                 </div>
               )}
+            />
+
+            <FormField
+              control={form.control}
+              name="lga"
+              rules={{ required: "Please select local government area" }}
+              render={({ field }) => (
+                <div className="flex flex-col space-y-2">
+                  <label className="text-sm" htmlFor="lga">
+                    Local Govt.
+                  </label>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value || ""}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select lga" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {lgasData?.responseData.map((lga) => (
+                        <SelectItem key={lga} value={lga}>
+                          {lga}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {errors.lga && (
+                    <p className="text-red-500 text-xs">{errors.lga.message}</p>
+                  )}
+                </div>
+              )}
+            />
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+            <FormInput
+              id="city"
+              label="City (optional)"
+              type="text"
+              register={register("city")}
+              placeholder="Enter your city"
+            />
+
+            <FormInput
+              id="lastBustop"
+              label="Last Bus Stop (optional)"
+              type="text"
+              register={register("lastBustop")}
+              placeholder="Enter your last bus stop"
             />
 
             <FormInput
@@ -330,7 +396,7 @@ export const AccountOpeningForm = () => {
               name="meansOfIdentification"
               rules={{ required: "Please select a means of identification" }}
               render={({ field }) => (
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-2">
                   <label className="text-sm" htmlFor="gender">
                     Means of Identification
                   </label>
