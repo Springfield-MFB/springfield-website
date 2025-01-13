@@ -19,7 +19,7 @@ export const Hero = () => {
       title: "Your Spring to ",
       highlight: "Success",
       description:
-        "Springfield Microfinance Bank Limited (SMFB), situated in Igando, Lagos State, is a licensed Microfinance Bank dedicated to providing cutting-edge microfinance services/products to underserved communities and MSME through technological innovation.",
+        "Springfield Microfinance Bank Limited (SMFB), situated at Igando, Lagos State, is a licensed Microfinance Bank dedicated to providing cutting-edge microfinance services/products to underserved communities and MSME through technological innovation.",
       image: HeroImage,
     },
     {

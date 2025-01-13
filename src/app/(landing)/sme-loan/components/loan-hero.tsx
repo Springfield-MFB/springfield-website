@@ -38,7 +38,8 @@ export const LoanHero = () => {
 
             <BoxReveal boxColor={"#F0B929"} duration={1.2}>
               <p className="text-dark-text mb-6 text-sm">
-                Interest Rate: Competitive interest rate
+                {/* Interest Rate: Competitive interest rate */}
+                No Equity Contribution of 10%
               </p>
             </BoxReveal>
             <CustomButton link="/loan/apply" type="primary">

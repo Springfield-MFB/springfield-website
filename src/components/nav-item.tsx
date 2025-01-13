@@ -70,7 +70,6 @@ export const NavItem: FC<NavItemProps> = ({
                     {navItem.content.map((item, i) => {
                       const handleClick = () => {
                         if (!item.href) {
-                          close();
                           toast.success("Coming Soon");
                           return;
                         }

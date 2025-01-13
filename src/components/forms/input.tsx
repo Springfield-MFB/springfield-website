@@ -22,6 +22,9 @@ const FormInput: React.FC<FormInputProps> = ({
   error,
   className,
   onChange,
+  pattern,
+  maxLength,
+  minLength,
 }) => {
   return (
     <div className="flex flex-col space-y-2">
@@ -29,6 +32,9 @@ const FormInput: React.FC<FormInputProps> = ({
         {label}
       </label>
       <Input
+        pattern={pattern}
+        maxLength={maxLength}
+        minLength={minLength}
         type={type}
         id={id}
         placeholder={placeholder}

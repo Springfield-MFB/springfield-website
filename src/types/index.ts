@@ -5,6 +5,22 @@ export interface ApiResponse<T> {
   responseData: T; // Generic type for the response data
 }
 
+// GENERIC
+
+interface State {
+  slug: string;
+  name: string;
+}
+
+export type StateResponse = ApiResponse<State[]>;
+
+export interface LGAResponse {
+  responseCode: string;
+  responseMessage: string;
+  errors: string[];
+  responseData: string[]; // List of LGAs
+}
+
 interface FileUploadResponseData {
   responseCode: string;
   publicLink: string;
@@ -12,6 +28,8 @@ interface FileUploadResponseData {
 }
 
 export type FileUploadResponse = ApiResponse<FileUploadResponseData>;
+
+// WHISTLE BLOWER & CONTACT US
 
 export interface WhistleEnquiryPayload {
   enquiryType: string;
@@ -44,6 +62,15 @@ export type ContactUsEnquiryResponse = ApiResponse<
   ContactUsEnquiryResponseData
 >;
 
+// LOAN APPLICATIONS
+interface BusinessType {
+  id: number;
+  prettyName: string;
+  type: string;
+}
+
+export type BusinessTypeResponse = ApiResponse<BusinessType[]>;
+
 export interface LoanApplicationPayload {
   fullName: string;
   dateOfBirth: string;
@@ -55,6 +82,10 @@ export interface LoanApplicationPayload {
   loanAmount: number;
   loanPurpose: string;
   loanTenure: number;
+  businessType: string;
+  businessAddress: string;
+  bvn: string;
+  nin: string;
 }
 
 interface LoanApplicationResponseData {
@@ -65,6 +96,8 @@ interface LoanApplicationResponseData {
 }
 
 export type LoanApplicationResponse = ApiResponse<LoanApplicationResponseData>;
+
+// ACCOUNT OPENING
 
 export interface AccountOpeningPayload {
   productType: string;

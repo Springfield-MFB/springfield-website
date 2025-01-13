@@ -261,7 +261,7 @@ export const NAVBART_ITEMS = [
         iconColor: "#D80A12",
         href: "/shelter-loan",
         color: "#FFE6E7",
-        title: "Springfield Housing Loan",
+        title: "Springfield Micro Shelter Loan",
         desc:
           "Loan designed to help you build, renovate, or own your dream home with flexible repayment options tailored to your needs.",
       },
@@ -525,7 +525,7 @@ export const BENEFITS = [
     image: BankingImg, // Replace with actual image paths
   },
   {
-    title: "Liquidity",
+    title: "Easy Access",
     description:
       "Savings accounts provide easy access to your money when needed.",
     image: LoansImg,
@@ -542,12 +542,7 @@ export const BENEFITS = [
       "Savings accounts earn interest, allowing your money to grow over time.",
     image: BankingImg, // Replace with actual image paths
   },
-  {
-    title: "Liquidity",
-    description:
-      "Savings accounts provide easy access to your money when needed.",
-    image: LoansImg,
-  },
+
   {
     title: "Low Risk ",
     description:
@@ -571,7 +566,7 @@ export const LOAN_PROPERTIES = [
   {
     icon: FastSvg,
     title: "Loan Range",
-    desc: "Between N100,000  to N1,000,000",
+    desc: "Between N100,000  to N500,000",
   },
   {
     icon: RepaymentSvg,
@@ -596,7 +591,7 @@ export const ASSETS_ACQUISITION_LOAN_PROPERTIES = [
   {
     icon: FastSvg,
     title: "Loan Range",
-    desc: "Up to N12m",
+    desc: "Up to N3m",
   },
   {
     icon: RepaymentSvg,
@@ -620,7 +615,7 @@ export const SHELTER_LOAN_PROPERTIES = [
   {
     icon: FastSvg,
     title: "Loan Range",
-    desc: "Get up to 3,000,000.00",
+    desc: "Loan up to 3,000,000.00",
   },
   {
     icon: RepaymentSvg,
@@ -644,7 +639,7 @@ export const SME_LOAN_PROPERTIES = [
   {
     icon: FastSvg,
     title: "Loan Range",
-    desc: "Above N1m",
+    desc: "Up to N3m",
   },
   {
     icon: RepaymentSvg,
@@ -718,11 +713,11 @@ export const LOAN_BENEFITS = [
     description:
       "Address immediate financial needs with our short-term solution, offering quick relief without long-term commitments.",
   },
-  {
-    title: "Credit History Not Always a Decisive Factor",
-    description:
-      "Some lenders may consider the borrower's income and employment status more heavily than their credit history when approving a loan. This can make loans accessible to individuals with a less-than-perfect credit history.",
-  },
+  // {
+  //   title: "Credit History Not Always a Decisive Factor",
+  //   description:
+  //     "Some lenders may consider the borrower's income and employment status more heavily than their credit history when approving a loan. This can make loans accessible to individuals with a less-than-perfect credit history.",
+  // },
   {
     title: "Predictable Repayments",
     description:
@@ -847,7 +842,7 @@ export const FAQ_DATA = [
   },
   {
     question: "Can I open an account on my phone?",
-    answer: "Yes you can open an account on your phone.",
+    answer: "Not yet, Coming soon",
   },
   {
     question: "Is ATM card free?",
