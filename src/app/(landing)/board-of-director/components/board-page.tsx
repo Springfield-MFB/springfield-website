@@ -44,9 +44,7 @@ export const BoardOfDirectorPage = () => {
               {/* Text Content */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent opacity-75  p-4">
                 <div className="transition-transform duration-500 transform group-hover:-translate-x-[150%]">
-                  <p className="text-white text-lg">
-                    {capitalizeWords(member.name)}
-                  </p>
+                  <p className="text-white text-lg">{member.name}</p>
                 </div>
 
                 {/* "View Profile" Button Sliding Right */}
