@@ -830,7 +830,7 @@ export const DIRECTORS = [
   },
   {
     name: "Mr. Adetunji Rasaq Adeshina",
-    image: NoImg,
+    image: RasaqImg,
     summary:
       "Mr. Rasaq Adeshina is a graduate of Business Administration and Management from Osun State Polytechnic, Iree. He is the current Managing Director of Springfield Microfinance Bank. He is a member of the Chartered Institute of Bankers of Nigeria (CIBN) and the Chartered Institute of Loan and Risk Management (CILRM). He has over 15 years’ experience in Microfinance sector, having work in various Microfinance Banks at different positions. Prior to joining Springfield Microfinance Bank, he was the Managing Director of Kayvee Microfinance Bank Limited, Zonal Manager of Hasal Microfinance Bank Limited, Branch Manager/Coordinator of Northern Region at Accion Microfinance Bank Limited amongst others. He has attended several professional training seminars, courses and workshops on Microfinance and Risk Management Culture",
   },
