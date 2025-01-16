@@ -65,6 +65,8 @@ import IsrealImg from "@/public/images/mr-ogundeyi Israel.jpg";
 import AyodejiImg from "@/public/images/ayodeji.jpeg";
 import UdohImg from "@/public/images/uduh.jpeg";
 import NoImg from "@/public/images/no-image.png";
+import DiranImg from "@/public/images/diran.jpeg";
+import OlamideImg from "@/public/images/olamide.jpeg";
 
 export const NAVBART_ITEMS = [
   // COMPANY
@@ -792,7 +794,7 @@ export const TEAM_MEMEBERS = [
 export const DIRECTORS = [
   {
     name: "Dr. Diran Amosun MBBS",
-    image: NoImg,
+    image: DiranImg,
     summary:
       "Dr. Diran Amosun MBBS is a product of College of Medicine, University of Lagos and Royal College of Anesthesiologist, United Kingdom. He is a renowned Anesthesiologist with over 20 years’ experience. He is a member of the American Board of Anesthesiologist, Royal College of Anesthesiologists. He is an anesthesiologist in group practice at Floyd Medical Center, Rome, Georgia, the Anesthesia Associates of Columbus, Georgia, covering three hospitals and one surgery center. He is also an Anesthesiologist with Amsol Physicians of Columbus, Georgia since 2010.",
   },
@@ -810,7 +812,7 @@ export const DIRECTORS = [
   },
   {
     name: "Olamide Adeyinka",
-    image: NoImg,
+    image: OlamideImg,
     summary:
       "Olamide Adeyinka is a graduate of Arts in Economics, Minor Legal Studies at the University of Massachusetts, Lowell, MA. She received a double Masters in Business Administration and International Development & Social Change at Clark University, Worcester, Massachusetts, USA. She is a certified Project Management Professional at the Project Management Institute, Washington DC. She has almost 10 years of working experience in the USA, West Africa, Middle East, North Africa and Asia. She formerly worked with Chemonics International, Inc. in Washington DC, as a Project Manager. She also worked with the International Centre for Research on Women (ICRW) as a Project Manager in their Consulting and Advisory arm.",
   },
