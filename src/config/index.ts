@@ -37,7 +37,6 @@ import BankingImg from "@/public/images/banking.png";
 import LoansImg from "@/public/images/loans.png";
 import InsuranceImg from "@/public/images/insurance.png";
 import TailorImg from "@/public/images/tailor-1.jpeg";
-import FinancialAdImg from "@/public/images/financial-adv.jpg";
 
 // WHY CHOOSE SPRINGFIELD
 import Money from "@/public/svg/money.svg";
@@ -67,6 +66,15 @@ import UdohImg from "@/public/images/uduh.jpeg";
 import NoImg from "@/public/images/no-image.png";
 import DiranImg from "@/public/images/diran.jpeg";
 import OlamideImg from "@/public/images/olamide.jpeg";
+
+//  ESG Images
+import ESGImage1 from "@/public/images/esg-img1.png";
+import ESGImage2 from "@/public/images/esg-img2.png";
+import ESGImage3 from "@/public/images/esg-img3.png";
+
+//  CSR Images
+import CSRImage1 from "@/public/images/csr-img1.png";
+import CSRImage2 from "@/public/images/csr-img2.png";
 
 export const NAVBART_ITEMS = [
   // COMPANY
@@ -117,7 +125,7 @@ export const NAVBART_ITEMS = [
       {
         icon: RiFolderVideoFill,
         iconColor: "#54606E",
-        href: "",
+        href: "/media",
         color: "#E2EBF7",
         title: "Media",
         desc:
@@ -126,7 +134,7 @@ export const NAVBART_ITEMS = [
       {
         icon: PiBankFill,
         iconColor: "#EFAD00",
-        href: "",
+        href: "/esg",
         color: "#FFF7E2",
         title: "ESG",
         desc:
@@ -136,7 +144,7 @@ export const NAVBART_ITEMS = [
       {
         icon: RiUserStarFill,
         iconColor: "#1818D9",
-        href: "",
+        href: "/csr",
         color: "#E8E8FF",
         title: "CSR",
         desc:
@@ -891,6 +899,130 @@ export const STATES_IN_NIGERIA = [
   "Zamfara",
   "FCT",
 ];
+
+//  ESG SECTIONS
+export const ESGSections = [
+  {
+    title: "Environmental Stewardship",
+    description:
+      "We recognize the importance of protecting our planet and are dedicated to reducing our environmental impact.",
+    items: [
+      {
+        title: "Energy Efficiency",
+        text:
+          "Implementing energy-saving practices across our facilities and investing in renewable energy sources.",
+      },
+      {
+        title: "Waste Management",
+        text:
+          "Adopting waste reduction strategies and promoting recycling to minimize our ecological footprint.",
+      },
+      {
+        title: "Sustainable Products and Services",
+        text:
+          "Offering eco-friendly solutions to help our customers reduce their environmental impact.",
+      },
+    ],
+    image: ESGImage1,
+    reverse: false,
+  },
+  {
+    title: "Social Responsibility",
+    description:
+      "Our commitment to people and communities is at the heart of everything we do. We strive to empower individuals and drive positive change.",
+    items: [
+      {
+        title: "Financial Inclusion",
+        text:
+          "Providing access to financial services for underserved populations to foster economic growth.",
+      },
+      {
+        title: "Community Engagement",
+        text:
+          "Supporting local communities through philanthropic activities, educational programs, and partnerships.",
+      },
+      {
+        title: "Diversity, Equity, and Inclusion (DEI)",
+        text:
+          "Promoting a workplace culture that values diversity and ensures equal opportunities for all.",
+      },
+    ],
+    image: ESGImage2,
+    reverse: true,
+  },
+  {
+    title: "Governance Excellence",
+    description:
+      "Integrity and accountability are the cornerstones of our governance framework. We uphold the highest standards of ethics.",
+    items: [
+      {
+        title: "Transparent Leadership",
+        text:
+          "Ensuring clear communication and decision-making processes that prioritize stakeholder trust.",
+      },
+      {
+        title: "Risk Management",
+        text:
+          "Identifying and mitigating risks to safeguard the interests of our stakeholders.",
+      },
+      {
+        title: "Compliance",
+        text:
+          "Adhering to all regulatory requirements and promoting ethical business practices.",
+      },
+    ],
+    image: ESGImage3,
+    reverse: false,
+  },
+];
+
+// CSR PAGE
+export const CSRSection1 = {
+  title: "Empowering Through Action",
+  description: "Our CSR initiatives are built around:",
+  items: [
+    {
+      title: "Promoting Financial Literacy",
+      text:
+        "We empower individuals with the knowledge and tools to make informed financial decisions.",
+    },
+    {
+      title: "Supporting Small Businesses",
+      text:
+        "By providing access to credit and entrepreneurial support, we help local businesses thrive.",
+    },
+    {
+      title: "Enriching Communities",
+      text:
+        "From health campaigns to skill acquisition workshops, we actively contribute to the development of the communities we serve.",
+    },
+  ],
+  image: CSRImage1,
+  reverse: false,
+};
+
+export const CSRSection2 = {
+  title: "Looking Ahead",
+  description:
+    "Springfield Microfinance Bank envisions a future where financial inclusion leads to shared prosperity. Our upcoming CSR plans include:",
+  items: [
+    {
+      title: "Launching women-focused business loans.",
+      text: "",
+    },
+    {
+      title:
+        "Collaborating with educational institutions to provide scholarships.",
+      text: "",
+    },
+    {
+      title: "Supporting environmental conservation efforts.",
+      text: "",
+    },
+  ],
+  image: CSRImage2,
+  reverse: true,
+};
 
 // API URL
 export const API_URL = "https://uat.springfieldmfb.com";
