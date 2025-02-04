@@ -10,7 +10,7 @@ export const OurImpact = () => {
     <div className="my-10">
       <MaxWidthWrapper className="">
         <div className="md:mx-10 border-[1.5px] border-brand-primary rounded-[16px] bg-white">
-          <div className="flex pt-8 pb-40 px-4 md:px-14 md:py-8 items-center relative">
+          <div className="flex pt-8 pb-48 px-4 md:px-14 md:py-8 items-center relative">
             <div className="flex flex-col gap-y-4 ">
               <SmallHeading>Our Impact</SmallHeading>
               <p className="text-[13px] text-[#494848] leading-5 md:leading-6 md:w-[65%] font-satoshi">
