@@ -30,7 +30,7 @@ export const SmallHeading = ({
     <BoxReveal boxColor={"#F0B929"} duration={0.8}>
       <h1
         className={cn(
-          "text-2xl md:text-4xl text-center lg:text-left font-millik text-dark-primary",
+          "text-2xl md:text-4xl  text-center lg:text-left font-millik text-dark-primary",
           className
         )}
         {...props}
