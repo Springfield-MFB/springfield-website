@@ -17,6 +17,8 @@ const buttonVariants = cva(
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         secondary: "bg-white text-black hover:bg-neutral-100",
         ghost: "border-transparent shadow-none hover:text-accent-foreground",
+        brand:
+          "bg-brand-primary border-none text-xs hover:bg-brand-primary/95 font-satoshi ",
         muted: "bg-neutral-200 text-neutral-600 hover:bg-neutral-200/80",
         teritary:
           "bg-blue-100 text-blue-600 border-transparent hover:bg-blue-200 shadow-none",
