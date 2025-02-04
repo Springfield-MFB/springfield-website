@@ -36,7 +36,7 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
       <Navbar />
       {children}
       <TawkToChat />
-      <section id="footer">
+      <section id="footer" className="">
         <Footer />
       </section>
 
