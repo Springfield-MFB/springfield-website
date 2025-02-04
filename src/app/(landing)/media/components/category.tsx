@@ -30,7 +30,7 @@ type CategoryProps = (typeof categories)[number];
 
 const CategoryCard = ({ image, title }: CategoryProps) => {
   return (
-    <div className="bg-white border-[2px] border-[#F2F2F2] rounded-[6px] w-[20%] size-[120px] flex flex-col gap-y-4 items-center justify-center ">
+    <div className="bg-white border-[2px] border-[#F2F2F2] rounded-[6px] w-[45%] lg:w-[20%] size-[120px] flex flex-col gap-y-4 items-center justify-center ">
       <Image
         src={image}
         width={150}
@@ -49,8 +49,8 @@ export const Category = () => {
     <div className="py-16">
       <MaxWidthWrapper className="">
         <div className="border-[1.5px] border-brand-primary rounded-[16px]">
-          <div className="flex pt-8 pb-40 px-4 md:px-14 md:py-12 items-center relative">
-            <div className="flex flex-col gap-y-4 w-[40%] ">
+          <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row pt-8 pb-8  px-4 md:px-14 md:py-12 md:items-center relative">
+            <div className="flex flex-col gap-y-4 md:w-[40%] ">
               <SmallHeading>Categories</SmallHeading>
               <p className="text-[13px] text-[#494848] leading-5 md:leading-6 w-full font-satoshi">
                 Stay informed, stay ahead of the financial curve, and bank
@@ -58,7 +58,7 @@ export const Category = () => {
               </p>
             </div>
 
-            <div className="flex gap-4 justify-end items-center w-[60%]">
+            <div className="flex gap-4 justify-between lg:justify-end items-center lg:w-[60%] flex-wrap">
               {categories.map((cat, idx) => (
                 <CategoryCard key={idx} {...cat} />
               ))}
