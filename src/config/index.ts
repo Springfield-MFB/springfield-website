@@ -66,6 +66,8 @@ import UdohImg from "@/public/images/uduh.jpeg";
 import NoImg from "@/public/images/no-image.png";
 import DiranImg from "@/public/images/diran.jpeg";
 import OlamideImg from "@/public/images/olamide.jpeg";
+import JohnsonImg from "@/public/images/Mr Johnson.jpeg";
+import SegunImg from "@/public/images/Mr. Segun.jpeg";
 
 //  ESG Images
 import ESGImage1 from "@/public/images/esg-img1.png";
@@ -808,7 +810,7 @@ export const DIRECTORS = [
   },
   {
     name: "Mr. Johnson Akhidenor",
-    image: NoImg,
+    image: JohnsonImg,
     summary:
       "Mr. Johnson Akhidenor has his first degree from the University of Lagos (1998) and Master of Business Administration (2000) from Ambrose Alli University, Ekpoma, Edo State. He is also an Associate member of the Chartered Institute of Bankers, with over 20 years’ experience in Retail and Corporate Banking Operations, Mortgage Finance and Management Consulting. He has attended several professional training seminars, courses and workshops in commercial and mortgage banking.",
   },
@@ -832,7 +834,7 @@ export const DIRECTORS = [
   },
   {
     name: "Mr. Olabode Segun Adedayo MNIM, FCA",
-    image: NoImg,
+    image: SegunImg,
     summary:
       "Mr. Olabode is certified by the Nigerian Institute of Management and also a Chartered Accountant with a wealth of experience in the financial and real estate sector. He is currently the Managing Consultant/CEO of DSS Property Investment Limited. He is also the Managing Partner of Renaissance Professionals. He worked at Sparklight Property Development Company Limited, where he rose through the ranks from the position of an Account Officer to a NonExecutive Director. Mr. Olabode also a post graduate degree in Theology.",
   },
