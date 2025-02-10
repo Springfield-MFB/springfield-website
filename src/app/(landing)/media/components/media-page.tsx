@@ -11,7 +11,7 @@ export const MediaPage = () => {
     <div className="bg-[#F9F9F9]">
       <PageBoard
         containerClassName="lg:w-[90%]"
-        className="h-[50vh] lg:h-[90vh]"
+        className="h-[50vh] lg:h-[50vh]"
         backgroundImage="url('/images/media-bg.png')"
         desc="We have a lot to share as events unfold in our industry, so visit us often to get the latest news from Springfield Bank and the banking industry."
         heading="Media Centre"
