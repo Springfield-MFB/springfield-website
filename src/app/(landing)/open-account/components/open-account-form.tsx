@@ -89,6 +89,8 @@ export const AccountOpeningForm = () => {
   };
 
   const onSubmit = async (data: IMicroLoanForm) => {
+    console.log(data);
+
     try {
       // Upload files and get their URLs
       const idDocumentUrl = data.id ? await uploadDocument(data.id[0]) : "";
@@ -281,8 +283,11 @@ export const AccountOpeningForm = () => {
                     State of Residence
                   </label>
                   <Select
-                    onValueChange={handleStateChange}
-                    defaultValue={field.value}
+                    onValueChange={(value) => {
+                      field.onChange(value); // Update React Hook Form
+                      handleStateChange(value); // Update selectedState
+                    }}
+                    value={field.value}
                   >
                     <SelectTrigger>
                       <SelectValue placeholder="Select state" />
