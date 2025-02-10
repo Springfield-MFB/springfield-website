@@ -2,6 +2,7 @@
 
 import { CustomButton } from "@/components/custom-button";
 import { DatePickerWithPresets } from "@/components/data-picker";
+import DOBPicker from "@/components/date-picker";
 import FormInput from "@/components/forms/input";
 import { FormField } from "@/components/ui/form";
 import {
@@ -39,7 +40,7 @@ interface IMicroLoanForm {
 }
 
 export const AccountOpeningForm = () => {
-  const [date, setDate] = useState<Date>();
+  const [dob, setDob] = useState<Date | null>(null);
   const [selectedState, setSelectedState] = useState("");
 
   const { data } = useStatesQuery();
@@ -89,6 +90,8 @@ export const AccountOpeningForm = () => {
   };
 
   const onSubmit = async (data: IMicroLoanForm) => {
+    console.log(data);
+
     try {
       // Upload files and get their URLs
       const idDocumentUrl = data.id ? await uploadDocument(data.id[0]) : "";
@@ -105,7 +108,7 @@ export const AccountOpeningForm = () => {
           productType: data.accountCategory,
           fullName: data.fullName,
           gender: data.gender,
-          dateOfBirth: date?.toISOString() || "",
+          dateOfBirth: dob ? dob.toISOString() : "",
           emailAddress: data.email,
           phoneNumber: data.phone,
           stateOfResidence: data.stateOfResidence,
@@ -231,10 +234,13 @@ export const AccountOpeningForm = () => {
               )}
             />
             <div className="flex flex-col space-y-2">
-              <label className="text-sm" htmlFor="date">
+              <label className="text-sm" htmlFor="dob">
                 Date of Birth
               </label>
-              <DatePickerWithPresets date={date} setDate={setDate} />
+              <DOBPicker date={dob} setDate={setDob} />
+              {errors.dob && (
+                <p className="text-red-500 text-xs">{errors.dob.message}</p>
+              )}
             </div>
           </div>
 
@@ -281,8 +287,11 @@ export const AccountOpeningForm = () => {
                     State of Residence
                   </label>
                   <Select
-                    onValueChange={handleStateChange}
-                    defaultValue={field.value}
+                    onValueChange={(value) => {
+                      field.onChange(value); // Update React Hook Form
+                      handleStateChange(value); // Update selectedState
+                    }}
+                    value={field.value}
                   >
                     <SelectTrigger>
                       <SelectValue placeholder="Select state" />
