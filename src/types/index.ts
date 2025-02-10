@@ -6,7 +6,6 @@ export interface ApiResponse<T> {
 }
 
 // GENERIC
-
 interface State {
   slug: string;
   name: string;

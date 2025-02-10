@@ -318,7 +318,7 @@ export const NAVBART_ITEMS = [
       {
         icon: HiCreditCard,
         iconColor: "#0099B7",
-        href: "",
+        href: "/instant-debit-card",
         color: "#E6FBFF",
         title: "Instant Debit Card",
         desc:
@@ -328,7 +328,7 @@ export const NAVBART_ITEMS = [
       {
         icon: BiSolidMobileVibration,
         iconColor: "#00B457",
-        href: "",
+        href: "/mobile-banking",
         color: "#E6FFF2",
         title: "Mobile Banking",
         desc:
@@ -338,7 +338,7 @@ export const NAVBART_ITEMS = [
       {
         icon: TbPasswordMobilePhone,
         iconColor: "#CB06B3",
-        href: "",
+        href: "/agency-banking",
         color: "#FFE6FC",
         title: "Agency Banking",
         desc:
@@ -358,7 +358,7 @@ export const NAVBART_ITEMS = [
       {
         icon: PiHashFill,
         iconColor: "#CE6401",
-        href: "",
+        href: "/ussd",
         color: "#FFF3E8",
         title: "USSD",
         desc:
