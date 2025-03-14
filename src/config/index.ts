@@ -318,7 +318,7 @@ export const NAVBART_ITEMS = [
       {
         icon: HiCreditCard,
         iconColor: "#0099B7",
-        href: "",
+        href: "/instant-debit-card",
         color: "#E6FBFF",
         title: "Instant Debit Card",
         desc:
@@ -328,7 +328,7 @@ export const NAVBART_ITEMS = [
       {
         icon: BiSolidMobileVibration,
         iconColor: "#00B457",
-        href: "",
+        href: "/mobile-banking",
         color: "#E6FFF2",
         title: "Mobile Banking",
         desc:
@@ -338,7 +338,7 @@ export const NAVBART_ITEMS = [
       {
         icon: TbPasswordMobilePhone,
         iconColor: "#CB06B3",
-        href: "",
+        href: "/agency-banking",
         color: "#FFE6FC",
         title: "Agency Banking",
         desc:
@@ -358,7 +358,7 @@ export const NAVBART_ITEMS = [
       {
         icon: PiHashFill,
         iconColor: "#CE6401",
-        href: "",
+        href: "/ussd",
         color: "#FFF3E8",
         title: "USSD",
         desc:
@@ -859,6 +859,34 @@ export const FAQ_DATA = [
   {
     question: "Is ATM card free?",
     answer: "No, this is coming soon",
+  },
+];
+
+export const APP_FAQ_DATA = [
+  {
+    question: "How do I download the mobile app?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
+  },
+  {
+    question: "Can I open an account on my mobile app?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
+  },
+  {
+    question: "Can I make international transfer on the app?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
+  },
+  {
+    question: "Is Virtual card free?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
+  },
+  {
+    question: "Can I make international payment on the app?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
   },
 ];
 
