@@ -862,6 +862,34 @@ export const FAQ_DATA = [
   },
 ];
 
+export const APP_FAQ_DATA = [
+  {
+    question: "How do I download the mobile app?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
+  },
+  {
+    question: "Can I open an account on my mobile app?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
+  },
+  {
+    question: "Can I make international transfer on the app?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
+  },
+  {
+    question: "Is Virtual card free?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
+  },
+  {
+    question: "Can I make international payment on the app?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque pariatur animi neque velit nulla, quaerat eligendi cumque et commodi",
+  },
+];
+
 export const STATES_IN_NIGERIA = [
   "Abia",
   "Adamawa",
