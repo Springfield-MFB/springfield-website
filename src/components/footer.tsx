@@ -211,6 +211,10 @@ export const Footer = () => {
                 <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
                   <a href="/contact-us">Contact Us</a>
                 </li>
+
+                <li className="hover:text-brand-primary transition-all duration-500 hover:underline">
+                  <a href="/terms-and-conditions">Terms & Conditions</a>
+                </li>
               </ul>
             </div>
           </div>
