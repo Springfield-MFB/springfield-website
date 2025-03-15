@@ -7,6 +7,7 @@ interface PageBoardProps {
   backgroundImage: string;
   desc: string;
   heading: string;
+  headingSize?: string;
   className?: string;
   containerClassName?: string;
 }
@@ -15,6 +16,7 @@ export const PageBoard: React.FC<PageBoardProps> = ({
   backgroundImage,
   desc,
   heading,
+  headingSize,
   className = "lg:h-[450px]",
   containerClassName = "lg:w-[70%]",
 }) => {
@@ -39,7 +41,9 @@ export const PageBoard: React.FC<PageBoardProps> = ({
           containerClassName
         )}
       >
-        <Heading className="text-white lg:leading-[80px]">{heading}</Heading>
+        <Heading className={cn("text-white lg:leading-[80px]", headingSize)}>
+          {heading}
+        </Heading>
         <BoxReveal boxColor={"#F0B929"} duration={1.2}>
           <p className="text-sm mt-3 leading-6 text-center">{desc}</p>
         </BoxReveal>
